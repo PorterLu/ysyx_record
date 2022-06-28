@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 
   /* Start engine. */
   engine_start();
-
+/*
   FILE *file = fopen("out.txt","r");
   char tmp[65536];
   char *expression;
@@ -47,6 +47,6 @@ int main(int argc, char *argv[]) {
       }
     }
   }
-  
+ */ 
   return 0;
 }
