@@ -33,7 +33,7 @@ void init_wp_pool() {
 void new_wp(char *expression)
 {
 	WP* pointer = free_;
-  	bool success;
+  	bool success = true;
 	if(pointer != NULL)
 	{
 		free_ = pointer->next;
@@ -76,7 +76,7 @@ void print_wp()
   	while(pointer != NULL)
   	{
     	printf(" NO: %d, ",pointer->NO);
-    	printf(" expr: %s %ld\n",pointer->expr,pointer->value);
+    	printf(" expr: %s 0x%lx\n",pointer->expr,pointer->value);
     	pointer = pointer->next;
   	}
 }
@@ -87,12 +87,13 @@ bool check_wp()
 	WP *pointer = head;
   	while(pointer != NULL)
   	{
-    	int value = expr(pointer->expr,&success);
+    	uint64_t value = expr(pointer->expr,&success);
+		success = true;
     	if(value != pointer->value)
     	{
       		record = true;
       		pointer->value = value;
-      		printf("w%d,Program stop before 0x%08lx\n",pointer->NO,cpu.pc);
+      		printf("w%d,Program stop before 0x%08lx new value = %lx\n",pointer->NO,cpu.pc, pointer->value);
       		break;
     	}	
     	pointer = pointer->next;

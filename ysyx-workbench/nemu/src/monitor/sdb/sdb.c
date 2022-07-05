@@ -9,6 +9,7 @@ void print_wp();
 void check_wp();
 void new_wp(char *e);
 void free_wp(int NO);
+void print_ftrace();
 static int is_batch_mode = false;
 
 void init_regex();
@@ -40,7 +41,14 @@ static int cmd_c(char *args) {
 
 
 static int cmd_q(char *args) {
+   nemu_state.state = NEMU_QUIT;
   return -1;
+}
+
+static int cmd_ft(char *args)
+{
+	print_ftrace();
+	return 0;
 }
 
 static int cmd_si(char *args) {
@@ -119,7 +127,37 @@ int cmd_d(char *args)
 	return 0;
 }
 
-static int cmd_help(char *args) ;
+void print_ringbuf();
+int cmd_rb(char *args)
+{
+	print_ringbuf();
+	return 0;
+}
+
+void memlog_print(paddr_t start, word_t len, char* type);
+int cmd_mt(char *args)
+{
+	paddr_t start;
+	int len;
+	char type[2];
+
+	char *tmp;
+
+	tmp = strtok(NULL," ");
+	sscanf(tmp, "%s", type);
+
+	tmp = strtok(NULL," ");
+	sscanf(tmp, "%x", &start);
+
+	tmp = strtok(NULL," ");
+	sscanf(tmp, "%d", &len);
+
+	memlog_print(start, len, type);
+
+	return 0;
+}
+
+static int cmd_help(char *args);
 
 static struct {
   const char *name;
@@ -134,7 +172,10 @@ static struct {
   { "x", "scan memory", cmd_x},
   { "p", "calculate the value", cmd_p},
   { "w", "set watchpoint", cmd_w},
-  { "d", "delete watchpoint", cmd_d}
+  { "d", "delete watchpoint", cmd_d},
+  { "rb", "print contents of ringbuf", cmd_rb},
+  { "mt", "trace memory request", cmd_mt},
+  { "ft", "trace function implementation", cmd_ft}
 };
 
 #define NR_CMD ARRLEN(cmd_table)
@@ -152,9 +193,9 @@ static int cmd_help(char *args) {
 	}
 	else {
 		for(i = 0; i < NR_CMD; i ++) 
-    {
+    	{
 			if(strcmp(arg, cmd_table[i].name) == 0) 
-      {
+      		{
 				printf("%s - %s\n", cmd_table[i].name, cmd_table[i].description);
 				return 0;
 			}

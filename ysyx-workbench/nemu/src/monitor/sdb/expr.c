@@ -190,36 +190,40 @@ bool check_parentheses(uint32_t p,uint32_t q)
 uint64_t eval(int p,int q,bool* success, int depth) {
 	//printf("start p %d, q %d\n",p,q);
 	//printf("p:%d q:%d\n",p,q);
-    if(p > q || *success == false || depth > 35) {
+    if(*success == false || depth > 35) {
 		  *success = false; 
 		  return -1;
     }
 
+	if(p > q)
+	{
+		return 0;
+	}
     else if(p == q) { 
 
-	uint64_t result;
-	  //printf("%s\n",tokens[p].str);
+		uint64_t result;
+		//printf("%s\n",tokens[p].str);
 
-	switch(tokens[p].type)
-	{
-	case NUM:
-		//printf("%d %s\n",p,tokens[p].str);
-		sscanf(tokens[p].str,"%lu",&result);
-		//printf("number\n");
-		return result;
-	case REG:
-		return isa_reg_str2val(tokens[p].str,success);
-	case HEX:
-		sscanf(tokens[p].str,"0x%lx",&result);
-		return result;
-	/*
-	case SYMB:
-		result = findSym(tokens[p].str);
-		return result;
-	default:
-		return look_up_symtab(tokens[p].str,success);
-	*/
-	}
+		switch(tokens[p].type)
+		{
+			case NUM:
+				//printf("%d %s\n",p,tokens[p].str);
+				sscanf(tokens[p].str,"%lu",&result);
+				//printf("number\n");
+				return result;
+			case REG:
+				return isa_reg_str2val(tokens[p].str,success);
+			case HEX:
+				sscanf(tokens[p].str,"0x%lx",&result);
+				return result;
+			/*
+			case SYMB:
+				result = findSym(tokens[p].str);
+				return result;
+			default:
+				return look_up_symtab(tokens[p].str,success);
+			*/
+		}
     
     }
     else if(check_parentheses(p, q) == true) {
@@ -277,7 +281,6 @@ uint64_t eval(int p,int q,bool* success, int depth) {
     uint64_t val1 = eval(p, op - 1,success,depth+1);
 	//printf("p:%d  op-1:%d",p,op-1);
     uint64_t val2 = eval(op + 1, q,success,depth+1);
-
 	//printf("p %d,q %d\n",p,q);
 	/*f(p==0 && q==4)
 	{
@@ -325,7 +328,7 @@ uint64_t eval(int p,int q,bool* success, int depth) {
       case NEQ: return val1 != val2; break;
       case AND: return val1 && val2; break;
       case OR: return val1 || val2; break;
-      case DEREF: return vaddr_read(val1, 4); break;
+      case DEREF: return vaddr_read(val2, 8); break;
       default: assert(0);
     }
 	/*
@@ -360,7 +363,7 @@ word_t expr(char *e, bool *success) {
 	for(i = 0; i < nr_token; i++) 
 	{
    		 if(tokens[i].type == '*' && (i == 0 || operator_judge(tokens[i - 1].type)  ) )
-        		tokens[i].type = DEREF;
+        	tokens[i].type = DEREF; 
 	}
 	
 	uint64_t result = eval(0,nr_token-1,success, 0);

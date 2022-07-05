@@ -8,6 +8,7 @@ deps_/home/porterlu/ysyx-workbench/nemu/build/obj-riscv64-nemu-interpreter/src/m
     $(wildcard include/config/msize.h) \
     $(wildcard include/config/mbase.h) \
     $(wildcard include/config/mem/random.h) \
+    $(wildcard include/config/mem/trace.h) \
     $(wildcard include/config/device.h) \
   /home/porterlu/ysyx-workbench/nemu/include/memory/host.h \
     $(wildcard include/config/isa64.h) \

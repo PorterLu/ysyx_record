@@ -30,6 +30,14 @@ config WATCHPOINT
   bool "enable watchpoint"
   default y
 
+config RINGBUF
+  bool "enable instruction ringbuf"
+  default y
+
+config MEM_TRACE
+  bool "enabel memory trace"
+  default y
+
 choice
   prompt "NEMU execution engine"
   default ENGINE_INTERPRETER

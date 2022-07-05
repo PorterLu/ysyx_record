@@ -10,7 +10,6 @@
  */
 #define MAX_INST_TO_PRINT 10
 
-
 CPU_state cpu = {};
 uint64_t g_nr_guest_inst = 0;
 static uint64_t g_timer = 0; // unit: us
@@ -19,17 +18,46 @@ static bool g_print_step = false;
 void device_update();
 bool check_wp();
 
+#define RINGBUFSIZE 15
+typedef struct ringbuf{
+	char buf[RINGBUFSIZE][128];
+	uint32_t pointer;
+} ringbuf;
+
+static ringbuf rb;
+
+void print_ringbuf()
+{
+	int i;
+	for(i=0; i<RINGBUFSIZE; i++)
+	{
+		if(i == rb.pointer)
+			printf("---> ");
+		else 
+			printf("     ");
+		puts(rb.buf[i]);
+	}
+}
+
+
 static void trace_and_difftest(Decode *_this, vaddr_t dnpc) {
 #ifdef CONFIG_ITRACE_COND
   if (ITRACE_COND) { log_write("%s\n", _this->logbuf); }
 #endif
   if (g_print_step) { IFDEF(CONFIG_ITRACE, puts(_this->logbuf)); }
   IFDEF(CONFIG_DIFFTEST, difftest_step(_this->pc, dnpc));
+
+#ifdef CONFIG_RINGBUF
+  strcpy(rb.buf[rb.pointer], _this->logbuf);
+  rb.pointer = (rb.pointer + 1)%RINGBUFSIZE;
+#endif
+
 #ifdef CONFIG_WATCHPOINT
   if(check_wp())
     nemu_state.state = NEMU_STOP;
 #endif
 }
+
 
 static void exec_once(Decode *s, vaddr_t pc) {
   s->pc = pc;
@@ -37,24 +65,28 @@ static void exec_once(Decode *s, vaddr_t pc) {
   isa_exec_once(s);
   cpu.pc = s->dnpc;
 #ifdef CONFIG_ITRACE
-  char *p = s->logbuf;
-  p += snprintf(p, sizeof(s->logbuf), FMT_WORD ":", s->pc);
-  int ilen = s->snpc - s->pc;
-  int i;
-  uint8_t *inst = (uint8_t *)&s->isa.inst.val;
-  for (i = ilen - 1; i >= 0; i --) {
-    p += snprintf(p, 4, " %02x", inst[i]);
+  char *p = s->logbuf;										
+  p += snprintf(p, sizeof(s->logbuf), FMT_WORD ":", s->pc);	// print pc to logbuf array
+  int ilen = s->snpc - s->pc;								// get instruction len
+  int i;												
+  uint8_t *inst = (uint8_t *)&s->isa.inst.val;				// parse instruction content
+  for (i = ilen - 1; i >= 0; i --) {						
+    p += snprintf(p, 4, " %02x", inst[i]);					// print the binary content of instruction to the logbuf array
   }
-  int ilen_max = MUXDEF(CONFIG_ISA_x86, 8, 4);
-  int space_len = ilen_max - ilen;
+  int ilen_max = MUXDEF(CONFIG_ISA_x86, 8, 4);			
+  int space_len = ilen_max - ilen;						
   if (space_len < 0) space_len = 0;
-  space_len = space_len * 3 + 1;
+  space_len = space_len * 3 + 1;							// the output space is used for alignment.For riscv, it is always one
   memset(p, ' ', space_len);
   p += space_len;
 
-  void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
+
+  //at here, we implement llvm to specific instruction
+  void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);		 
   disassemble(p, s->logbuf + sizeof(s->logbuf) - p,
-      MUXDEF(CONFIG_ISA_x86, s->snpc, s->pc), (uint8_t *)&s->isa.inst.val, ilen);
+      MUXDEF(CONFIG_ISA_x86, s->snpc, s->pc), (uint8_t *)&s->isa.inst.val, ilen); // p is the ouput array, the next is the remaining length of the array, the third 
+	  																			  // parameter is the PC value of the instruction, the fourth parameter is the value
+																				  // of the instruction, and the fifth is the instruction length
 #endif
 }
 

@@ -7,6 +7,8 @@ void init_monitor(int, char *[]);
 void am_init_monitor();
 void engine_start();
 int is_exit_status_bad();
+void memlog_close();
+void delete_ftrace();
 uint64_t expr(char*e, bool *success);
 
 int main(int argc, char *argv[]) {
@@ -19,6 +21,13 @@ int main(int argc, char *argv[]) {
 
   /* Start engine. */
   engine_start();
+  
+  memlog_close();
+  
+  delete_ftrace();
+  
+  return is_exit_status_bad();
+
 /*
   FILE *file = fopen("out.txt","r");
   char tmp[65536];
@@ -47,6 +56,7 @@ int main(int argc, char *argv[]) {
       }
     }
   }
- */ 
+*/
+
   return 0;
 }
