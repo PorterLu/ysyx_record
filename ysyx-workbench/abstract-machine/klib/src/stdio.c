@@ -4,24 +4,39 @@
 #include <stdarg.h>
 #include <stdint.h>
 
-
 #if !defined(__ISA_NATIVE__) || defined(__NATIVE_USE_KLIB__)
 
 //only for positive number
 int int2str(int num, char *str)
 {
+	bool isNeg = false;
+	int appendix = 1;
 	int index = 0,i;
+	if(num == 0)
+	{
+		str[index] = '0';
+		index++;
+	}
+
+	if(num<0)
+	{
+		str[index] = '-';
+		isNeg = true;
+		index++;
+		appendix = 0;
+	}
+	
 	while(num != 0)
 	{
-		str[index] = num%10 + 0x30;
+		str[index] = (isNeg? -(num%10):num%10)+ 0x30;
 		index ++;
 		num /= 10;
 	}
 
-	for(i=0; i < index/2; i++)
+	for(i=isNeg; i < (index + isNeg)/2; i++)
 	{
-		int tmp = str[index - i - 1];
-		str[index - i - 1] = str[i];
+		int tmp = str[index - i - appendix];
+		str[index - i - appendix ] = str[i];
 		str[i] = tmp;
 	}
 

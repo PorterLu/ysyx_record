@@ -1,0 +1,26 @@
+# Building dummy-run [riscv64-npc]
+# Building am-archive [riscv64-npc]
++ CC src/riscv/npc/trm.c
++ AR -> build/am-riscv64-npc.a
+# Building klib-archive [riscv64-npc]
++ LD -> build/dummy-riscv64-npc.elf
+# Creating image [riscv64-npc]
++ OBJCOPY -> build/dummy-riscv64-npc.bin
+Archive ar -rcs VmyCPU__ALL.a VmyCPU__ALL.o
+/home/porterlu/ysyx-workbench/am-kernels/tests/cpu-tests/build/dummy-riscv64-npc.bin
+
+size: 57
+[1;34m[/home/porterlu/ysyx-workbench/myCPU/csrc/main.cpp:53 load_img] The image is /home/porterlu/ysyx-workbench/am-kernels/tests/cpu-tests/build/dummy-riscv64-npc.bin, size = 57[0m
+src1:0 + src2:80000000 = dest:80000000
+src1:0 + src2:80000000 = dest:80000004
+src1:9 + src2:80009008 = dest:80000008
+src1:ffc + src2:80000000 = dest:8000000c
+src1:c + src2:8000001c = dest:80000010
+src1:0 + src2:80000000 = dest:8000001c
+src1:0 + src2:80000020 = dest:80000020
+src1:1c + src2:80000000 = dest:80000024
+src1:0 + src2:80000000 = dest:80000028
+src1:1fffe8 + src2:80000014 = dest:8000002c
+program is over
+ dummy
+[         dummy] [1;32mPASS![0m

@@ -18,6 +18,11 @@ f(30) f(31)
 #define OFFSET_STATUS (33 * 8)
 #define OFFSET_EPC    (34 * 8)
 
+# REGS(PUSH) -> PUSH(1)		PUSH(3)......PUSH(31) -> sd concat(x,1) (1*8)(sp) ...... sd concat(x,31) (31*8)(sp) 
+# -> sd x1 (1*8)(sp) ...... sd x2 (31*8)(sp)
+#
+#
+
 .globl __am_asm_trap
 __am_asm_trap:
   addi sp, sp, -CONTEXT_SIZE

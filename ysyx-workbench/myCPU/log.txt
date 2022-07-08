@@ -1,0 +1,1 @@
+[1;34m[/home/porterlu/ysyx-workbench/myCPU/csrc/img.c:29 load_img] No image is  given. Use the default built-in image.[0m

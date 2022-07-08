@@ -96,7 +96,12 @@ void *memmove(void *dst, const void *src, size_t n) {
 }
 
 void *memcpy(void *out, const void *in, size_t n) {
-	bool overtop = false;
+	return memmove(out, in, n);
+	/*bool overtop = false;
+
+	if(n == 0)
+		return 0;
+
 	size_t i;
 	if(in + n > out || out + n > in)
 		overtop = true;
@@ -119,9 +124,7 @@ void *memcpy(void *out, const void *in, size_t n) {
 		for(i = 0; i < n; i++)
 		*((char*)out + i) = *((char*)in + i);
 
-	}
-
-	return out;
+	}*/
 }
 
 int memcmp(const void *s1, const void *s2, size_t n) {

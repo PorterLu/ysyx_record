@@ -119,11 +119,11 @@ $(DST_DIR)/%.o: %.cpp
 ### Rule (compile): a single `.S` -> `.o` (gcc, which preprocesses and calls as)
 $(DST_DIR)/%.o: %.S
 	mkdir -p $(dir $@) && echo + AS $<
-	$(AS) $(ASFLAGS) -c -o $@ $(realpath $<) -DCONFIG_TARGET_AM
+	$(AS) $(ASFLAGS) -c -o $@ $(realpath $<)
 
 ### Rule (recursive make): build a dependent library (am, klib, ...)
 $(LIBS): %:
-	$(MAKE) -s -C $(AM_HOME)/$* archive
+	$(MAKE) -C $(AM_HOME)/$* archive
 
 ### Rule (link): objects (`*.o`) and libraries (`*.a`) -> `IMAGE.elf`, the final ELF binary to be packed into image (ld)
 $(IMAGE).elf: $(OBJS) am $(LIBS)

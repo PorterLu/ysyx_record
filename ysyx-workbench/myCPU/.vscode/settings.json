@@ -1,0 +1,10 @@
+{
+	"C_Cpp.errorSquiggles": "Disabled",
+	"files.associations": {
+		"vmem.h": "c",
+		"string.h": "c"
+	},
+	"files.watcherExclude": {
+		"**/target": true
+	}
+}
