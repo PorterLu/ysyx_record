@@ -188,6 +188,28 @@ def myMethod(count: Int, wrap: Boolean, wrapValue: Int = 24):Unit = { ... }
 //如果调用时带上名字，设置可以任意设置参数顺序
 myMethod(wrapValue = 24, wrap = false , count = 10)
 ```
+## 单例
+   什么是单例？顾名思义，它只有一个实例，scala是一种面向对象的变成语言，常量、变量、方法等必须定义在class或者object里面才行。在一个脚本中引用另外一个脚本中的对象的方法是，则需要使用import进行对象对对象的路径的说明。一个单例对象是全局唯一的，具有稳定的路径。
+```
+object findsum{
+	var a = 56
+	var b = 21
+	def sum(): Int = { return a+b}
+}
+
+object Main
+{
+	def print(){
+		printf("The sum is :" + findsum.sum());
+	}
+	
+	def main(args:Array[String])
+	{
+		print();
+	}
+}
+```
+   
 
 
 
