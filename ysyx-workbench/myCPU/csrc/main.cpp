@@ -20,12 +20,16 @@
 #include <expr.h>
 #include <exec.h>
 #include <watchpoint.h>
+#include <disasm.h>
+#include <elftl.h>
+#include <difftest.h>
 
 char* elf_file = NULL;
 
 void halt()
 {
-	state = NEMU_END;
+	state = NEMU_ABORT;
+	return;
 	//printf(ANSI_FMT("HIT GOOG TRAP\n",ANSI_FG_GREEN));
 	//exit(0);
 }
@@ -36,17 +40,19 @@ int parse_args(int argc, char *argv[])
 		{"batch",	no_argument			, NULL, 'b'},
 		{"elf"	,	required_argument	, NULL, 'e'},
 		{"log"	,	required_argument	, NULL, 'l'},
+		{"so"	, 	required_argument	, NULL, 's'},
 		{0		, 	0					, NULL,  0 }
 	};
 	
 	int o;
-	while((o=getopt_long(argc, argv, "-be:l:", table, NULL))!=-1)
+	while((o=getopt_long(argc, argv, "-bs:e:l:", table, NULL))!=-1)
 	{
 		switch(o)
 		{
 			case 'b': set_batch_mode(); break;
 			case 'l': log_file = optarg;break;
 			case 'e': elf_file = optarg;break;
+			case 's': ref_so_file = optarg; break;
 			case 1: img_file = optarg;return 0;
 		}
 	}
@@ -57,15 +63,17 @@ int parse_args(int argc, char *argv[])
 int main(int argc, char *argv[]){
 	parse_args(argc, argv);
 	init_log(log_file);
+	init_disasm("riscv64-pc-linux-gnu");
 	init_regex();
 	init_wp_pool();
 	init_default_program();
 	load_img();
-
+	init_elf(elf_file);
 	sim_init();
 	contextp->commandArgs(argc, argv);
 	reset(10);
-	exec(2);
+	init_difftest(ref_so_file, img_size, 0);
+
 
 	sdbloop();
 	/*

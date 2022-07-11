@@ -53,7 +53,7 @@ extern "C" void set_gpr_ptr(const svLogicVecVal* reg0, const svLogicVecVal* reg1
 	cpu.gpr[29] = Reg(29);
 	cpu.gpr[30] = Reg(30);
 	cpu.gpr[31] = Reg(31);
-	cpu.pc = top->io_pc_debug;
+	cpu.pc = top->io_pc_addr;
 }
 
 void dump_gpr(){

@@ -13,6 +13,7 @@
 #include <expr.h>
 #include <vmem.h>
 #include <watchpoint.h>
+#include <elftl.h>
 
 static bool is_batch_mode = false;
 
@@ -105,11 +106,17 @@ static int cmd_w(char *args){
 	new_wp(expression);
 	return 0;
 }
+
 static int cmd_d(char *args){
 	char *num = strtok(NULL, " ");
 	int NO;
 	sscanf(num, "%d", &NO);
 	free_wp(NO);
+	return 0;
+}
+
+static int cmd_ft(char *args){
+	print_ftrace();
 	return 0;
 }
 
@@ -127,7 +134,8 @@ static struct {
 	{ "x", "scan memory", cmd_x},
 	{ "p", "calculate the value", cmd_p},
 	{ "w", "set watchpoint", cmd_w},
-	{ "d", "delete watchpoint", cmd_d}
+	{ "d", "delete watchpoint", cmd_d},
+	{ "ft", "ftrace",cmd_ft}
 };
 
 #define NR_CMD sizeof(cmd_table)/sizeof(cmd_table[0])
@@ -189,12 +197,6 @@ void sdbloop()
 
 		switch(state){
 			case NEMU_QUIT:
-				return;
-			case NEMU_END:
-				if(status())
-					printf(ANSI_FMT("HIT GOOG TRAP\n",ANSI_FG_GREEN));
-				else
-					printf(ANSI_FMT("HIT BAD TRAP\n",ANSI_FG_RED));
 				return;
 		}
 	}

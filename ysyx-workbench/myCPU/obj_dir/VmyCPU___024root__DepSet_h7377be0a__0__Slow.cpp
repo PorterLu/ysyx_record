@@ -23,6 +23,7 @@ VL_ATTR_COLD void VmyCPU___024root___eval_settle(VmyCPU___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    VmyCPU___024root___eval_settle\n"); );
     // Body
     VmyCPU___024root___settle__TOP__0(vlSelf);
+    vlSelf->__Vm_traceActivity[2U] = 1U;
     vlSelf->__Vm_traceActivity[1U] = 1U;
     vlSelf->__Vm_traceActivity[0U] = 1U;
 }
@@ -51,22 +52,19 @@ VL_ATTR_COLD void VmyCPU___024root___ctor_var_reset(VmyCPU___024root* vlSelf) {
     vlSelf->myCPU__DOT__regFile_io_wdata = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__regFile_io_rdata_0 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__pc = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT__instr = VL_RAND_RESET_I(32);
     vlSelf->myCPU__DOT___pc_T_1 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__imm_tmp = VL_RAND_RESET_I(32);
-    vlSelf->myCPU__DOT___GEN_69 = VL_RAND_RESET_Q(54);
+    vlSelf->myCPU__DOT___GEN_63 = VL_RAND_RESET_Q(54);
     VL_RAND_RESET_W(79, vlSelf->myCPU__DOT___src1_T_8);
-    VL_RAND_RESET_W(79, vlSelf->myCPU__DOT___GEN_68);
-    vlSelf->myCPU__DOT___pc_remote_T_1 = VL_RAND_RESET_Q(64);
+    VL_RAND_RESET_W(79, vlSelf->myCPU__DOT___GEN_62);
     vlSelf->myCPU__DOT___src2_T_8 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__src2 = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT___pc_remote_T_5 = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT___GEN_50 = VL_RAND_RESET_Q(64);
+    vlSelf->myCPU__DOT___pc_remote_T_3 = VL_RAND_RESET_Q(64);
+    vlSelf->myCPU__DOT___GEN_46 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__dest = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT___GEN_67 = VL_RAND_RESET_I(32);
-    vlSelf->myCPU__DOT___GEN_72 = VL_RAND_RESET_I(32);
-    vlSelf->myCPU__DOT___GEN_78 = VL_RAND_RESET_I(32);
-    vlSelf->myCPU__DOT__pc_tmp = VL_RAND_RESET_Q(64);
+    vlSelf->myCPU__DOT___GEN_61 = VL_RAND_RESET_I(32);
+    vlSelf->myCPU__DOT___GEN_66 = VL_RAND_RESET_I(32);
+    vlSelf->myCPU__DOT___GEN_71 = VL_RAND_RESET_I(32);
     vlSelf->myCPU__DOT__regFile__DOT__reg_0 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__regFile__DOT__reg_1 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__regFile__DOT__reg_2 = VL_RAND_RESET_Q(64);
@@ -103,7 +101,7 @@ VL_ATTR_COLD void VmyCPU___024root___ctor_var_reset(VmyCPU___024root* vlSelf) {
     vlSelf->myCPU__DOT__regFile__DOT___GEN_90 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__regFile__DOT___GEN_110 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__regFile__DOT___GEN_123 = VL_RAND_RESET_Q(64);
-    for (int __Vi0=0; __Vi0<2; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<3; ++__Vi0) {
         vlSelf->__Vm_traceActivity[__Vi0] = VL_RAND_RESET_I(1);
     }
 }

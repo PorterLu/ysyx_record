@@ -19,7 +19,8 @@ void reset(int n)
 {
     top->reset = 1;
     while(n-->0) single_cycle();
-    top->reset = 0; 
+    top->reset = 0;
+	top->eval();
 }
 
 
@@ -27,6 +28,7 @@ void step_and_dump_wave()			//模型利用输入计算输出，同时记录时�
 {
     single_cycle();
     contextp->timeInc(1);
+	//printf("%ld\n",top->rootp->myCPU__DOT__regFile__DOT__reg_24);
     tfp->dump(contextp->time());
 }
 

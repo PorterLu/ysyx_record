@@ -35,7 +35,6 @@ module gpr_ptr(input clock,
 	input [63:0] regfile_31
 );
 
-	always @(posedge clock)
-		if(!reset)
-			set_gpr_ptr(regfile_0, regfile_1, regfile_2, regfile_3, regfile_4,regfile_5,regfile_6,regfile_7,regfile_8,regfile_9,regfile_10,regfile_11,regfile_12,regfile_13,regfile_14,regfile_15,regfile_16,regfile_17,regfile_18,regfile_19,regfile_20,regfile_21,regfile_22,regfile_23,regfile_24,regfile_25,regfile_26,regfile_27,regfile_28,regfile_29,regfile_30,regfile_31);
+	always @(*)
+		set_gpr_ptr(regfile_0, regfile_1, regfile_2, regfile_3, regfile_4,regfile_5,regfile_6,regfile_7,regfile_8,regfile_9,regfile_10,regfile_11,regfile_12,regfile_13,regfile_14,regfile_15,regfile_16,regfile_17,regfile_18,regfile_19,regfile_20,regfile_21,regfile_22,regfile_23,regfile_24,regfile_25,regfile_26,regfile_27,regfile_28,regfile_29,regfile_30,regfile_31);
 endmodule

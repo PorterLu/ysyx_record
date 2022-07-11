@@ -24,4 +24,7 @@ main.o: /home/porterlu/ysyx-workbench/myCPU/csrc/main.cpp \
  /home/porterlu/ysyx-workbench/myCPU/include/state.h \
  /home/porterlu/ysyx-workbench/myCPU/include/expr.h \
  /home/porterlu/ysyx-workbench/myCPU/include/exec.h \
- /home/porterlu/ysyx-workbench/myCPU/include/watchpoint.h
+ /home/porterlu/ysyx-workbench/myCPU/include/watchpoint.h \
+ /home/porterlu/ysyx-workbench/myCPU/include/disasm.h \
+ /home/porterlu/ysyx-workbench/myCPU/include/elftl.h \
+ /home/porterlu/ysyx-workbench/myCPU/include/difftest.h

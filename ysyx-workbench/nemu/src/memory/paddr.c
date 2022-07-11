@@ -81,8 +81,8 @@ void memlog_close()
 word_t paddr_read(paddr_t addr, int len) {
   if (likely(in_pmem(addr))) 
   {
-#ifdef CONFIG_MEM_TRACE
 	word_t data = pmem_read(addr, len);
+#ifdef CONFIG_MEM_TRACE
 	memlog_record(addr, len, data, false);
 #endif
 	return data;

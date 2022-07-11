@@ -18,4 +18,5 @@ sdb.o: /home/porterlu/ysyx-workbench/myCPU/csrc/sdb.c \
  /home/porterlu/ysyx-workbench/myCPU/include/expr.h \
  /home/porterlu/ysyx-workbench/myCPU/include/vmem.h \
  /home/porterlu/ysyx-workbench/myCPU/include/pmem.h \
- /home/porterlu/ysyx-workbench/myCPU/include/watchpoint.h
+ /home/porterlu/ysyx-workbench/myCPU/include/watchpoint.h \
+ /home/porterlu/ysyx-workbench/myCPU/include/elftl.h

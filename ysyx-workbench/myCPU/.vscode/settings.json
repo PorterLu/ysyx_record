@@ -2,7 +2,13 @@
 	"C_Cpp.errorSquiggles": "Disabled",
 	"files.associations": {
 		"vmem.h": "c",
-		"string.h": "c"
+		"string.h": "c",
+		"exec.h": "c",
+		"ostream": "cpp",
+		"watchpoint.h": "c",
+		"utils.h": "c",
+		"elftl.h": "c",
+		"assert.h": "c"
 	},
 	"files.watcherExclude": {
 		"**/target": true

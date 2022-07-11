@@ -22,4 +22,4 @@ image: $(IMAGE).elf
 	$(OBJCOPY) -S --set-section-flags .bss=alloc,contents -O binary $(IMAGE).elf $(IMAGE).bin
 
 run : image
-	make -C $(dir $(AM_HOME))/myCPU IMG_FILE=$(abspath $(IMAGE).bin) run
+	make -C $(dir $(AM_HOME))/myCPU IMG_BIN=$(abspath $(IMAGE).bin) IMG_FILE=$(abspath $(IMAGE).elf) SO_FILE=$(abspath $(NEMU_HOME)/build/riscv64-nemu-interpreter-so) run
