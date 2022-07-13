@@ -93,7 +93,7 @@ void init_difftest(char *ref_so_file, long img_size, int port){
 	ref_difftest_regcpy(&cpu, DIFFTEST_TO_REF);
 }
 
-void difftest_step(vaddr_t pc, vaddr_t npc){
+void difftest_step(vaddr_t pc, vaddr_t npc, vaddr_t addr, bool is_store){
 	CPU_state ref_r;
 
 	if(skip_dut_nr_inst > 0){
@@ -119,4 +119,27 @@ void difftest_step(vaddr_t pc, vaddr_t npc){
 	ref_difftest_regcpy(&ref_r, DIFFTEST_TO_DUT);
 
 	checkregs(&ref_r, pc);
+
+	if(is_store)
+	{
+		int i;
+		uint8_t tmp[8];
+		uint64_t data = paddr_read(addr, 8);
+		ref_difftest_memcpy(addr, tmp, 8, DIFFTEST_TO_DUT);
+		if( data != *((uint64_t*)tmp))
+		{
+			state = NEMU_ABORT;
+			set_bad();
+    		reg_display();
+			printf("store data different at %lx\n", addr);
+			printf("ref: ");
+			for(i = 0; i < 8; i++)
+				printf("%02x ", tmp[i]);
+			printf("\n");
+			printf("dut: ");
+			for(i = 0; i < 8; i++)
+				printf("%02x ", *((uint8_t*)&data + i));
+			printf("\n");
+		}
+	}
 }

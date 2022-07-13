@@ -58,7 +58,7 @@ static int cmd_si(char *args){
 static int cmd_info(char *args){
 	char *arg = strtok(NULL, " ");
 	if(strcmp(arg, "r") == 0)
-		dump_gpr();
+		reg_display();
 	if(strcmp(arg, "w") == 0)
 		print_wp();
 	return 0;
@@ -167,6 +167,7 @@ static int cmd_help(char *args){
 
 void sdbloop()
 {	
+	set_batch_mode();
 	if(is_batch_mode){
 		cmd_c(NULL);
 		return ;

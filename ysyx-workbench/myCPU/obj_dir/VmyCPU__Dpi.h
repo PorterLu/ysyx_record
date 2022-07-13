@@ -16,10 +16,14 @@ extern "C" {
 
 
     // DPI IMPORTS
-    // DPI import at /home/porterlu/ysyx-workbench/myCPU/vsrc/ebreak.v:1:30
-    extern void halt();
+    // DPI import at /home/porterlu/ysyx-workbench/myCPU/vsrc/Mem.v:3:30
+    extern void pc_read(long long raddr, long long* rdata);
+    // DPI import at /home/porterlu/ysyx-workbench/myCPU/vsrc/Mem.v:1:30
+    extern void pmem_read(long long raddr, long long* rdata);
+    // DPI import at /home/porterlu/ysyx-workbench/myCPU/vsrc/Mem.v:2:30
+    extern void pmem_write(long long waddr, long long wdata, char mask);
     // DPI import at /home/porterlu/ysyx-workbench/myCPU/vsrc/gpr_ptr.v:1:30
-    extern void set_gpr_ptr(const svLogicVecVal* regfile_0, const svLogicVecVal* regfile_1, const svLogicVecVal* regfile_2, const svLogicVecVal* regfile_3, const svLogicVecVal* regfile_4, const svLogicVecVal* regfile_5, const svLogicVecVal* regfile_6, const svLogicVecVal* regfile_7, const svLogicVecVal* regfile_8, const svLogicVecVal* regfile_9, const svLogicVecVal* regfile_10, const svLogicVecVal* regfile_11, const svLogicVecVal* regfile_12, const svLogicVecVal* regfile_13, const svLogicVecVal* regfile_14, const svLogicVecVal* regfile_15, const svLogicVecVal* regfile_16, const svLogicVecVal* regfile_17, const svLogicVecVal* regfile_18, const svLogicVecVal* regfile_19, const svLogicVecVal* regfile_20, const svLogicVecVal* regfile_21, const svLogicVecVal* regfile_22, const svLogicVecVal* regfile_23, const svLogicVecVal* regfile_24, const svLogicVecVal* regfile_25, const svLogicVecVal* regfile_26, const svLogicVecVal* regfile_27, const svLogicVecVal* regfile_28, const svLogicVecVal* regfile_29, const svLogicVecVal* regfile_30, const svLogicVecVal* regfile_31);
+    extern void set_gpr_ptr(long long regfile_0, long long regfile_1, long long regfile_2, long long regfile_3, long long regfile_4, long long regfile_5, long long regfile_6, long long regfile_7, long long regfile_8, long long regfile_9, long long regfile_10, long long regfile_11, long long regfile_12, long long regfile_13, long long regfile_14, long long regfile_15, long long regfile_16, long long regfile_17, long long regfile_18, long long regfile_19, long long regfile_20, long long regfile_21, long long regfile_22, long long regfile_23, long long regfile_24, long long regfile_25, long long regfile_26, long long regfile_27, long long regfile_28, long long regfile_29, long long regfile_30, long long regfile_31);
 
 #ifdef __cplusplus
 }

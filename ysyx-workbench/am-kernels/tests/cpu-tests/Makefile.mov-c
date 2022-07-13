@@ -1,0 +1,4 @@
+NAME = mov-c
+SRCS = tests/mov-c.c
+LIBS += klib
+include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

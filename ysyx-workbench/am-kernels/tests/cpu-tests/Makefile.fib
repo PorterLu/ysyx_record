@@ -1,0 +1,4 @@
+NAME = fib
+SRCS = tests/fib.c
+LIBS += klib
+include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

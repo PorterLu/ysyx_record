@@ -1,0 +1,62 @@
+
+/home/porterlu/ysyx-workbench/am-kernels/tests/cpu-tests/build/swap-riscv64-npc.elf:     file format elf64-littleriscv
+
+
+Disassembly of section .text:
+
+0000000080000000 <_start>:
+    80000000:	00000413          	li	s0,0
+    80000004:	00009117          	auipc	sp,0x9
+    80000008:	ffc10113          	addi	sp,sp,-4 # 80009000 <_end>
+    8000000c:	08c000ef          	jal	ra,80000098 <_trm_init>
+
+0000000080000010 <check>:
+    80000010:	00050463          	beqz	a0,80000018 <check+0x8>
+    80000014:	00008067          	ret
+    80000018:	ff010113          	addi	sp,sp,-16
+    8000001c:	00100513          	li	a0,1
+    80000020:	00113423          	sd	ra,8(sp)
+    80000024:	06c000ef          	jal	ra,80000090 <halt>
+
+0000000080000028 <swap>:
+    80000028:	0005a703          	lw	a4,0(a1)
+    8000002c:	00052783          	lw	a5,0(a0)
+    80000030:	00e52023          	sw	a4,0(a0)
+    80000034:	00f5a023          	sw	a5,0(a1)
+    80000038:	00008067          	ret
+
+000000008000003c <main>:
+    8000003c:	fe010113          	addi	sp,sp,-32
+    80000040:	00d00793          	li	a5,13
+    80000044:	00c10593          	addi	a1,sp,12
+    80000048:	00810513          	addi	a0,sp,8
+    8000004c:	00f12423          	sw	a5,8(sp)
+    80000050:	00e00793          	li	a5,14
+    80000054:	00113c23          	sd	ra,24(sp)
+    80000058:	00f12623          	sw	a5,12(sp)
+    8000005c:	fcdff0ef          	jal	ra,80000028 <swap>
+    80000060:	00812503          	lw	a0,8(sp)
+    80000064:	ff250513          	addi	a0,a0,-14
+    80000068:	00153513          	seqz	a0,a0
+    8000006c:	fa5ff0ef          	jal	ra,80000010 <check>
+    80000070:	00c12503          	lw	a0,12(sp)
+    80000074:	ff350513          	addi	a0,a0,-13
+    80000078:	00153513          	seqz	a0,a0
+    8000007c:	f95ff0ef          	jal	ra,80000010 <check>
+    80000080:	01813083          	ld	ra,24(sp)
+    80000084:	00000513          	li	a0,0
+    80000088:	02010113          	addi	sp,sp,32
+    8000008c:	00008067          	ret
+
+0000000080000090 <halt>:
+    80000090:	00100073          	ebreak
+    80000094:	0000006f          	j	80000094 <halt+0x4>
+
+0000000080000098 <_trm_init>:
+    80000098:	ff010113          	addi	sp,sp,-16
+    8000009c:	00000517          	auipc	a0,0x0
+    800000a0:	01c50513          	addi	a0,a0,28 # 800000b8 <mainargs>
+    800000a4:	00113423          	sd	ra,8(sp)
+    800000a8:	f95ff0ef          	jal	ra,8000003c <main>
+    800000ac:	00100073          	ebreak
+    800000b0:	0000006f          	j	800000b0 <_trm_init+0x18>

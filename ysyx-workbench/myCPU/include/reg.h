@@ -5,7 +5,8 @@
 #include "svdpi.h"
 #include "verilated_dpi.h"
 
-#define Reg(i) (* ((uint64_t *)(reg ## i)))
+#define Reg(i) reg##i
+//#define Reg(i) top->io_gpr_ptr_ ## i
 
 typedef struct {
 	word_t gpr[32];
@@ -21,7 +22,8 @@ typedef struct {
 extern CPU_state cpu;
 extern const char *regs[];
 
-extern "C" void set_gpr_ptr(const svLogicVecVal* reg0, const svLogicVecVal* reg1,const svLogicVecVal* reg2,const svLogicVecVal* reg3,const svLogicVecVal* reg4,const svLogicVecVal* reg5,const svLogicVecVal* reg6,const svLogicVecVal* reg7,const svLogicVecVal* reg8,const svLogicVecVal* reg9,const svLogicVecVal* reg10,const svLogicVecVal* reg11,const svLogicVecVal* reg12,const svLogicVecVal*reg13,const svLogicVecVal* reg14,const svLogicVecVal* reg15,const svLogicVecVal* reg16,const svLogicVecVal* reg17,const svLogicVecVal* reg18,const svLogicVecVal* reg19,const svLogicVecVal* reg20,const svLogicVecVal* reg21,const svLogicVecVal* reg22,const svLogicVecVal* reg23,const svLogicVecVal*reg24,const svLogicVecVal*reg25,const svLogicVecVal*reg26,const svLogicVecVal* reg27, const svLogicVecVal* reg28, const svLogicVecVal* reg29, const svLogicVecVal* reg30, const svLogicVecVal* reg31);
+//void update_register();
+extern "C" void set_gpr_ptr(long long int  reg0, long long int  reg1,long long int  reg2,long long int  reg3,long long int  reg4,long long int  reg5,long long int  reg6,long long int  reg7,long long int  reg8,long long int  reg9,long long int  reg10,long long int  reg11,long long int  reg12,long long int reg13,long long int  reg14,long long int  reg15,long long int  reg16,long long int  reg17,long long int  reg18,long long int  reg19,long long int  reg20,long long int  reg21,long long int  reg22,long long int  reg23,long long int reg24,long long int reg25,long long int reg26,long long int  reg27, long long int  reg28, long long int  reg29, long long int  reg30, long long int  reg31);
 void dump_gpr();
 void reg_display();
 word_t reg_str2val(const char *s, bool *success);

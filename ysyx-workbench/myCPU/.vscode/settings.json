@@ -8,7 +8,8 @@
 		"watchpoint.h": "c",
 		"utils.h": "c",
 		"elftl.h": "c",
-		"assert.h": "c"
+		"assert.h": "c",
+		"common.h": "c"
 	},
 	"files.watcherExclude": {
 		"**/target": true

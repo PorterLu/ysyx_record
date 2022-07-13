@@ -1,0 +1,4 @@
+NAME = load-store
+SRCS = tests/load-store.c
+LIBS += klib
+include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

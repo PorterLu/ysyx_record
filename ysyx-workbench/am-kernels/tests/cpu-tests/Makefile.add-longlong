@@ -1,0 +1,4 @@
+NAME = add-longlong
+SRCS = tests/add-longlong.c
+LIBS += klib
+include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

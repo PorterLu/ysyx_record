@@ -84,5 +84,5 @@ int main(int argc, char *argv[]){
 		dump_gpr();
 	}*/
 	sim_exit();
-	return 0;
+	return status();
 }	

@@ -13,12 +13,6 @@ VmyCPU::VmyCPU(VerilatedContext* _vcontextp__, const char* _vcname__)
     : vlSymsp{new VmyCPU__Syms(_vcontextp__, _vcname__, this)}
     , clock{vlSymsp->TOP.clock}
     , reset{vlSymsp->TOP.reset}
-    , io_wen{vlSymsp->TOP.io_wen}
-    , io_instr{vlSymsp->TOP.io_instr}
-    , io_dat_addr{vlSymsp->TOP.io_dat_addr}
-    , io_pc_addr{vlSymsp->TOP.io_pc_addr}
-    , io_wdata{vlSymsp->TOP.io_wdata}
-    , io_rdata{vlSymsp->TOP.io_rdata}
     , io_pc_debug{vlSymsp->TOP.io_pc_debug}
     , __PVT____024unit{vlSymsp->TOP.__PVT____024unit}
     , rootp{&(vlSymsp->TOP)}

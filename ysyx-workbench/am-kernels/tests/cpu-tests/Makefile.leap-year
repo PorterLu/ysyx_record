@@ -1,0 +1,4 @@
+NAME = leap-year
+SRCS = tests/leap-year.c
+LIBS += klib
+include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

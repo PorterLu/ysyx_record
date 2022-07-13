@@ -1,0 +1,4 @@
+NAME = movsx
+SRCS = tests/movsx.c
+LIBS += klib
+include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

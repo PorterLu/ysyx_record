@@ -1,0 +1,4 @@
+NAME = quick-sort
+SRCS = tests/quick-sort.c
+LIBS += klib
+include /home/porterlu/ysyx-workbench/abstract-machine/Makefile
