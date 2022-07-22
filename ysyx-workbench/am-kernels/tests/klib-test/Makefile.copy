@@ -1,4 +1,0 @@
-NAME = copy
-SRCS = tests/copy.c
-LIBS += klib
-include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

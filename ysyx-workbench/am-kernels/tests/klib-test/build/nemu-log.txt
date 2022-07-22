@@ -1,6 +1,0 @@
-[1;34m[src/utils/log.c:13 init_log] Log is written to /home/porterlu/ysyx-workbench/am-kernels/tests/klib-test/build/nemu-log.txt[0m
-[1;34m[src/memory/paddr.c:45 init_mem] physical memory area [0x80000000, 0x87ffffff][0m
-[1;34m[src/monitor/monitor.c:47 load_img] The image is /home/porterlu/ysyx-workbench/am-kernels/tests/klib-test/build/memcmp-riscv64-nemu.bin, size = 496[0m
-[1;34m[src/monitor/monitor.c:14 welcome] Trace: [1;32mON[0m[0m
-[1;34m[src/monitor/monitor.c:15 welcome] If trace is enabled, a log file will be generated to record the trace. This may lead to a large log file. If it is not necessary, you can disable it in menuconfig[0m
-[1;34m[src/monitor/monitor.c:18 welcome] Build time: 23:28:37, Jul 13 2022[0m

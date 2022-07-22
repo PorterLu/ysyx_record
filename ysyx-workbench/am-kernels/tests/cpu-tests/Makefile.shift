@@ -1,4 +1,0 @@
-NAME = shift
-SRCS = tests/shift.c
-LIBS += klib
-include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

@@ -1,4 +1,0 @@
-NAME = matrix-mul
-SRCS = tests/matrix-mul.c
-LIBS += klib
-include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

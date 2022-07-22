@@ -1,4 +1,0 @@
-NAME = add-test
-SRCS = tests/add-test.c
-LIBS += klib
-include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

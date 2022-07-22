@@ -1,4 +1,0 @@
-NAME = func_test
-SRCS = tests/func_test.c
-LIBS += klib
-include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

@@ -1,4 +1,0 @@
-NAME = sprintf
-SRCS = tests/sprintf.c
-LIBS += klib
-include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

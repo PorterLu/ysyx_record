@@ -1,4 +1,0 @@
-NAME = sum
-SRCS = tests/sum.c
-LIBS += klib
-include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

@@ -1,4 +1,0 @@
-NAME = min3
-SRCS = tests/min3.c
-LIBS += klib
-include /home/porterlu/ysyx-workbench/abstract-machine/Makefile

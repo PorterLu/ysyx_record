@@ -1,4 +1,0 @@
-NAME = sub-longlong
-SRCS = tests/sub-longlong.c
-LIBS += klib
-include /home/porterlu/ysyx-workbench/abstract-machine/Makefile
