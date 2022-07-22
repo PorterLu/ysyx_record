@@ -6,7 +6,9 @@
 static char *strtab = NULL;
 static Elf64_Sym *symtab = NULL;
 static int nr_symtab_entry;
-
+static char *strtab_program = NULL;
+static Elf64_Sym *symtab_program = NULL;
+static int nr_symtab_entry_program;
 static int depth = 0;
 
 typedef struct ftrace_element{
@@ -19,6 +21,11 @@ typedef struct ftrace_element{
 
 ftrace_element *head = NULL;
 ftrace_element *tail = NULL;
+
+uint8_t* guest_to_host(paddr_t paddr);
+
+uint64_t findSym(char *name);
+void elf_program();
 
 void init_elf(const char* elf_file)
 {
@@ -76,11 +83,44 @@ void init_elf(const char* elf_file)
 		}
 	}
 
+
+	uint8_t buf_disk[4096];
+	uint64_t ramdisk_start = findSym("ramdisk_start");
+
+	//if(ramdisk_start != -1)
+	//{
+	memcpy(buf_disk, guest_to_host(ramdisk_start), 4096);
+
+	Elf64_Ehdr *elf_ramdisk = (void*)buf_disk;
+
+	uint64_t sh_ramdisk_size = elf_ramdisk->e_shentsize * elf_ramdisk->e_shnum;
+
+	Elf64_Shdr *sh_ramdisk = malloc(sh_ramdisk_size);
+	memcpy(sh_ramdisk, guest_to_host(ramdisk_start + elf_ramdisk->e_shoff), sh_ramdisk_size);
+
+	char *shstrtab_program = malloc(sh[elf_ramdisk->e_shstrndx].sh_size);
+	memcpy(shstrtab_program, guest_to_host(ramdisk_start + sh_ramdisk[elf_ramdisk->e_shstrndx].sh_offset), sh_ramdisk[elf_ramdisk->e_shstrndx].sh_size);
+
+	for(int i = 0; i < elf_ramdisk->e_shnum; i++){
+		if(sh_ramdisk[i].sh_type == SHT_SYMTAB && (strcmp(shstrtab_program + sh_ramdisk[i].sh_name, ".symtab") == 0)){
+			symtab_program = malloc(sh_ramdisk[i].sh_size);
+			memcpy(symtab_program, guest_to_host(ramdisk_start + sh_ramdisk[i].sh_offset), sh_ramdisk[i].sh_size);
+			nr_symtab_entry_program = sh_ramdisk[i].sh_size/(sizeof(symtab_program[0]));
+		}else if(sh_ramdisk[i].sh_type == SHT_STRTAB && (strcmp(shstrtab_program + sh_ramdisk[i].sh_name, ".strtab") == 0)){
+			strtab_program = malloc(sh_ramdisk[i].sh_size);
+			memcpy(strtab_program, guest_to_host(ramdisk_start + sh_ramdisk[i].sh_offset), sh_ramdisk[i].sh_size);
+		
+		}
+	}
+	free(sh_ramdisk);
+	//}
+
+
 	free(sh);
 	free(shstrtab);
-
+	assert(symtab != NULL && strtab != NULL);
 	assert(strtab != NULL && symtab != NULL);
-
+	//assert(strtab_program != NULL && symtab_program != NULL);
 	fclose(fp);
 }
 
@@ -93,6 +133,8 @@ uint64_t findSym(char *name){
 	return -1;
 }
 
+
+
 //在64位地址空间可以使用指针
 //findFunc通过地址找到对应的函数名
 char* findFunc(uint64_t addr)
@@ -100,9 +142,15 @@ char* findFunc(uint64_t addr)
 	int i;
 	for(i=0; i<nr_symtab_entry; i++)
 	{
-		if(addr >= symtab[i].st_value && addr < symtab[i].st_value + symtab[i].st_size)
+		if(addr >= symtab[i].st_value && addr <= symtab[i].st_value + symtab[i].st_size)
 			return &strtab[symtab[i].st_name];
 	}
+
+	for(i = 0; i < nr_symtab_entry_program; i++){
+		if(addr >= symtab_program[i].st_value && addr <= symtab_program[i].st_value + symtab_program[i].st_size)
+			return &strtab_program[symtab_program[i].st_name];
+	}
+
 	return NULL;
 }
 
@@ -112,6 +160,7 @@ void add_ftrace(uint64_t addr, bool is_call)
 	pointer->addr = addr;
 	pointer->is_call = is_call;
 	pointer->func_name = findFunc(addr);
+	pointer->next = NULL;
 	
 	if(is_call)
 	{

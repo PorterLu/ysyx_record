@@ -75,10 +75,12 @@ void memlog_record(paddr_t addr, int len, word_t data, bool iswrite)
 
 void memlog_close()
 {
+#ifdef CONFIG_MEM_TRACE
 	fclose(memFile);
+#endif
 }
 
-word_t paddr_read(paddr_t addr, int len) {
+word_t paddr_read(volatile paddr_t addr, int len) {
   if (likely(in_pmem(addr))) 
   {
 	word_t data = pmem_read(addr, len);
@@ -92,7 +94,7 @@ word_t paddr_read(paddr_t addr, int len) {
   return 0;
 }
 
-void paddr_write(paddr_t addr, int len, word_t data) {
+void paddr_write(volatile paddr_t addr, int len, word_t data) {
   if (likely(in_pmem(addr)))
   {
 	 pmem_write(addr, len, data);

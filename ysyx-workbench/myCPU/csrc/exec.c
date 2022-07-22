@@ -7,6 +7,8 @@
 #include <reg.h>
 #include <elftl.h>
 #include <difftest.h>
+#include <gpu.h>
+#include <timer.h>
 
 #define SEXT(x, len) ({ struct { int64_t n : len; } __x = { .n = x }; (uint64_t)__x.n; })
 //#include <disasm.h>
@@ -28,6 +30,7 @@ static void exec_once()
 	
 	step_and_dump_wave();
 
+/*
 	sprintf(log_buf, "%016lx:    ", old_pc);
 	uint32_t instr = paddr_read(old_pc, 4);
 
@@ -37,14 +40,19 @@ static void exec_once()
 
 	sprintf(log_buf + 33, "   ");
 	disassemble(log_buf + 36, 70, old_pc , (uint8_t *)(&(instr)) , 4);
-	printf("%s\n", log_buf);
-	log_write("%s\n", log_buf);
+	
+	if(g_print_step){
+		printf("%s\n", log_buf);
+	}
+
+	log_write("%s\n", log_buf);*/
 	// p is the ouput array, the next is the remaining length of the array, the third
 	cpu.pc = top->io_pc_debug;
 
-
+/*
 	bool is_store = ((instr&0x7f) == 0x23);
 	uint64_t imm = ((instr & 0xfe000000) >> 20) + ((instr & 0xf80) >> 7);
+
 	SEXT(imm, 12);
 	difftest_step(old_pc, top->io_pc_debug,  (imm + cpu.gpr[(instr & 0x000f8000) >> 15]) & (~7) , is_store);
 
@@ -63,8 +71,15 @@ static void exec_once()
 			add_ftrace(cpu.pc,false); 
 		else if(dest==1 || dest ==5)				//目的寄存器为1或者5，则是call
 			add_ftrace(cpu.pc, true);
-	}
+	}*/
 
+	static uint64_t last = 0;
+  	uint64_t now = get_time();
+  	if ((now - last) < 1000000 / 60) {
+    	return;
+  	}
+  	last = now;
+  	vga_update_screen();
 }
  
 void exec(uint64_t n)

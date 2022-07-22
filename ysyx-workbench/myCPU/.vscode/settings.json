@@ -9,7 +9,8 @@
 		"utils.h": "c",
 		"elftl.h": "c",
 		"assert.h": "c",
-		"common.h": "c"
+		"common.h": "c",
+		"sim.h": "c"
 	},
 	"files.watcherExclude": {
 		"**/target": true

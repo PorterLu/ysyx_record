@@ -5,6 +5,15 @@
 static IOMap maps[NR_MAP] = {};
 static int nr_map = 0;
 
+void device_print(){
+	int i = 0;
+	for(;i < nr_map; i++){
+		printf("IO Name: %s\n", maps[i].name);
+		printf("addr: [%x, %x]\n", maps[i].low, maps[i].high);
+	}
+}
+
+
 static IOMap* fetch_mmio_map(paddr_t addr) {
   int mapid = find_mapid_by_addr(maps, nr_map, addr);
   return (mapid == -1 ? NULL : &maps[mapid]);

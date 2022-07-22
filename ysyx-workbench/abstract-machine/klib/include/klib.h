@@ -37,6 +37,12 @@ int    sprintf   (char *str, const char *format, ...);
 int    snprintf  (char *str, size_t size, const char *format, ...);
 int    vsprintf  (char *str, const char *format, va_list ap);
 int    vsnprintf (char *str, size_t size, const char *format, va_list ap);
+//int print_template(char *buf, int num, const char* fmt, ...);
+
+
+//#define printf(fmt, ...) do{print_template(NULL, 0, fmt, ## __VA_ARGS__);} while(0);
+//#define sprintf(buf, fmt, ...) do{print_template(buf, 1, fmt, ## __VA_ARGS__);} while(0);
+
 
 // assert.h
 #ifdef NDEBUG

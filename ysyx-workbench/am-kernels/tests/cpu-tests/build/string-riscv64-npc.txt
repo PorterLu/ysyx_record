@@ -159,7 +159,7 @@ Disassembly of section .text:
     8000021c:	0ff5f593          	andi	a1,a1,255
     80000220:	00050793          	mv	a5,a0
     80000224:	00c50733          	add	a4,a0,a2
-    80000228:	00060863          	beqz	a2,80000238 <memset+0x1c>
+    80000228:	00c05863          	blez	a2,80000238 <memset+0x1c>
     8000022c:	00b78023          	sb	a1,0(a5)
     80000230:	00178793          	addi	a5,a5,1
     80000234:	fee79ce3          	bne	a5,a4,8000022c <memset+0x10>

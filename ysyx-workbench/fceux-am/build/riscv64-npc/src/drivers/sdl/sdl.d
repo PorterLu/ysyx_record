@@ -1,0 +1,25 @@
+/home/porterlu/ysyx-workbench/fceux-am/build/riscv64-npc/src/drivers/sdl/sdl.o: \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/sdl.cpp \
+ /home/porterlu/ysyx-workbench/abstract-machine/klib/include/klib-macros.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/main.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../driver.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../types.h \
+ /home/porterlu/ysyx-workbench/abstract-machine/klib/include/klib.h \
+ /home/porterlu/ysyx-workbench/abstract-machine/am/include/am.h \
+ /home/porterlu/ysyx-workbench/abstract-machine/am/include/arch/riscv64-npc.h \
+ /home/porterlu/ysyx-workbench/abstract-machine/am/include/amdev.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../git.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../utils/md5.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../utils/../types.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../utils/valuearray.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../file.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../emufile.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/throttle.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../fceu.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../version.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/input.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/dface.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/sdl.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/sdl-video.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../types.h \
+ /home/porterlu/ysyx-workbench/fceux-am/src/drivers/sdl/../../config.h

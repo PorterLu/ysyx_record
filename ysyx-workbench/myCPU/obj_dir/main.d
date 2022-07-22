@@ -27,4 +27,8 @@ main.o: /home/porterlu/ysyx-workbench/myCPU/csrc/main.cpp \
  /home/porterlu/ysyx-workbench/myCPU/include/watchpoint.h \
  /home/porterlu/ysyx-workbench/myCPU/include/disasm.h \
  /home/porterlu/ysyx-workbench/myCPU/include/elftl.h \
- /home/porterlu/ysyx-workbench/myCPU/include/difftest.h
+ /home/porterlu/ysyx-workbench/myCPU/include/difftest.h \
+ /home/porterlu/ysyx-workbench/myCPU/include/serial.h \
+ /home/porterlu/ysyx-workbench/myCPU/include/timer.h \
+ /home/porterlu/ysyx-workbench/myCPU/include/gpu.h \
+ /home/porterlu/ysyx-workbench/myCPU/include/mmio.h

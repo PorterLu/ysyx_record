@@ -9,7 +9,7 @@ SRCS += $(abspath $(shell find ./csrc -name "*.cc"))
 VERILATOR = verilator
 PWD := $(shell pwd)
 INC_PATH = $(PWD)/include
-FLAGS = --cc --build --exe --trace -Mdir obj_dir --top-module myCPU
+FLAGS = --cc --build --exe --trace -Wno-lint -Mdir obj_dir --top-module myCPU
 HEAD_PATH = -CFLAGS -I$(INC_PATH)
 LOG_FILE = log.txt 
 IMG_FILE = 
@@ -28,7 +28,7 @@ CXXFLAGS = $(addprefix -CFLAGS ,$(shell llvm-config-11 --cxxflags) -fPIE)
 #CXXFLAGS += -CFLAGS -D__STDC_FORMAT_MACROS
 #CXXFLAGS += -CFLAGS -D__STDC_LIMIT_MACROS
 #CXXFLAGS += -CFLAGS -fPIE
-LIBS = -LDFLAGS $(shell llvm-config-11 --libs)
+LIBS = -LDFLAGS $(shell llvm-config-11 --libs) -LDFLAGS -lSDL2
 SO_LIBS = -LDFLAGS -ldl
 #-LDFLAGS -lriscv64-nemu-interpreter
 run : $(TARGET)

@@ -18,22 +18,30 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
     VmyCPU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VmyCPU___024root___settle__TOP__0\n"); );
     // Init
-    VlWide<4>/*127:0*/ __Vtemp_hcf153522__0;
-    VlWide<4>/*127:0*/ __Vtemp_h000cdfec__0;
-    VlWide<4>/*127:0*/ __Vtemp_h27b98097__0;
-    VlWide<4>/*127:0*/ __Vtemp_h9e395d09__0;
-    VlWide<4>/*127:0*/ __Vtemp_ha01e7241__0;
     VlWide<4>/*127:0*/ __Vtemp_ha00eb84c__0;
     VlWide<4>/*127:0*/ __Vtemp_ha01eead0__0;
     VlWide<4>/*127:0*/ __Vtemp_hcfb81aa2__0;
     VlWide<4>/*127:0*/ __Vtemp_hcfe0c66f__0;
+    VlWide<4>/*127:0*/ __Vtemp_h000cdfec__0;
+    VlWide<4>/*127:0*/ __Vtemp_h2225429e__0;
+    VlWide<4>/*127:0*/ __Vtemp_hd25c991c__0;
+    VlWide<4>/*127:0*/ __Vtemp_hed7db9c3__0;
+    VlWide<4>/*127:0*/ __Vtemp_hac86ceb7__0;
+    VlWide<3>/*95:0*/ __Vtemp_hdadf6d67__0;
+    VlWide<3>/*95:0*/ __Vtemp_h00004989__0;
+    VlWide<3>/*95:0*/ __Vtemp_h86dd9fb7__0;
+    VlWide<3>/*95:0*/ __Vtemp_h2833a926__0;
+    VlWide<3>/*95:0*/ __Vtemp_hf14e7ca7__0;
+    VlWide<3>/*95:0*/ __Vtemp_he7f6e66f__0;
+    VlWide<3>/*95:0*/ __Vtemp_h7078d0cb__0;
+    VlWide<4>/*127:0*/ __Vtemp_hfa207146__0;
     VlWide<4>/*127:0*/ __Vtemp_h000cdfec__1;
-    VlWide<4>/*127:0*/ __Vtemp_h9a82830e__0;
-    VlWide<4>/*127:0*/ __Vtemp_he2e0e153__0;
-    VlWide<4>/*127:0*/ __Vtemp_h003534c0__0;
-    VlWide<4>/*127:0*/ __Vtemp_h247610c0__0;
+    VlWide<4>/*127:0*/ __Vtemp_h27b98097__0;
+    VlWide<4>/*127:0*/ __Vtemp_h1fb49aca__0;
+    VlWide<4>/*127:0*/ __Vtemp_ha01e7241__0;
+    VlWide<4>/*127:0*/ __Vtemp_hfbe01535__0;
+    VlWide<4>/*127:0*/ __Vtemp_he14fa860__0;
     VlWide<4>/*127:0*/ __Vtemp_h000cdfec__2;
-    VlWide<4>/*127:0*/ __Vtemp_hac6fddfe__0;
     VlWide<4>/*127:0*/ __Vtemp_he7104f08__0;
     VlWide<4>/*127:0*/ __Vtemp_heaea44b1__0;
     VlWide<3>/*95:0*/ __Vtemp_h92845ed7__0;
@@ -272,85 +280,73 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                                    >> 0x14U)))
                                                                ? vlSelf->myCPU__DOT__regFile__DOT__reg_1
                                                                : vlSelf->myCPU__DOT__regFile__DOT__reg_0)))))))))))));
-    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_692 
-        = ((0x4013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-           | ((0x6013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-              | ((0x7013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                 | ((0x1013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                    | ((0x101bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                       | ((0x5013U == (0xfc00707fU 
-                                       & vlSelf->myCPU__DOT__control_io_inst)) 
-                          | ((0x501bU == (0xfe00707fU 
-                                          & vlSelf->myCPU__DOT__control_io_inst)) 
-                             | ((0x40005013U == (0xfc00707fU 
+    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_740 
+        = ((0x101bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+           | ((0x5013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+              | ((0x501bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                 | ((0x40005013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                    | ((0x4000501bU == (0xfe00707fU 
+                                        & vlSelf->myCPU__DOT__control_io_inst)) 
+                       | ((0x33U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                          | ((0x3bU == (0xfe00707fU 
+                                        & vlSelf->myCPU__DOT__control_io_inst)) 
+                             | ((0x40000033U == (0xfe00707fU 
                                                  & vlSelf->myCPU__DOT__control_io_inst)) 
-                                | ((0x4000501bU == 
+                                | ((0x4000003bU == 
                                     (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                                   | ((0x33U == (0xfe00707fU 
-                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
-                                      | ((0x3bU == 
+                                   | ((0x1033U == (0xfe00707fU 
+                                                   & vlSelf->myCPU__DOT__control_io_inst)) 
+                                      | ((0x103bU == 
                                           (0xfe00707fU 
                                            & vlSelf->myCPU__DOT__control_io_inst)) 
-                                         | ((0x40000033U 
+                                         | ((0x2033U 
                                              == (0xfe00707fU 
                                                  & vlSelf->myCPU__DOT__control_io_inst)) 
-                                            | ((0x4000003bU 
+                                            | ((0x3033U 
                                                 == 
                                                 (0xfe00707fU 
                                                  & vlSelf->myCPU__DOT__control_io_inst)) 
-                                               | ((0x1033U 
+                                               | ((0x4033U 
                                                    == 
                                                    (0xfe00707fU 
                                                     & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                  | ((0x103bU 
+                                                  | ((0x5033U 
                                                       == 
                                                       (0xfe00707fU 
                                                        & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                     | ((0x2033U 
+                                                     | ((0x503bU 
                                                          == 
                                                          (0xfe00707fU 
                                                           & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                        | ((0x3033U 
+                                                        | ((0x40005033U 
                                                             == 
                                                             (0xfe00707fU 
                                                              & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                           | ((0x4033U 
+                                                           | ((0x4000503bU 
                                                                == 
                                                                (0xfe00707fU 
                                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                              | ((0x5033U 
+                                                              | ((0x6033U 
                                                                   == 
                                                                   (0xfe00707fU 
                                                                    & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                 | ((0x503bU 
+                                                                 | ((0x7033U 
                                                                      == 
                                                                      (0xfe00707fU 
                                                                       & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                    | ((0x40005033U 
+                                                                    | ((0x2000033U 
                                                                         == 
                                                                         (0xfe00707fU 
                                                                          & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                       | ((0x4000503bU 
+                                                                       | ((0x200003bU 
                                                                            == 
                                                                            (0xfe00707fU 
                                                                             & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                          | ((0x6033U 
+                                                                          | ((0x2004033U 
                                                                               == 
                                                                               (0xfe00707fU 
                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                             | ((0x7033U 
-                                                                                == 
-                                                                                (0xfe00707fU 
-                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                                | ((0x2000033U 
-                                                                                == 
-                                                                                (0xfe00707fU 
-                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                                | ((0x200003bU 
-                                                                                == 
-                                                                                (0xfe00707fU 
-                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                                | ((0x2004033U 
+                                                                             | ((0x2005033U 
                                                                                 == 
                                                                                 (0xfe00707fU 
                                                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
@@ -358,7 +354,15 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                                                 == 
                                                                                 (0xfe00707fU 
                                                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                                | ((0x200503bU 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
                                                                                 | ((0x2006033U 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                                | ((0x2007033U 
                                                                                 == 
                                                                                 (0xfe00707fU 
                                                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
@@ -366,9 +370,13 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                                                 == 
                                                                                 (0xfe00707fU 
                                                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                                | ((0x200703bU 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
                                                                                 | (0x100073U 
                                                                                 != vlSelf->myCPU__DOT__control_io_inst)))))))))))))))))))))))))))))));
-    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_605 
+    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_649 
         = ((0x6fU == (0x7fU & vlSelf->myCPU__DOT__control_io_inst))
             ? 0U : ((0x67U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
                      ? 0U : ((0x63U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
@@ -440,72 +448,72 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                               & vlSelf->myCPU__DOT__control_io_inst))
                                                              ? 7U
                                                              : 0U)))))))))))))));
-    if ((0x3033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 7U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
-    } else if ((0x4033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 4U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
-    } else if ((0x5033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 8U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
-    } else if ((0x503bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 8U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
-    } else if ((0x40005033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 9U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
+    if ((0x40005033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 9U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
     } else if ((0x4000503bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 9U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 9U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
     } else if ((0x6033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 3U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 3U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
     } else if ((0x7033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 2U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 2U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
     } else if ((0x2000033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 0xcU;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0xcU;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
     } else if ((0x200003bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 0xcU;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0xcU;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
     } else if ((0x2004033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 0xdU;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0xdU;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
+    } else if ((0x2005033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0xfU;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
     } else if ((0x200403bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 0xdU;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0xdU;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
+    } else if ((0x200503bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0xfU;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
     } else if ((0x2006033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 0xeU;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0xeU;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
+    } else if ((0x2007033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0x10U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
     } else if ((0x200603bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 0xeU;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0xeU;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
+    } else if ((0x200703bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0x10U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
     } else if ((0x100073U == vlSelf->myCPU__DOT__control_io_inst)) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 3U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 0xfU;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 3U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0x11U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 0U;
     } else {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401 = 0xbU;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346 = 3U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429 = 0xbU;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370 = 3U;
     }
-    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_546 
+    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_586 
         = ((0x4063U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
             ? 0U : ((0x5063U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
                      ? 0U : ((0x6063U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
@@ -577,90 +585,79 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                               & vlSelf->myCPU__DOT__control_io_inst))
                                                              ? 4U
                                                              : 0U)))))))))))))));
-    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_198 
-        = ((0x3013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-           | ((0x4013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-              | ((0x6013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                 | ((0x7013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                    | ((0x1013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                       | ((0x101bU == (0xfe00707fU 
-                                       & vlSelf->myCPU__DOT__control_io_inst)) 
-                          | ((0x5013U == (0xfc00707fU 
-                                          & vlSelf->myCPU__DOT__control_io_inst)) 
-                             | ((0x501bU == (0xfe00707fU 
-                                             & vlSelf->myCPU__DOT__control_io_inst)) 
-                                | ((0x40005013U == 
-                                    (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                                   | ((0x4000501bU 
+    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_210 
+        = ((0x1013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+           | ((0x101bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+              | ((0x5013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                 | ((0x501bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                    | ((0x40005013U == (0xfc00707fU 
+                                        & vlSelf->myCPU__DOT__control_io_inst)) 
+                       | ((0x4000501bU == (0xfe00707fU 
+                                           & vlSelf->myCPU__DOT__control_io_inst)) 
+                          | ((0x33U == (0xfe00707fU 
+                                        & vlSelf->myCPU__DOT__control_io_inst)) 
+                             | ((0x3bU == (0xfe00707fU 
+                                           & vlSelf->myCPU__DOT__control_io_inst)) 
+                                | ((0x40000033U == 
+                                    (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                                   | ((0x4000003bU 
                                        == (0xfe00707fU 
                                            & vlSelf->myCPU__DOT__control_io_inst)) 
-                                      | ((0x33U == 
+                                      | ((0x1033U == 
                                           (0xfe00707fU 
                                            & vlSelf->myCPU__DOT__control_io_inst)) 
-                                         | ((0x3bU 
+                                         | ((0x103bU 
                                              == (0xfe00707fU 
                                                  & vlSelf->myCPU__DOT__control_io_inst)) 
-                                            | ((0x40000033U 
+                                            | ((0x2033U 
                                                 == 
                                                 (0xfe00707fU 
                                                  & vlSelf->myCPU__DOT__control_io_inst)) 
-                                               | ((0x4000003bU 
+                                               | ((0x3033U 
                                                    == 
                                                    (0xfe00707fU 
                                                     & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                  | ((0x1033U 
+                                                  | ((0x4033U 
                                                       == 
                                                       (0xfe00707fU 
                                                        & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                     | ((0x103bU 
+                                                     | ((0x5033U 
                                                          == 
                                                          (0xfe00707fU 
                                                           & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                        | ((0x2033U 
+                                                        | ((0x503bU 
                                                             == 
                                                             (0xfe00707fU 
                                                              & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                           | ((0x3033U 
+                                                           | ((0x40005033U 
                                                                == 
                                                                (0xfe00707fU 
                                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                              | ((0x4033U 
+                                                              | ((0x4000503bU 
                                                                   == 
                                                                   (0xfe00707fU 
                                                                    & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                 | ((0x5033U 
+                                                                 | ((0x6033U 
                                                                      == 
                                                                      (0xfe00707fU 
                                                                       & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                    | ((0x503bU 
+                                                                    | ((0x7033U 
                                                                         == 
                                                                         (0xfe00707fU 
                                                                          & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                       | ((0x40005033U 
+                                                                       | ((0x2000033U 
                                                                            == 
                                                                            (0xfe00707fU 
                                                                             & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                          | ((0x4000503bU 
+                                                                          | ((0x200003bU 
                                                                               == 
                                                                               (0xfe00707fU 
                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                             | ((0x6033U 
+                                                                             | ((0x2004033U 
                                                                                 == 
                                                                                 (0xfe00707fU 
                                                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                                | ((0x7033U 
-                                                                                == 
-                                                                                (0xfe00707fU 
-                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                                | ((0x2000033U 
-                                                                                == 
-                                                                                (0xfe00707fU 
-                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                                | ((0x200003bU 
-                                                                                == 
-                                                                                (0xfe00707fU 
-                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                                | ((0x2004033U 
+                                                                                | ((0x2005033U 
                                                                                 == 
                                                                                 (0xfe00707fU 
                                                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
@@ -668,15 +665,27 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                                                 == 
                                                                                 (0xfe00707fU 
                                                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                                | ((0x200503bU 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
                                                                                 | ((0x2006033U 
                                                                                 == 
                                                                                 (0xfe00707fU 
                                                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                                | (0x200603bU 
+                                                                                | ((0x2007033U 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                                | ((0x200603bU 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                                | (0x200703bU 
                                                                                 == 
                                                                                 (0xfe00707fU 
                                                                                 & vlSelf->myCPU__DOT__control_io_inst))))))))))))))))))))))))))))))));
-    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_244 
+    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_264 
         = ((0x4000501bU != (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
            & ((0x33U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
               | ((0x3bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst)) 
@@ -727,86 +736,102 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                                   == 
                                                                   (0xfe00707fU 
                                                                    & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                 | ((0x200403bU 
+                                                                 | ((0x2005033U 
                                                                      == 
                                                                      (0xfe00707fU 
                                                                       & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                    | ((0x2006033U 
+                                                                    | ((0x200403bU 
                                                                         == 
                                                                         (0xfe00707fU 
                                                                          & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                       | (0x200603bU 
-                                                                          == 
-                                                                          (0xfe00707fU 
-                                                                           & vlSelf->myCPU__DOT__control_io_inst)))))))))))))))))))))));
-    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_292 
-        = ((0x2033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))
-            ? 0U : ((0x3033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))
-                     ? 0U : ((0x4033U == (0xfe00707fU 
-                                          & vlSelf->myCPU__DOT__control_io_inst))
-                              ? 0U : ((0x5033U == (0xfe00707fU 
+                                                                       | ((0x200503bU 
+                                                                           == 
+                                                                           (0xfe00707fU 
+                                                                            & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                          | ((0x2006033U 
+                                                                              == 
+                                                                              (0xfe00707fU 
+                                                                               & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                             | ((0x2007033U 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                                | ((0x200603bU 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                                | (0x200703bU 
+                                                                                == 
+                                                                                (0xfe00707fU 
+                                                                                & vlSelf->myCPU__DOT__control_io_inst)))))))))))))))))))))))))));
+    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_312 
+        = ((0x503bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))
+            ? 1U : ((0x40005033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))
+                     ? 0U : ((0x4000503bU == (0xfe00707fU 
+                                              & vlSelf->myCPU__DOT__control_io_inst))
+                              ? 1U : ((0x6033U == (0xfe00707fU 
                                                    & vlSelf->myCPU__DOT__control_io_inst))
-                                       ? 0U : ((0x503bU 
+                                       ? 0U : ((0x7033U 
                                                 == 
                                                 (0xfe00707fU 
                                                  & vlSelf->myCPU__DOT__control_io_inst))
-                                                ? 1U
+                                                ? 0U
                                                 : (
-                                                   (0x40005033U 
+                                                   (0x2000033U 
                                                     == 
                                                     (0xfe00707fU 
                                                      & vlSelf->myCPU__DOT__control_io_inst))
                                                     ? 0U
                                                     : 
-                                                   ((0x4000503bU 
+                                                   ((0x200003bU 
                                                      == 
                                                      (0xfe00707fU 
                                                       & vlSelf->myCPU__DOT__control_io_inst))
                                                      ? 1U
                                                      : 
-                                                    ((0x6033U 
+                                                    ((0x2004033U 
                                                       == 
                                                       (0xfe00707fU 
                                                        & vlSelf->myCPU__DOT__control_io_inst))
                                                       ? 0U
                                                       : 
-                                                     ((0x7033U 
+                                                     ((0x2005033U 
                                                        == 
                                                        (0xfe00707fU 
                                                         & vlSelf->myCPU__DOT__control_io_inst))
                                                        ? 0U
                                                        : 
-                                                      ((0x2000033U 
+                                                      ((0x200403bU 
                                                         == 
                                                         (0xfe00707fU 
                                                          & vlSelf->myCPU__DOT__control_io_inst))
-                                                        ? 0U
+                                                        ? 1U
                                                         : 
-                                                       ((0x200003bU 
+                                                       ((0x200503bU 
                                                          == 
                                                          (0xfe00707fU 
                                                           & vlSelf->myCPU__DOT__control_io_inst))
                                                          ? 1U
                                                          : 
-                                                        ((0x2004033U 
+                                                        ((0x2006033U 
                                                           == 
                                                           (0xfe00707fU 
                                                            & vlSelf->myCPU__DOT__control_io_inst))
                                                           ? 0U
                                                           : 
-                                                         ((0x200403bU 
+                                                         ((0x2007033U 
                                                            == 
                                                            (0xfe00707fU 
                                                             & vlSelf->myCPU__DOT__control_io_inst))
-                                                           ? 1U
+                                                           ? 0U
                                                            : 
-                                                          ((0x2006033U 
+                                                          ((0x200603bU 
                                                             == 
                                                             (0xfe00707fU 
                                                              & vlSelf->myCPU__DOT__control_io_inst))
-                                                            ? 0U
+                                                            ? 1U
                                                             : 
-                                                           ((0x200603bU 
+                                                           ((0x200703bU 
                                                              == 
                                                              (0xfe00707fU 
                                                               & vlSelf->myCPU__DOT__control_io_inst))
@@ -994,157 +1019,177 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                                    >> 0x14U)))
                                                                ? vlSelf->myCPU__DOT__regFile__DOT__reg_14
                                                                : vlSelf->myCPU__DOT__regFile__DOT___GEN_110)))))))))))));
-    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_709 
-        = ((0x6063U != (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-           & ((0x7063U != (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-              & ((3U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                 | ((0x1003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                    | ((0x2003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                       | ((0x4003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                          | ((0x5003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                             | ((0x6003U == (0x707fU 
+    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_760 
+        = ((0x7063U != (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+           & ((3U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+              | ((0x1003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                 | ((0x2003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                    | ((0x4003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                       | ((0x5003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                          | ((0x6003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                             | ((0x3003U == (0x707fU 
                                              & vlSelf->myCPU__DOT__control_io_inst)) 
-                                | ((0x3003U == (0x707fU 
-                                                & vlSelf->myCPU__DOT__control_io_inst)) 
-                                   | ((0x23U != (0x707fU 
-                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
-                                      & ((0x1023U != 
+                                | ((0x23U != (0x707fU 
+                                              & vlSelf->myCPU__DOT__control_io_inst)) 
+                                   & ((0x1023U != (0x707fU 
+                                                   & vlSelf->myCPU__DOT__control_io_inst)) 
+                                      & ((0x2023U != 
                                           (0x707fU 
                                            & vlSelf->myCPU__DOT__control_io_inst)) 
-                                         & ((0x2023U 
+                                         & ((0x3023U 
                                              != (0x707fU 
                                                  & vlSelf->myCPU__DOT__control_io_inst)) 
-                                            & ((0x3023U 
-                                                != 
-                                                (0x707fU 
-                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
-                                               & ((0x13U 
-                                                   == 
-                                                   (0x707fU 
-                                                    & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                  | ((0x1bU 
-                                                      == 
-                                                      (0x707fU 
-                                                       & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                     | ((0x2013U 
-                                                         == 
-                                                         (0x707fU 
-                                                          & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                        | ((0x3013U 
-                                                            == 
-                                                            (0x707fU 
-                                                             & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                           | (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_692))))))))))))))))));
-    if ((0x6013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 3U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 1U;
-    } else if ((0x7013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 2U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 1U;
-    } else if ((0x1013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 6U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 1U;
-    } else if ((0x101bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 6U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 1U;
-    } else if ((0x5013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 8U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 1U;
-    } else if ((0x501bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 8U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 1U;
-    } else if ((0x40005013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 9U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 1U;
-    } else if ((0x4000501bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 9U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 1U;
-    } else if ((0x33U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 0U;
-    } else if ((0x3bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 0U;
-    } else if ((0x40000033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 1U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 0U;
-    } else if ((0x4000003bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 1U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 0U;
-    } else if ((0x1033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 6U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 0U;
-    } else if ((0x103bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 6U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 0U;
-    } else if ((0x2033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 = 5U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 = 0U;
-    } else {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636 
-            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_621;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416 
-            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_401;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361 
-            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_346;
-    }
-    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_215 
-        = ((0x5063U != (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-           & ((0x6063U != (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-              & ((0x7063U != (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                 & ((3U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                    | ((0x1003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                       | ((0x2003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                          | ((0x4003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
-                             | ((0x5003U == (0x707fU 
-                                             & vlSelf->myCPU__DOT__control_io_inst)) 
-                                | ((0x6003U == (0x707fU 
-                                                & vlSelf->myCPU__DOT__control_io_inst)) 
-                                   | ((0x3003U == (0x707fU 
-                                                   & vlSelf->myCPU__DOT__control_io_inst)) 
-                                      | ((0x23U == 
-                                          (0x707fU 
-                                           & vlSelf->myCPU__DOT__control_io_inst)) 
-                                         | ((0x1023U 
-                                             == (0x707fU 
-                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
-                                            | ((0x2023U 
+                                            & ((0x13U 
                                                 == 
                                                 (0x707fU 
                                                  & vlSelf->myCPU__DOT__control_io_inst)) 
-                                               | ((0x3023U 
+                                               | ((0x1bU 
                                                    == 
                                                    (0x707fU 
                                                     & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                  | ((0x13U 
+                                                  | ((0x2013U 
                                                       == 
                                                       (0x707fU 
                                                        & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                     | ((0x1bU 
+                                                     | ((0x3013U 
                                                          == 
                                                          (0x707fU 
                                                           & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                        | ((0x2013U 
+                                                        | ((0x4013U 
                                                             == 
                                                             (0x707fU 
                                                              & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                           | (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_198))))))))))))))))));
-    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_261 
+                                                           | ((0x6013U 
+                                                               == 
+                                                               (0x707fU 
+                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                              | ((0x7013U 
+                                                                  == 
+                                                                  (0x707fU 
+                                                                   & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                 | ((0x1013U 
+                                                                     == 
+                                                                     (0xfc00707fU 
+                                                                      & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                    | (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_740)))))))))))))))))))));
+    if ((0x5013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 8U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 1U;
+    } else if ((0x501bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 8U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 1U;
+    } else if ((0x40005013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 9U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 1U;
+    } else if ((0x4000501bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 9U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 1U;
+    } else if ((0x33U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 0U;
+    } else if ((0x3bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 0U;
+    } else if ((0x40000033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 1U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 0U;
+    } else if ((0x4000003bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 1U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 0U;
+    } else if ((0x1033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 6U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 0U;
+    } else if ((0x103bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 6U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 0U;
+    } else if ((0x2033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 5U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 0U;
+    } else if ((0x3033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 7U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 0U;
+    } else if ((0x4033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 4U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 0U;
+    } else if ((0x5033U == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 8U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 0U;
+    } else if ((0x503bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 = 8U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 = 0U;
+    } else {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680 
+            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_665;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444 
+            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_429;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385 
+            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_370;
+    }
+    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_229 
+        = ((0x7063U != (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+           & ((3U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+              | ((0x1003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                 | ((0x2003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                    | ((0x4003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                       | ((0x5003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                          | ((0x6003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
+                             | ((0x3003U == (0x707fU 
+                                             & vlSelf->myCPU__DOT__control_io_inst)) 
+                                | ((0x23U == (0x707fU 
+                                              & vlSelf->myCPU__DOT__control_io_inst)) 
+                                   | ((0x1023U == (0x707fU 
+                                                   & vlSelf->myCPU__DOT__control_io_inst)) 
+                                      | ((0x2023U == 
+                                          (0x707fU 
+                                           & vlSelf->myCPU__DOT__control_io_inst)) 
+                                         | ((0x3023U 
+                                             == (0x707fU 
+                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
+                                            | ((0x13U 
+                                                == 
+                                                (0x707fU 
+                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
+                                               | ((0x1bU 
+                                                   == 
+                                                   (0x707fU 
+                                                    & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                  | ((0x2013U 
+                                                      == 
+                                                      (0x707fU 
+                                                       & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                     | ((0x3013U 
+                                                         == 
+                                                         (0x707fU 
+                                                          & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                        | ((0x4013U 
+                                                            == 
+                                                            (0x707fU 
+                                                             & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                           | ((0x6013U 
+                                                               == 
+                                                               (0x707fU 
+                                                                & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                              | ((0x7013U 
+                                                                  == 
+                                                                  (0x707fU 
+                                                                   & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                 | (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_210))))))))))))))))))));
+    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_281 
         = ((0x3003U != (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
            & ((0x23U != (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
               & ((0x1023U != (0x707fU & vlSelf->myCPU__DOT__control_io_inst)) 
@@ -1184,79 +1229,81 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                             != 
                                                             (0xfc00707fU 
                                                              & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                           & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_244))))))))))))))))));
-    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_307 
-        = ((0x4013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
-            ? 0U : ((0x6013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
-                     ? 0U : ((0x7013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
-                              ? 0U : ((0x1013U == (0xfc00707fU 
-                                                   & vlSelf->myCPU__DOT__control_io_inst))
-                                       ? 0U : ((0x101bU 
+                                                           & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_264))))))))))))))))));
+    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_327 
+        = ((0x101bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))
+            ? 1U : ((0x5013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst))
+                     ? 0U : ((0x501bU == (0xfe00707fU 
+                                          & vlSelf->myCPU__DOT__control_io_inst))
+                              ? 1U : ((0x40005013U 
+                                       == (0xfc00707fU 
+                                           & vlSelf->myCPU__DOT__control_io_inst))
+                                       ? 0U : ((0x4000501bU 
                                                 == 
                                                 (0xfe00707fU 
                                                  & vlSelf->myCPU__DOT__control_io_inst))
                                                 ? 1U
                                                 : (
-                                                   (0x5013U 
+                                                   (0x33U 
                                                     == 
-                                                    (0xfc00707fU 
+                                                    (0xfe00707fU 
                                                      & vlSelf->myCPU__DOT__control_io_inst))
                                                     ? 0U
                                                     : 
-                                                   ((0x501bU 
+                                                   ((0x3bU 
                                                      == 
                                                      (0xfe00707fU 
                                                       & vlSelf->myCPU__DOT__control_io_inst))
                                                      ? 1U
                                                      : 
-                                                    ((0x40005013U 
+                                                    ((0x40000033U 
                                                       == 
-                                                      (0xfc00707fU 
+                                                      (0xfe00707fU 
                                                        & vlSelf->myCPU__DOT__control_io_inst))
                                                       ? 0U
                                                       : 
-                                                     ((0x4000501bU 
+                                                     ((0x4000003bU 
                                                        == 
                                                        (0xfe00707fU 
                                                         & vlSelf->myCPU__DOT__control_io_inst))
                                                        ? 1U
                                                        : 
-                                                      ((0x33U 
+                                                      ((0x1033U 
                                                         == 
                                                         (0xfe00707fU 
                                                          & vlSelf->myCPU__DOT__control_io_inst))
                                                         ? 0U
                                                         : 
-                                                       ((0x3bU 
+                                                       ((0x103bU 
                                                          == 
                                                          (0xfe00707fU 
                                                           & vlSelf->myCPU__DOT__control_io_inst))
                                                          ? 1U
                                                          : 
-                                                        ((0x40000033U 
+                                                        ((0x2033U 
                                                           == 
                                                           (0xfe00707fU 
                                                            & vlSelf->myCPU__DOT__control_io_inst))
                                                           ? 0U
                                                           : 
-                                                         ((0x4000003bU 
+                                                         ((0x3033U 
                                                            == 
                                                            (0xfe00707fU 
                                                             & vlSelf->myCPU__DOT__control_io_inst))
-                                                           ? 1U
+                                                           ? 0U
                                                            : 
-                                                          ((0x1033U 
+                                                          ((0x4033U 
                                                             == 
                                                             (0xfe00707fU 
                                                              & vlSelf->myCPU__DOT__control_io_inst))
                                                             ? 0U
                                                             : 
-                                                           ((0x103bU 
+                                                           ((0x5033U 
                                                              == 
                                                              (0xfe00707fU 
                                                               & vlSelf->myCPU__DOT__control_io_inst))
-                                                             ? 1U
-                                                             : (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_292))))))))))))))));
+                                                             ? 0U
+                                                             : (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_312))))))))))))))));
     vlSelf->myCPU__DOT__regFile_io_rdata_0 = ((0U == 
                                                (0x1fU 
                                                 & (vlSelf->myCPU__DOT__instr 
@@ -1337,73 +1384,73 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                            >> 0x14U)))
                                                        ? vlSelf->myCPU__DOT__regFile__DOT__reg_27
                                                        : vlSelf->myCPU__DOT__regFile__DOT___GEN_123))))));
-    if ((0x1003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 1U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 1U;
-    } else if ((0x2003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 1U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 1U;
-    } else if ((0x4003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 1U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 1U;
-    } else if ((0x5003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 1U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 1U;
-    } else if ((0x6003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 1U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 1U;
+    if ((0x6003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 1U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 1U;
     } else if ((0x3003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 1U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 1U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 1U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 1U;
     } else if ((0x23U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 2U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 2U;
     } else if ((0x1023U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 2U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 2U;
     } else if ((0x2023U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 2U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 2U;
     } else if ((0x3023U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 2U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 2U;
     } else if ((0x13U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 1U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 1U;
     } else if ((0x1bU == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 1U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 1U;
     } else if ((0x2013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 5U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 1U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 5U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 1U;
     } else if ((0x3013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 7U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 1U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 7U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 1U;
     } else if ((0x4013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 = 0U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 = 4U;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 = 1U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 4U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 1U;
+    } else if ((0x6013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 3U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 1U;
+    } else if ((0x7013U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 2U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 1U;
+    } else if ((0x1013U == (0xfc00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 6U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 1U;
+    } else if ((0x101bU == (0xfe00707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 = 0U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 = 6U;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 = 1U;
     } else {
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651 
-            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_636;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431 
-            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_416;
-        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376 
-            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_361;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695 
+            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_680;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459 
+            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_444;
+        vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400 
+            = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_385;
     }
     if ((0x37U == (0x7fU & vlSelf->myCPU__DOT__control_io_inst))) {
         vlSelf->myCPU__DOT__control_io_pc_sel = 0U;
@@ -1447,10 +1494,10 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                    ? 4U
                                                    : 0U))));
                 vlSelf->myCPU__DOT__control_io_st_type 
-                    = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_546;
+                    = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_586;
             }
         }
-        vlSelf->myCPU__DOT__control_io_ld_type = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_605;
+        vlSelf->myCPU__DOT__control_io_ld_type = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_649;
     }
     vlSelf->myCPU__DOT___st_mask_T_5 = ((1U == (IData)(vlSelf->myCPU__DOT__control_io_st_type))
                                          ? 0xfU : (
@@ -1462,140 +1509,161 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                      == (IData)(vlSelf->myCPU__DOT__control_io_st_type))
                                                      ? 1U
                                                      : 0xffU)));
-    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_322 
-        = ((3U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
-            ? 0U : ((0x1003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
-                     ? 0U : ((0x2003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
-                              ? 0U : ((0x4003U == (0x707fU 
-                                                   & vlSelf->myCPU__DOT__control_io_inst))
-                                       ? 0U : ((0x5003U 
+    vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_342 
+        = ((0x5003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
+            ? 0U : ((0x6003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
+                     ? 0U : ((0x3003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))
+                              ? 0U : ((0x23U == (0x707fU 
+                                                 & vlSelf->myCPU__DOT__control_io_inst))
+                                       ? 0U : ((0x1023U 
                                                 == 
                                                 (0x707fU 
                                                  & vlSelf->myCPU__DOT__control_io_inst))
                                                 ? 0U
                                                 : (
-                                                   (0x6003U 
+                                                   (0x2023U 
                                                     == 
                                                     (0x707fU 
                                                      & vlSelf->myCPU__DOT__control_io_inst))
                                                     ? 0U
                                                     : 
-                                                   ((0x3003U 
+                                                   ((0x3023U 
                                                      == 
                                                      (0x707fU 
                                                       & vlSelf->myCPU__DOT__control_io_inst))
                                                      ? 0U
                                                      : 
-                                                    ((0x23U 
+                                                    ((0x13U 
                                                       == 
                                                       (0x707fU 
                                                        & vlSelf->myCPU__DOT__control_io_inst))
                                                       ? 0U
                                                       : 
-                                                     ((0x1023U 
+                                                     ((0x1bU 
                                                        == 
                                                        (0x707fU 
                                                         & vlSelf->myCPU__DOT__control_io_inst))
-                                                       ? 0U
+                                                       ? 1U
                                                        : 
-                                                      ((0x2023U 
+                                                      ((0x2013U 
                                                         == 
                                                         (0x707fU 
                                                          & vlSelf->myCPU__DOT__control_io_inst))
                                                         ? 0U
                                                         : 
-                                                       ((0x3023U 
+                                                       ((0x3013U 
                                                          == 
                                                          (0x707fU 
                                                           & vlSelf->myCPU__DOT__control_io_inst))
                                                          ? 0U
                                                          : 
-                                                        ((0x13U 
+                                                        ((0x4013U 
                                                           == 
                                                           (0x707fU 
                                                            & vlSelf->myCPU__DOT__control_io_inst))
                                                           ? 0U
                                                           : 
-                                                         ((0x1bU 
+                                                         ((0x6013U 
                                                            == 
                                                            (0x707fU 
                                                             & vlSelf->myCPU__DOT__control_io_inst))
-                                                           ? 1U
+                                                           ? 0U
                                                            : 
-                                                          ((0x2013U 
+                                                          ((0x7013U 
                                                             == 
                                                             (0x707fU 
                                                              & vlSelf->myCPU__DOT__control_io_inst))
                                                             ? 0U
                                                             : 
-                                                           ((0x3013U 
+                                                           ((0x1013U 
                                                              == 
-                                                             (0x707fU 
+                                                             (0xfc00707fU 
                                                               & vlSelf->myCPU__DOT__control_io_inst))
                                                              ? 0U
-                                                             : (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_307))))))))))))))));
+                                                             : (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_327))))))))))))))));
     if ((0x37U == (0x7fU & vlSelf->myCPU__DOT__control_io_inst))) {
         vlSelf->myCPU__DOT__control_io_wb_sel = 0U;
-        vlSelf->myCPU__DOT__control_io_alu_op = 0xbU;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0xbU;
         vlSelf->myCPU__DOT__control_io_wd_type = 0U;
         vlSelf->myCPU__DOT__control_io_imm_sel = 3U;
     } else if ((0x17U == (0x7fU & vlSelf->myCPU__DOT__control_io_inst))) {
         vlSelf->myCPU__DOT__control_io_wb_sel = 0U;
-        vlSelf->myCPU__DOT__control_io_alu_op = 0U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
         vlSelf->myCPU__DOT__control_io_wd_type = 0U;
         vlSelf->myCPU__DOT__control_io_imm_sel = 3U;
     } else if ((0x6fU == (0x7fU & vlSelf->myCPU__DOT__control_io_inst))) {
         vlSelf->myCPU__DOT__control_io_wb_sel = 2U;
-        vlSelf->myCPU__DOT__control_io_alu_op = 0U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
         vlSelf->myCPU__DOT__control_io_wd_type = 0U;
         vlSelf->myCPU__DOT__control_io_imm_sel = 4U;
     } else if ((0x67U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
         vlSelf->myCPU__DOT__control_io_wb_sel = 2U;
-        vlSelf->myCPU__DOT__control_io_alu_op = 0U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
         vlSelf->myCPU__DOT__control_io_wd_type = 0U;
         vlSelf->myCPU__DOT__control_io_imm_sel = 1U;
     } else if ((0x63U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
         vlSelf->myCPU__DOT__control_io_wb_sel = 0U;
-        vlSelf->myCPU__DOT__control_io_alu_op = 0U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
         vlSelf->myCPU__DOT__control_io_wd_type = 0U;
         vlSelf->myCPU__DOT__control_io_imm_sel = 5U;
     } else if ((0x1063U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
         vlSelf->myCPU__DOT__control_io_wb_sel = 0U;
-        vlSelf->myCPU__DOT__control_io_alu_op = 0U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
         vlSelf->myCPU__DOT__control_io_wd_type = 0U;
         vlSelf->myCPU__DOT__control_io_imm_sel = 5U;
     } else if ((0x4063U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
         vlSelf->myCPU__DOT__control_io_wb_sel = 0U;
-        vlSelf->myCPU__DOT__control_io_alu_op = 0U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
         vlSelf->myCPU__DOT__control_io_wd_type = 0U;
         vlSelf->myCPU__DOT__control_io_imm_sel = 5U;
     } else if ((0x5063U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
         vlSelf->myCPU__DOT__control_io_wb_sel = 0U;
-        vlSelf->myCPU__DOT__control_io_alu_op = 0U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
         vlSelf->myCPU__DOT__control_io_wd_type = 0U;
         vlSelf->myCPU__DOT__control_io_imm_sel = 5U;
     } else if ((0x6063U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
         vlSelf->myCPU__DOT__control_io_wb_sel = 0U;
-        vlSelf->myCPU__DOT__control_io_alu_op = 0U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
         vlSelf->myCPU__DOT__control_io_wd_type = 0U;
         vlSelf->myCPU__DOT__control_io_imm_sel = 5U;
     } else if ((0x7063U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
         vlSelf->myCPU__DOT__control_io_wb_sel = 0U;
-        vlSelf->myCPU__DOT__control_io_alu_op = 0U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
         vlSelf->myCPU__DOT__control_io_wd_type = 0U;
         vlSelf->myCPU__DOT__control_io_imm_sel = 5U;
+    } else if ((3U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control_io_wb_sel = 1U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
+        vlSelf->myCPU__DOT__control_io_wd_type = 0U;
+        vlSelf->myCPU__DOT__control_io_imm_sel = 1U;
+    } else if ((0x1003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control_io_wb_sel = 1U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
+        vlSelf->myCPU__DOT__control_io_wd_type = 0U;
+        vlSelf->myCPU__DOT__control_io_imm_sel = 1U;
+    } else if ((0x2003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control_io_wb_sel = 1U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
+        vlSelf->myCPU__DOT__control_io_wd_type = 0U;
+        vlSelf->myCPU__DOT__control_io_imm_sel = 1U;
+    } else if ((0x4003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        vlSelf->myCPU__DOT__control_io_wb_sel = 1U;
+        vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
+        vlSelf->myCPU__DOT__control_io_wd_type = 0U;
+        vlSelf->myCPU__DOT__control_io_imm_sel = 1U;
     } else {
-        if ((3U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
+        if ((0x5003U == (0x707fU & vlSelf->myCPU__DOT__control_io_inst))) {
             vlSelf->myCPU__DOT__control_io_wb_sel = 1U;
-            vlSelf->myCPU__DOT__control_io_alu_op = 0U;
+            vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 = 0U;
             vlSelf->myCPU__DOT__control_io_imm_sel = 1U;
         } else {
-            vlSelf->myCPU__DOT__control_io_wb_sel = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_651;
-            vlSelf->myCPU__DOT__control_io_alu_op = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_431;
+            vlSelf->myCPU__DOT__control_io_wb_sel = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_695;
+            vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5 
+                = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_459;
             vlSelf->myCPU__DOT__control_io_imm_sel 
-                = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_376;
+                = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_400;
         }
-        vlSelf->myCPU__DOT__control_io_wd_type = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_322;
+        vlSelf->myCPU__DOT__control_io_wd_type = vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_342;
     }
     vlSelf->myCPU__DOT__A_data = (((0x37U != (0x7fU 
                                               & vlSelf->myCPU__DOT__control_io_inst)) 
@@ -1618,7 +1686,15 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                       != 
                                                       (0x707fU 
                                                        & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                     & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_215))))))))
+                                                     & ((0x5063U 
+                                                         != 
+                                                         (0x707fU 
+                                                          & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                        & ((0x6063U 
+                                                            != 
+                                                            (0x707fU 
+                                                             & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                           & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_229))))))))))
                                    ? vlSelf->myCPU__DOT__regFile_io_rdata_0
                                    : (QData)((IData)(vlSelf->myCPU__DOT__pc)));
     vlSelf->myCPU__DOT__brCond__DOT__eq = (vlSelf->myCPU__DOT__regFile_io_rdata_0 
@@ -1677,7 +1753,11 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                                    != 
                                                                    (0x707fU 
                                                                     & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                  & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_709))))))))));
+                                                                  & ((0x6063U 
+                                                                      != 
+                                                                      (0x707fU 
+                                                                       & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                                     & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_760)))))))))));
     vlSelf->myCPU__DOT__immGen__DOT___io_out_T_5 = 
         ((2U == (IData)(vlSelf->myCPU__DOT__control_io_imm_sel))
           ? (((QData)((IData)(((vlSelf->myCPU__DOT__immGen_io_inst 
@@ -1769,7 +1849,7 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                                                 != 
                                                                                 (0x707fU 
                                                                                 & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                                & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_261)))))))))))))))))
+                                                                                & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_281)))))))))))))))))
                                    ? vlSelf->myCPU__DOT__regFile_io_rdata_1
                                    : ((6U == (IData)(vlSelf->myCPU__DOT__control_io_imm_sel))
                                        ? (((QData)((IData)(
@@ -1823,12 +1903,6 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
         vlSelf->myCPU__DOT__alu_io_A = vlSelf->myCPU__DOT__A_data;
         vlSelf->myCPU__DOT__alu_io_B = vlSelf->myCPU__DOT__B_data;
     }
-    VL_EXTEND_WQ(128,64, __Vtemp_hcf153522__0, VL_DIV_QQQ(64, vlSelf->myCPU__DOT__alu_io_A, vlSelf->myCPU__DOT__alu_io_B));
-    VL_EXTEND_WQ(128,64, __Vtemp_h000cdfec__0, vlSelf->myCPU__DOT__alu_io_A);
-    VL_EXTEND_WQ(128,64, __Vtemp_h27b98097__0, vlSelf->myCPU__DOT__alu_io_B);
-    VL_MUL_W(4, __Vtemp_h9e395d09__0, __Vtemp_h000cdfec__0, __Vtemp_h27b98097__0);
-    VL_EXTEND_WQ(127,64, __Vtemp_ha01e7241__0, (vlSelf->myCPU__DOT__alu_io_A 
-                                                ^ vlSelf->myCPU__DOT__alu_io_B));
     VL_EXTEND_WQ(127,64, __Vtemp_ha00eb84c__0, (vlSelf->myCPU__DOT__alu_io_A 
                                                 | vlSelf->myCPU__DOT__alu_io_B));
     VL_EXTEND_WQ(127,64, __Vtemp_ha01eead0__0, (vlSelf->myCPU__DOT__alu_io_A 
@@ -1836,21 +1910,25 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
     VL_EXTEND_WI(127,1, __Vtemp_hcfb81aa2__0, (vlSelf->myCPU__DOT__alu_io_A 
                                                < vlSelf->myCPU__DOT__alu_io_B));
     VL_EXTEND_WI(127,1, __Vtemp_hcfe0c66f__0, VL_LTS_IQQ(64, vlSelf->myCPU__DOT__alu_io_A, vlSelf->myCPU__DOT__alu_io_B));
-    VL_EXTEND_WQ(127,64, __Vtemp_h000cdfec__1, vlSelf->myCPU__DOT__alu_io_A);
+    VL_EXTEND_WQ(127,64, __Vtemp_h000cdfec__0, vlSelf->myCPU__DOT__alu_io_A);
     vlSelf->myCPU__DOT__alu__DOT__shamt = (0x3fU & 
                                            ((1U == (IData)(vlSelf->myCPU__DOT__control_io_wd_type))
                                              ? (0x1fU 
                                                 & (IData)(vlSelf->myCPU__DOT__alu_io_B))
                                              : (IData)(vlSelf->myCPU__DOT__alu_io_B)));
-    VL_SHIFTL_WWI(127,127,6, __Vtemp_h9a82830e__0, __Vtemp_h000cdfec__1, (IData)(vlSelf->myCPU__DOT__alu__DOT__shamt));
-    VL_EXTEND_WQ(127,64, __Vtemp_he2e0e153__0, ((8U 
-                                                 == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))
+    VL_SHIFTL_WWI(127,127,6, __Vtemp_h2225429e__0, __Vtemp_h000cdfec__0, (IData)(vlSelf->myCPU__DOT__alu__DOT__shamt));
+    VL_EXTEND_WQ(127,64, __Vtemp_hd25c991c__0, ((8U 
+                                                 == 
+                                                 (0xfU 
+                                                  & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))
                                                  ? 
                                                 (vlSelf->myCPU__DOT__alu_io_A 
                                                  >> (IData)(vlSelf->myCPU__DOT__alu__DOT__shamt))
                                                  : 
                                                 ((9U 
-                                                  == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))
+                                                  == 
+                                                  (0xfU 
+                                                   & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))
                                                   ? 
                                                  VL_SHIFTRS_QQI(64,64,6, 
                                                                 ((1U 
@@ -1867,126 +1945,210 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                                   : vlSelf->myCPU__DOT__alu_io_A), (IData)(vlSelf->myCPU__DOT__alu__DOT__shamt))
                                                   : 
                                                  ((1U 
-                                                   == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))
+                                                   == 
+                                                   (0xfU 
+                                                    & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))
                                                    ? 
                                                   (vlSelf->myCPU__DOT__alu_io_A 
                                                    - vlSelf->myCPU__DOT__alu_io_B)
                                                    : 
                                                   ((0U 
-                                                    == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))
+                                                    == 
+                                                    (0xfU 
+                                                     & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))
                                                     ? 
                                                    (vlSelf->myCPU__DOT__alu_io_A 
                                                     + vlSelf->myCPU__DOT__alu_io_B)
                                                     : vlSelf->myCPU__DOT__alu_io_B)))));
-    if ((4U == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))) {
-        __Vtemp_h003534c0__0[0U] = __Vtemp_ha01e7241__0[0U];
-        __Vtemp_h003534c0__0[1U] = __Vtemp_ha01e7241__0[1U];
-        __Vtemp_h003534c0__0[2U] = __Vtemp_ha01e7241__0[2U];
-        __Vtemp_h003534c0__0[3U] = (0x7fffffffU & __Vtemp_ha01e7241__0[3U]);
-    } else if ((3U == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))) {
-        __Vtemp_h003534c0__0[0U] = __Vtemp_ha00eb84c__0[0U];
-        __Vtemp_h003534c0__0[1U] = __Vtemp_ha00eb84c__0[1U];
-        __Vtemp_h003534c0__0[2U] = __Vtemp_ha00eb84c__0[2U];
-        __Vtemp_h003534c0__0[3U] = (0x7fffffffU & __Vtemp_ha00eb84c__0[3U]);
-    } else if ((2U == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))) {
-        __Vtemp_h003534c0__0[0U] = __Vtemp_ha01eead0__0[0U];
-        __Vtemp_h003534c0__0[1U] = __Vtemp_ha01eead0__0[1U];
-        __Vtemp_h003534c0__0[2U] = __Vtemp_ha01eead0__0[2U];
-        __Vtemp_h003534c0__0[3U] = (0x7fffffffU & __Vtemp_ha01eead0__0[3U]);
-    } else if ((7U == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))) {
-        __Vtemp_h003534c0__0[0U] = __Vtemp_hcfb81aa2__0[0U];
-        __Vtemp_h003534c0__0[1U] = __Vtemp_hcfb81aa2__0[1U];
-        __Vtemp_h003534c0__0[2U] = __Vtemp_hcfb81aa2__0[2U];
-        __Vtemp_h003534c0__0[3U] = (0x7fffffffU & __Vtemp_hcfb81aa2__0[3U]);
-    } else if ((5U == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))) {
-        __Vtemp_h003534c0__0[0U] = __Vtemp_hcfe0c66f__0[0U];
-        __Vtemp_h003534c0__0[1U] = __Vtemp_hcfe0c66f__0[1U];
-        __Vtemp_h003534c0__0[2U] = __Vtemp_hcfe0c66f__0[2U];
-        __Vtemp_h003534c0__0[3U] = (0x7fffffffU & __Vtemp_hcfe0c66f__0[3U]);
-    } else if ((6U == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))) {
-        __Vtemp_h003534c0__0[0U] = __Vtemp_h9a82830e__0[0U];
-        __Vtemp_h003534c0__0[1U] = __Vtemp_h9a82830e__0[1U];
-        __Vtemp_h003534c0__0[2U] = __Vtemp_h9a82830e__0[2U];
-        __Vtemp_h003534c0__0[3U] = (0x7fffffffU & __Vtemp_h9a82830e__0[3U]);
+    if ((3U == (0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))) {
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[0U] 
+            = __Vtemp_ha00eb84c__0[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[1U] 
+            = __Vtemp_ha00eb84c__0[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[2U] 
+            = __Vtemp_ha00eb84c__0[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[3U] 
+            = (0x7fffffffU & __Vtemp_ha00eb84c__0[3U]);
+    } else if ((2U == (0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))) {
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[0U] 
+            = __Vtemp_ha01eead0__0[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[1U] 
+            = __Vtemp_ha01eead0__0[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[2U] 
+            = __Vtemp_ha01eead0__0[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[3U] 
+            = (0x7fffffffU & __Vtemp_ha01eead0__0[3U]);
+    } else if ((7U == (0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))) {
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[0U] 
+            = __Vtemp_hcfb81aa2__0[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[1U] 
+            = __Vtemp_hcfb81aa2__0[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[2U] 
+            = __Vtemp_hcfb81aa2__0[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[3U] 
+            = (0x7fffffffU & __Vtemp_hcfb81aa2__0[3U]);
+    } else if ((5U == (0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))) {
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[0U] 
+            = __Vtemp_hcfe0c66f__0[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[1U] 
+            = __Vtemp_hcfe0c66f__0[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[2U] 
+            = __Vtemp_hcfe0c66f__0[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[3U] 
+            = (0x7fffffffU & __Vtemp_hcfe0c66f__0[3U]);
+    } else if ((6U == (0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))) {
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[0U] 
+            = __Vtemp_h2225429e__0[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[1U] 
+            = __Vtemp_h2225429e__0[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[2U] 
+            = __Vtemp_h2225429e__0[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[3U] 
+            = (0x7fffffffU & __Vtemp_h2225429e__0[3U]);
     } else {
-        __Vtemp_h003534c0__0[0U] = __Vtemp_he2e0e153__0[0U];
-        __Vtemp_h003534c0__0[1U] = __Vtemp_he2e0e153__0[1U];
-        __Vtemp_h003534c0__0[2U] = __Vtemp_he2e0e153__0[2U];
-        __Vtemp_h003534c0__0[3U] = (0x7fffffffU & __Vtemp_he2e0e153__0[3U]);
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[0U] 
+            = __Vtemp_hd25c991c__0[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[1U] 
+            = __Vtemp_hd25c991c__0[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[2U] 
+            = __Vtemp_hd25c991c__0[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_74[3U] 
+            = (0x7fffffffU & __Vtemp_hd25c991c__0[3U]);
     }
-    VL_EXTEND_WW(128,127, __Vtemp_h247610c0__0, __Vtemp_h003534c0__0);
-    if ((0xdU == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))) {
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[0U] 
-            = __Vtemp_hcf153522__0[0U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[1U] 
-            = __Vtemp_hcf153522__0[1U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[2U] 
-            = __Vtemp_hcf153522__0[2U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[3U] 
-            = __Vtemp_hcf153522__0[3U];
-    } else if ((0xcU == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))) {
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[0U] 
-            = __Vtemp_h9e395d09__0[0U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[1U] 
-            = __Vtemp_h9e395d09__0[1U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[2U] 
-            = __Vtemp_h9e395d09__0[2U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[3U] 
-            = __Vtemp_h9e395d09__0[3U];
+    VL_EXTEND_WQ(128,64, __Vtemp_hed7db9c3__0, ((1U 
+                                                 == (IData)(vlSelf->myCPU__DOT__control_io_wd_type))
+                                                 ? (QData)((IData)(
+                                                                   VL_MODDIVS_III(32, (IData)(vlSelf->myCPU__DOT__alu_io_A), (IData)(vlSelf->myCPU__DOT__alu_io_B))))
+                                                 : 
+                                                VL_MODDIVS_QQQ(64, vlSelf->myCPU__DOT__alu_io_A, vlSelf->myCPU__DOT__alu_io_B)));
+    VL_EXTEND_WQ(128,64, __Vtemp_hac86ceb7__0, ((1U 
+                                                 == (IData)(vlSelf->myCPU__DOT__control_io_wd_type))
+                                                 ? (QData)((IData)(
+                                                                   VL_DIV_III(32, (IData)(vlSelf->myCPU__DOT__alu_io_A), (IData)(vlSelf->myCPU__DOT__alu_io_B))))
+                                                 : 
+                                                VL_DIV_QQQ(64, vlSelf->myCPU__DOT__alu_io_A, vlSelf->myCPU__DOT__alu_io_B)));
+    VL_EXTEND_WQ(65,33, __Vtemp_hdadf6d67__0, (0x1ffffffffULL 
+                                               & VL_DIVS_QQQ(33, 
+                                                             (0x1ffffffffULL 
+                                                              & VL_EXTENDS_QI(33,32, (IData)(vlSelf->myCPU__DOT__alu_io_A))), 
+                                                             (0x1ffffffffULL 
+                                                              & VL_EXTENDS_QI(33,32, (IData)(vlSelf->myCPU__DOT__alu_io_B))))));
+    VL_EXTENDS_WQ(65,64, __Vtemp_h00004989__0, vlSelf->myCPU__DOT__alu_io_A);
+    __Vtemp_h86dd9fb7__0[0U] = __Vtemp_h00004989__0[0U];
+    __Vtemp_h86dd9fb7__0[1U] = __Vtemp_h00004989__0[1U];
+    __Vtemp_h86dd9fb7__0[2U] = (1U & __Vtemp_h00004989__0[2U]);
+    VL_EXTENDS_WQ(65,64, __Vtemp_h2833a926__0, vlSelf->myCPU__DOT__alu_io_B);
+    __Vtemp_hf14e7ca7__0[0U] = __Vtemp_h2833a926__0[0U];
+    __Vtemp_hf14e7ca7__0[1U] = __Vtemp_h2833a926__0[1U];
+    __Vtemp_hf14e7ca7__0[2U] = (1U & __Vtemp_h2833a926__0[2U]);
+    VL_DIVS_WWW(65, __Vtemp_he7f6e66f__0, __Vtemp_h86dd9fb7__0, __Vtemp_hf14e7ca7__0);
+    if ((1U == (IData)(vlSelf->myCPU__DOT__control_io_wd_type))) {
+        __Vtemp_h7078d0cb__0[0U] = __Vtemp_hdadf6d67__0[0U];
+        __Vtemp_h7078d0cb__0[1U] = __Vtemp_hdadf6d67__0[1U];
+        __Vtemp_h7078d0cb__0[2U] = (1U & __Vtemp_hdadf6d67__0[2U]);
     } else {
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[0U] 
-            = __Vtemp_h247610c0__0[0U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[1U] 
-            = __Vtemp_h247610c0__0[1U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[2U] 
-            = __Vtemp_h247610c0__0[2U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_46[3U] 
-            = __Vtemp_h247610c0__0[3U];
+        __Vtemp_h7078d0cb__0[0U] = __Vtemp_he7f6e66f__0[0U];
+        __Vtemp_h7078d0cb__0[1U] = __Vtemp_he7f6e66f__0[1U];
+        __Vtemp_h7078d0cb__0[2U] = (1U & __Vtemp_he7f6e66f__0[2U]);
+    }
+    VL_EXTEND_WW(128,65, __Vtemp_hfa207146__0, __Vtemp_h7078d0cb__0);
+    VL_EXTEND_WQ(128,64, __Vtemp_h000cdfec__1, vlSelf->myCPU__DOT__alu_io_A);
+    VL_EXTEND_WQ(128,64, __Vtemp_h27b98097__0, vlSelf->myCPU__DOT__alu_io_B);
+    VL_MUL_W(4, __Vtemp_h1fb49aca__0, __Vtemp_h000cdfec__1, __Vtemp_h27b98097__0);
+    VL_EXTEND_WQ(127,64, __Vtemp_ha01e7241__0, (vlSelf->myCPU__DOT__alu_io_A 
+                                                ^ vlSelf->myCPU__DOT__alu_io_B));
+    if ((4U == (0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))) {
+        __Vtemp_hfbe01535__0[0U] = __Vtemp_ha01e7241__0[0U];
+        __Vtemp_hfbe01535__0[1U] = __Vtemp_ha01e7241__0[1U];
+        __Vtemp_hfbe01535__0[2U] = __Vtemp_ha01e7241__0[2U];
+        __Vtemp_hfbe01535__0[3U] = __Vtemp_ha01e7241__0[3U];
+    } else {
+        __Vtemp_hfbe01535__0[0U] = vlSelf->myCPU__DOT__alu__DOT___out_T_74[0U];
+        __Vtemp_hfbe01535__0[1U] = vlSelf->myCPU__DOT__alu__DOT___out_T_74[1U];
+        __Vtemp_hfbe01535__0[2U] = vlSelf->myCPU__DOT__alu__DOT___out_T_74[2U];
+        __Vtemp_hfbe01535__0[3U] = vlSelf->myCPU__DOT__alu__DOT___out_T_74[3U];
+    }
+    VL_EXTEND_WW(128,127, __Vtemp_he14fa860__0, __Vtemp_hfbe01535__0);
+    if ((0xeU == (0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))) {
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[0U] 
+            = __Vtemp_hed7db9c3__0[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[1U] 
+            = __Vtemp_hed7db9c3__0[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[2U] 
+            = __Vtemp_hed7db9c3__0[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[3U] 
+            = __Vtemp_hed7db9c3__0[3U];
+    } else if ((0xfU == (0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))) {
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[0U] 
+            = __Vtemp_hac86ceb7__0[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[1U] 
+            = __Vtemp_hac86ceb7__0[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[2U] 
+            = __Vtemp_hac86ceb7__0[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[3U] 
+            = __Vtemp_hac86ceb7__0[3U];
+    } else if ((0xdU == (0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))) {
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[0U] 
+            = __Vtemp_hfa207146__0[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[1U] 
+            = __Vtemp_hfa207146__0[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[2U] 
+            = __Vtemp_hfa207146__0[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[3U] 
+            = __Vtemp_hfa207146__0[3U];
+    } else if ((0xcU == (0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))) {
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[0U] 
+            = __Vtemp_h1fb49aca__0[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[1U] 
+            = __Vtemp_h1fb49aca__0[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[2U] 
+            = __Vtemp_h1fb49aca__0[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[3U] 
+            = __Vtemp_h1fb49aca__0[3U];
+    } else {
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[0U] 
+            = __Vtemp_he14fa860__0[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[1U] 
+            = __Vtemp_he14fa860__0[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[2U] 
+            = __Vtemp_he14fa860__0[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_84[3U] 
+            = __Vtemp_he14fa860__0[3U];
     }
     VL_EXTEND_WQ(128,64, __Vtemp_h000cdfec__2, vlSelf->myCPU__DOT__alu_io_A);
-    VL_EXTEND_WQ(128,64, __Vtemp_hac6fddfe__0, VL_MODDIV_QQQ(64, vlSelf->myCPU__DOT__alu_io_A, vlSelf->myCPU__DOT__alu_io_B));
-    if ((0xaU == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))) {
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[0U] 
+    if ((0xaU == (0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5)))) {
+        vlSelf->myCPU__DOT__alu__DOT___out_T_88[0U] 
             = __Vtemp_h000cdfec__2[0U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[1U] 
+        vlSelf->myCPU__DOT__alu__DOT___out_T_88[1U] 
             = __Vtemp_h000cdfec__2[1U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[2U] 
+        vlSelf->myCPU__DOT__alu__DOT___out_T_88[2U] 
             = __Vtemp_h000cdfec__2[2U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[3U] 
+        vlSelf->myCPU__DOT__alu__DOT___out_T_88[3U] 
             = __Vtemp_h000cdfec__2[3U];
-    } else if ((0xeU == (IData)(vlSelf->myCPU__DOT__control_io_alu_op))) {
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[0U] 
-            = __Vtemp_hac6fddfe__0[0U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[1U] 
-            = __Vtemp_hac6fddfe__0[1U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[2U] 
-            = __Vtemp_hac6fddfe__0[2U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[3U] 
-            = __Vtemp_hac6fddfe__0[3U];
     } else {
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[0U] 
-            = vlSelf->myCPU__DOT__alu__DOT___out_T_46[0U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[1U] 
-            = vlSelf->myCPU__DOT__alu__DOT___out_T_46[1U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[2U] 
-            = vlSelf->myCPU__DOT__alu__DOT___out_T_46[2U];
-        vlSelf->myCPU__DOT__alu__DOT___out_T_50[3U] 
-            = vlSelf->myCPU__DOT__alu__DOT___out_T_46[3U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_88[0U] 
+            = vlSelf->myCPU__DOT__alu__DOT___out_T_84[0U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_88[1U] 
+            = vlSelf->myCPU__DOT__alu__DOT___out_T_84[1U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_88[2U] 
+            = vlSelf->myCPU__DOT__alu__DOT___out_T_84[2U];
+        vlSelf->myCPU__DOT__alu__DOT___out_T_88[3U] 
+            = vlSelf->myCPU__DOT__alu__DOT___out_T_84[3U];
     }
     vlSelf->myCPU__DOT__alu_io_out = ((1U == (IData)(vlSelf->myCPU__DOT__control_io_wd_type))
                                        ? (((QData)((IData)(
-                                                           ((vlSelf->myCPU__DOT__alu__DOT___out_T_50[0U] 
+                                                           ((vlSelf->myCPU__DOT__alu__DOT___out_T_88[0U] 
                                                              >> 0x1fU)
                                                              ? 0xffffffffU
                                                              : 0U))) 
                                            << 0x20U) 
                                           | (QData)((IData)(
-                                                            vlSelf->myCPU__DOT__alu__DOT___out_T_50[0U])))
+                                                            vlSelf->myCPU__DOT__alu__DOT___out_T_88[0U])))
                                        : (((QData)((IData)(
-                                                           vlSelf->myCPU__DOT__alu__DOT___out_T_50[1U])) 
+                                                           vlSelf->myCPU__DOT__alu__DOT___out_T_88[1U])) 
                                            << 0x20U) 
                                           | (QData)((IData)(
-                                                            vlSelf->myCPU__DOT__alu__DOT___out_T_50[0U]))));
+                                                            vlSelf->myCPU__DOT__alu__DOT___out_T_88[0U]))));
     vlSelf->myCPU__DOT___GEN_0 = ((IData)(vlSelf->reset)
                                    ? 0x80000000ULL : 
                                   (((0U == (IData)(vlSelf->myCPU__DOT__control_io_pc_sel)) 

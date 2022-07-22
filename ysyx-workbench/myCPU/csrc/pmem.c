@@ -1,4 +1,5 @@
 #include <pmem.h>
+#include <mmio.h>
 #include <cstdio>
 #include <reg.h>
 #include <state.h>
@@ -33,15 +34,24 @@ void pc_read(long long raddr, long long *rdata){
 
 void pmem_read(long long raddr, long long *rdata){
 	uint64_t addr = (uint64_t) raddr & ~(0x7);
+	/*
 	if(addr + 8 >= 0x88000000 || addr < 0x80000000)
 	{
+
 		printf("addr:%lx is out of bound\n", addr);
 		set_bad();
 		state = NEMU_ABORT;
 		return;
 	}
 
-	*rdata = host_read(guest_to_host(addr), 8);
+	*rdata = host_read(guest_to_host(addr), 8);*/
+
+	if(addr + 8 < 0x88000000 && addr >= 0x80000000){
+		*rdata = host_read(guest_to_host(addr), 8);
+	}else{
+		
+		*rdata = mmio_read(raddr, 4);
+	}
 }
 
 void pmem_write(long long waddr, long long wdata, char mask){
@@ -49,7 +59,7 @@ void pmem_write(long long waddr, long long wdata, char mask){
 	uint8_t *arr = (uint8_t *) &wdata;
 	int i;
 	uint8_t tmp = 0x01;
-
+/*
 	if(addr >= 0x88000000 || addr < 0x80000000)
 	{
 		printf("addr:%lx is out of bound\n", addr);
@@ -57,12 +67,17 @@ void pmem_write(long long waddr, long long wdata, char mask){
 		state = NEMU_ABORT;
 		return;
 	}
-
-	for(i = 0; i < 8; i++)
+*/
+	if(addr + 8 < 0x88000000 && addr >= 0x80000000)
 	{
-		if((mask & tmp) != 0)
-			host_write(guest_to_host(addr + i), 1, arr[i]);
-		tmp = tmp << 1;
+		for(i = 0; i < 8; i++)
+		{
+			if((mask & tmp) != 0)
+				host_write(guest_to_host(addr + i), 1, arr[i]);
+			tmp = tmp << 1;
+		}
+	}else{
+		mmio_write(waddr, 1, wdata >> (8 * (waddr & (0x07)))); 
 	}
 }
 

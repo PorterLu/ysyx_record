@@ -1,15 +1,20 @@
 #include <device/map.h>
 #include <device/alarm.h>
 #include <utils.h>
+//#include <time.h>
+//#include <sys/time.h>
 
 static uint32_t *rtc_port_base = NULL;
+//static struct timeval start ,now;
 
 static void rtc_io_handler(uint32_t offset, int len, bool is_write) {
   assert(offset == 0 || offset == 4);
   if (!is_write && offset == 4) {
-    uint64_t us = get_time();
-    rtc_port_base[0] = (uint32_t)us;
+    uint64_t us = get_time(); 
     rtc_port_base[1] = us >> 32;
+  }else if(!is_write){
+	uint64_t us = get_time();
+	rtc_port_base[0] = (uint32_t)us;
   }
 }
 

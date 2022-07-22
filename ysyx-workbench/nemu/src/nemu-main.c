@@ -9,6 +9,8 @@ void engine_start();
 int is_exit_status_bad();
 void memlog_close();
 void delete_ftrace();
+void delete_dtrace();
+void delete_etrace();
 uint64_t expr(char*e, bool *success);
 
 int main(int argc, char *argv[]) {
@@ -25,6 +27,10 @@ int main(int argc, char *argv[]) {
   memlog_close();
   
   delete_ftrace();
+
+  delete_etrace();
+
+  delete_dtrace();
   
   return is_exit_status_bad();
 

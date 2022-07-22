@@ -48,6 +48,7 @@ VM_USER_CFLAGS = \
 # User LDLIBS (from -LDFLAGS on Verilator command line)
 VM_USER_LDLIBS = \
 	-lLLVM-11 \
+	-lSDL2 \
 	-lreadline \
 	-ldl \
 
@@ -58,14 +59,18 @@ VM_USER_CLASSES = \
 	elftl \
 	exec \
 	expr \
+	gpu \
 	img \
 	log \
 	main \
+	mmio \
 	pmem \
 	reg \
 	sdb \
+	serial \
 	sim \
 	state \
+	timer \
 	vmem \
 	watchpoint \
 
@@ -93,11 +98,15 @@ exec.o: /home/porterlu/ysyx-workbench/myCPU/csrc/exec.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 expr.o: /home/porterlu/ysyx-workbench/myCPU/csrc/expr.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+gpu.o: /home/porterlu/ysyx-workbench/myCPU/csrc/gpu.c
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 img.o: /home/porterlu/ysyx-workbench/myCPU/csrc/img.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 log.o: /home/porterlu/ysyx-workbench/myCPU/csrc/log.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 main.o: /home/porterlu/ysyx-workbench/myCPU/csrc/main.cpp
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+mmio.o: /home/porterlu/ysyx-workbench/myCPU/csrc/mmio.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 pmem.o: /home/porterlu/ysyx-workbench/myCPU/csrc/pmem.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
@@ -105,9 +114,13 @@ reg.o: /home/porterlu/ysyx-workbench/myCPU/csrc/reg.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 sdb.o: /home/porterlu/ysyx-workbench/myCPU/csrc/sdb.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+serial.o: /home/porterlu/ysyx-workbench/myCPU/csrc/serial.c
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 sim.o: /home/porterlu/ysyx-workbench/myCPU/csrc/sim.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 state.o: /home/porterlu/ysyx-workbench/myCPU/csrc/state.c
+	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
+timer.o: /home/porterlu/ysyx-workbench/myCPU/csrc/timer.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<
 vmem.o: /home/porterlu/ysyx-workbench/myCPU/csrc/vmem.c
 	$(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(OPT_FAST) -c -o $@ $<

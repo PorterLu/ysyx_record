@@ -11,13 +11,13 @@ VL_ATTR_COLD void VmyCPU___024root__trace_init_sub__TOP__0(VmyCPU___024root* vlS
     // Init
     const int c = vlSymsp->__Vm_baseCode;
     // Body
-    tracep->declBit(c+149,"clock", false,-1);
-    tracep->declBit(c+150,"reset", false,-1);
-    tracep->declQuad(c+151,"io_pc_debug", false,-1, 63,0);
+    tracep->declBit(c+150,"clock", false,-1);
+    tracep->declBit(c+151,"reset", false,-1);
+    tracep->declQuad(c+152,"io_pc_debug", false,-1, 63,0);
     tracep->pushNamePrefix("myCPU ");
-    tracep->declBit(c+149,"clock", false,-1);
-    tracep->declBit(c+150,"reset", false,-1);
-    tracep->declQuad(c+151,"io_pc_debug", false,-1, 63,0);
+    tracep->declBit(c+150,"clock", false,-1);
+    tracep->declBit(c+151,"reset", false,-1);
+    tracep->declQuad(c+152,"io_pc_debug", false,-1, 63,0);
     tracep->declQuad(c+70,"alu_io_A", false,-1, 63,0);
     tracep->declQuad(c+72,"alu_io_B", false,-1, 63,0);
     tracep->declBus(c+74,"alu_io_width_type", false,-1, 1,0);
@@ -42,8 +42,8 @@ VL_ATTR_COLD void VmyCPU___024root__trace_init_sub__TOP__0(VmyCPU___024root* vlS
     tracep->declQuad(c+93,"brCond_io_rs2", false,-1, 63,0);
     tracep->declBus(c+86,"brCond_io_br_type", false,-1, 2,0);
     tracep->declBit(c+95,"brCond_io_taken", false,-1);
-    tracep->declBit(c+149,"regFile_clock", false,-1);
-    tracep->declBit(c+150,"regFile_reset", false,-1);
+    tracep->declBit(c+150,"regFile_clock", false,-1);
+    tracep->declBit(c+151,"regFile_reset", false,-1);
     tracep->declBit(c+96,"regFile_io_wen", false,-1);
     tracep->declBus(c+97,"regFile_io_waddr", false,-1, 4,0);
     tracep->declQuad(c+98,"regFile_io_wdata", false,-1, 63,0);
@@ -82,8 +82,8 @@ VL_ATTR_COLD void VmyCPU___024root__trace_init_sub__TOP__0(VmyCPU___024root* vlS
     tracep->declQuad(c+57,"regFile_io_rdata_32", false,-1, 63,0);
     tracep->declQuad(c+59,"regFile_io_rdata_33", false,-1, 63,0);
     tracep->declQuad(c+61,"regFile_io_rdata_34", false,-1, 63,0);
-    tracep->declBit(c+149,"mem__clock", false,-1);
-    tracep->declBit(c+150,"mem__reset", false,-1);
+    tracep->declBit(c+150,"mem__clock", false,-1);
+    tracep->declBit(c+151,"mem__reset", false,-1);
     tracep->declQuad(c+63,"mem__pc_addr", false,-1, 63,0);
     tracep->declQuad(c+102,"mem__pc_data", false,-1, 63,0);
     tracep->declQuad(c+76,"mem__addr", false,-1, 63,0);
@@ -92,9 +92,9 @@ VL_ATTR_COLD void VmyCPU___024root__trace_init_sub__TOP__0(VmyCPU___024root* vlS
     tracep->declQuad(c+107,"mem__rdata", false,-1, 63,0);
     tracep->declBit(c+109,"mem__enable", false,-1);
     tracep->declBit(c+110,"mem__wen", false,-1);
-    tracep->declBit(c+149,"gpr_ptr_clock", false,-1);
-    tracep->declBit(c+150,"gpr_ptr_reset", false,-1);
-    tracep->declQuad(c+153,"gpr_ptr_regfile_0", false,-1, 63,0);
+    tracep->declBit(c+150,"gpr_ptr_clock", false,-1);
+    tracep->declBit(c+151,"gpr_ptr_reset", false,-1);
+    tracep->declQuad(c+154,"gpr_ptr_regfile_0", false,-1, 63,0);
     tracep->declQuad(c+1,"gpr_ptr_regfile_1", false,-1, 63,0);
     tracep->declQuad(c+3,"gpr_ptr_regfile_2", false,-1, 63,0);
     tracep->declQuad(c+5,"gpr_ptr_regfile_3", false,-1, 63,0);
@@ -171,11 +171,12 @@ VL_ATTR_COLD void VmyCPU___024root__trace_init_sub__TOP__0(VmyCPU___024root* vlS
     tracep->declBus(c+89,"io_wb_sel", false,-1, 1,0);
     tracep->declBit(c+90,"io_wb_en", false,-1);
     tracep->declBus(c+75,"io_alu_op", false,-1, 3,0);
+    tracep->declBus(c+130,"ctrlSignals_5", false,-1, 4,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("gpr_ptr ");
-    tracep->declBit(c+149,"clock", false,-1);
-    tracep->declBit(c+150,"reset", false,-1);
-    tracep->declQuad(c+153,"regfile_0", false,-1, 63,0);
+    tracep->declBit(c+150,"clock", false,-1);
+    tracep->declBit(c+151,"reset", false,-1);
+    tracep->declQuad(c+154,"regfile_0", false,-1, 63,0);
     tracep->declQuad(c+1,"regfile_1", false,-1, 63,0);
     tracep->declQuad(c+3,"regfile_2", false,-1, 63,0);
     tracep->declQuad(c+5,"regfile_3", false,-1, 63,0);
@@ -212,23 +213,23 @@ VL_ATTR_COLD void VmyCPU___024root__trace_init_sub__TOP__0(VmyCPU___024root* vlS
     tracep->declBus(c+78,"io_inst", false,-1, 31,0);
     tracep->declBus(c+79,"io_sel", false,-1, 2,0);
     tracep->declQuad(c+80,"io_out", false,-1, 63,0);
-    tracep->declBit(c+130,"sign", false,-1);
-    tracep->declBus(c+131,"Iimm_lo", false,-1, 11,0);
-    tracep->declQuad(c+132,"Iimm", false,-1, 43,0);
-    tracep->declBus(c+134,"Simm_lo", false,-1, 11,0);
-    tracep->declQuad(c+135,"Simm", false,-1, 43,0);
-    tracep->declBus(c+137,"Bimm_lo_1", false,-1, 12,0);
-    tracep->declQuad(c+138,"Bimm", false,-1, 44,0);
-    tracep->declBus(c+140,"Uimm_lo", false,-1, 31,0);
-    tracep->declQuad(c+141,"Uimm", false,-1, 63,0);
-    tracep->declBus(c+143,"Jimm_lo_1", false,-1, 20,0);
-    tracep->declQuad(c+144,"Jimm", false,-1, 52,0);
-    tracep->declBus(c+146,"Zimm_lo", false,-1, 5,0);
-    tracep->declQuad(c+147,"Zimm", false,-1, 37,0);
+    tracep->declBit(c+131,"sign", false,-1);
+    tracep->declBus(c+132,"Iimm_lo", false,-1, 11,0);
+    tracep->declQuad(c+133,"Iimm", false,-1, 43,0);
+    tracep->declBus(c+135,"Simm_lo", false,-1, 11,0);
+    tracep->declQuad(c+136,"Simm", false,-1, 43,0);
+    tracep->declBus(c+138,"Bimm_lo_1", false,-1, 12,0);
+    tracep->declQuad(c+139,"Bimm", false,-1, 44,0);
+    tracep->declBus(c+141,"Uimm_lo", false,-1, 31,0);
+    tracep->declQuad(c+142,"Uimm", false,-1, 63,0);
+    tracep->declBus(c+144,"Jimm_lo_1", false,-1, 20,0);
+    tracep->declQuad(c+145,"Jimm", false,-1, 52,0);
+    tracep->declBus(c+147,"Zimm_lo", false,-1, 5,0);
+    tracep->declQuad(c+148,"Zimm", false,-1, 37,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("mem_ ");
-    tracep->declBit(c+149,"clock", false,-1);
-    tracep->declBit(c+150,"reset", false,-1);
+    tracep->declBit(c+150,"clock", false,-1);
+    tracep->declBit(c+151,"reset", false,-1);
     tracep->declQuad(c+63,"pc_addr", false,-1, 63,0);
     tracep->declQuad(c+102,"pc_data", false,-1, 63,0);
     tracep->declQuad(c+76,"addr", false,-1, 63,0);
@@ -239,8 +240,8 @@ VL_ATTR_COLD void VmyCPU___024root__trace_init_sub__TOP__0(VmyCPU___024root* vlS
     tracep->declBit(c+110,"wen", false,-1);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("regFile ");
-    tracep->declBit(c+149,"clock", false,-1);
-    tracep->declBit(c+150,"reset", false,-1);
+    tracep->declBit(c+150,"clock", false,-1);
+    tracep->declBit(c+151,"reset", false,-1);
     tracep->declBit(c+96,"io_wen", false,-1);
     tracep->declBus(c+97,"io_waddr", false,-1, 4,0);
     tracep->declQuad(c+98,"io_wdata", false,-1, 63,0);
@@ -395,7 +396,7 @@ VL_ATTR_COLD void VmyCPU___024root__trace_full_sub_0(VmyCPU___024root* vlSelf, V
     bufp->fullQData(oldp+70,(vlSelf->myCPU__DOT__alu_io_A),64);
     bufp->fullQData(oldp+72,(vlSelf->myCPU__DOT__alu_io_B),64);
     bufp->fullCData(oldp+74,(vlSelf->myCPU__DOT__control_io_wd_type),2);
-    bufp->fullCData(oldp+75,(vlSelf->myCPU__DOT__control_io_alu_op),4);
+    bufp->fullCData(oldp+75,((0xfU & (IData)(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5))),4);
     bufp->fullQData(oldp+76,(vlSelf->myCPU__DOT__alu_io_out),64);
     bufp->fullIData(oldp+78,(vlSelf->myCPU__DOT__immGen_io_inst),32);
     bufp->fullCData(oldp+79,(vlSelf->myCPU__DOT__control_io_imm_sel),3);
@@ -458,7 +459,15 @@ VL_ATTR_COLD void VmyCPU___024root__trace_full_sub_0(VmyCPU___024root* vlSelf, V
                                            & ((0x4063U 
                                                != (0x707fU 
                                                    & vlSelf->myCPU__DOT__control_io_inst)) 
-                                              & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_215))))))))));
+                                              & ((0x5063U 
+                                                  != 
+                                                  (0x707fU 
+                                                   & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                 & ((0x6063U 
+                                                     != 
+                                                     (0x707fU 
+                                                      & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                    & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_229))))))))))));
     bufp->fullBit(oldp+85,(((0x37U != (0x7fU & vlSelf->myCPU__DOT__control_io_inst)) 
                             & ((0x17U != (0x7fU & vlSelf->myCPU__DOT__control_io_inst)) 
                                & ((0x6fU != (0x7fU 
@@ -509,7 +518,7 @@ VL_ATTR_COLD void VmyCPU___024root__trace_full_sub_0(VmyCPU___024root* vlSelf, V
                                                                           != 
                                                                           (0x707fU 
                                                                            & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                                         & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_261)))))))))))))))))));
+                                                                         & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_281)))))))))))))))))));
     bufp->fullCData(oldp+86,(vlSelf->myCPU__DOT__control_io_br_type),3);
     bufp->fullCData(oldp+87,(vlSelf->myCPU__DOT__control_io_st_type),3);
     bufp->fullCData(oldp+88,(vlSelf->myCPU__DOT__control_io_ld_type),3);
@@ -532,7 +541,11 @@ VL_ATTR_COLD void VmyCPU___024root__trace_full_sub_0(VmyCPU___024root* vlSelf, V
                                                   != 
                                                   (0x707fU 
                                                    & vlSelf->myCPU__DOT__control_io_inst)) 
-                                                 & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_709)))))))))));
+                                                 & ((0x6063U 
+                                                     != 
+                                                     (0x707fU 
+                                                      & vlSelf->myCPU__DOT__control_io_inst)) 
+                                                    & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_760))))))))))));
     bufp->fullQData(oldp+91,(vlSelf->myCPU__DOT__regFile_io_rdata_0),64);
     bufp->fullQData(oldp+93,(vlSelf->myCPU__DOT__regFile_io_rdata_1),64);
     bufp->fullBit(oldp+95,(vlSelf->myCPU__DOT__brCond_io_taken));
@@ -613,25 +626,26 @@ VL_ATTR_COLD void VmyCPU___024root__trace_full_sub_0(VmyCPU___024root* vlSelf, V
                                                                        & (IData)(vlSelf->myCPU__DOT__load_data))))
                                                     : vlSelf->myCPU__DOT__load_data))))))),64);
     bufp->fullCData(oldp+121,(vlSelf->myCPU__DOT__alu__DOT__shamt),6);
-    bufp->fullQData(oldp+122,((((QData)((IData)(vlSelf->myCPU__DOT__alu__DOT___out_T_50[1U])) 
+    bufp->fullQData(oldp+122,((((QData)((IData)(vlSelf->myCPU__DOT__alu__DOT___out_T_88[1U])) 
                                 << 0x20U) | (QData)((IData)(
-                                                            vlSelf->myCPU__DOT__alu__DOT___out_T_50[0U])))),64);
+                                                            vlSelf->myCPU__DOT__alu__DOT___out_T_88[0U])))),64);
     bufp->fullBit(oldp+124,(vlSelf->myCPU__DOT__brCond__DOT__eq));
     bufp->fullBit(oldp+125,((1U & (~ (IData)(vlSelf->myCPU__DOT__brCond__DOT__eq)))));
     bufp->fullBit(oldp+126,(vlSelf->myCPU__DOT__brCond__DOT__lt));
     bufp->fullBit(oldp+127,((1U & (~ (IData)(vlSelf->myCPU__DOT__brCond__DOT__lt)))));
     bufp->fullBit(oldp+128,(vlSelf->myCPU__DOT__brCond__DOT__ltu));
     bufp->fullBit(oldp+129,((1U & (~ (IData)(vlSelf->myCPU__DOT__brCond__DOT__ltu)))));
-    bufp->fullBit(oldp+130,((vlSelf->myCPU__DOT__immGen_io_inst 
+    bufp->fullCData(oldp+130,(vlSelf->myCPU__DOT__control__DOT__ctrlSignals_5),5);
+    bufp->fullBit(oldp+131,((vlSelf->myCPU__DOT__immGen_io_inst 
                              >> 0x1fU)));
-    bufp->fullSData(oldp+131,((vlSelf->myCPU__DOT__immGen_io_inst 
+    bufp->fullSData(oldp+132,((vlSelf->myCPU__DOT__immGen_io_inst 
                                >> 0x14U)),12);
-    bufp->fullQData(oldp+132,(vlSelf->myCPU__DOT__immGen__DOT__Iimm),44);
-    bufp->fullSData(oldp+134,(((0xfe0U & (vlSelf->myCPU__DOT__immGen_io_inst 
+    bufp->fullQData(oldp+133,(vlSelf->myCPU__DOT__immGen__DOT__Iimm),44);
+    bufp->fullSData(oldp+135,(((0xfe0U & (vlSelf->myCPU__DOT__immGen_io_inst 
                                           >> 0x14U)) 
                                | (0x1fU & (vlSelf->myCPU__DOT__immGen_io_inst 
                                            >> 7U)))),12);
-    bufp->fullQData(oldp+135,((((QData)((IData)(((vlSelf->myCPU__DOT__immGen_io_inst 
+    bufp->fullQData(oldp+136,((((QData)((IData)(((vlSelf->myCPU__DOT__immGen_io_inst 
                                                   >> 0x1fU)
                                                   ? 0xffffffffU
                                                   : 0U))) 
@@ -642,7 +656,7 @@ VL_ATTR_COLD void VmyCPU___024root__trace_full_sub_0(VmyCPU___024root* vlSelf, V
                                                             | (0x1fU 
                                                                & (vlSelf->myCPU__DOT__immGen_io_inst 
                                                                   >> 7U))))))),44);
-    bufp->fullSData(oldp+137,(((0x1000U & (vlSelf->myCPU__DOT__immGen_io_inst 
+    bufp->fullSData(oldp+138,(((0x1000U & (vlSelf->myCPU__DOT__immGen_io_inst 
                                            >> 0x13U)) 
                                | ((0x800U & (vlSelf->myCPU__DOT__immGen_io_inst 
                                              << 4U)) 
@@ -650,7 +664,7 @@ VL_ATTR_COLD void VmyCPU___024root__trace_full_sub_0(VmyCPU___024root* vlSelf, V
                                                 >> 0x14U)) 
                                      | (0x1eU & (vlSelf->myCPU__DOT__immGen_io_inst 
                                                  >> 7U)))))),13);
-    bufp->fullQData(oldp+138,((((QData)((IData)(((vlSelf->myCPU__DOT__immGen_io_inst 
+    bufp->fullQData(oldp+139,((((QData)((IData)(((vlSelf->myCPU__DOT__immGen_io_inst 
                                                   >> 0x1fU)
                                                   ? 0xffffffffU
                                                   : 0U))) 
@@ -667,15 +681,15 @@ VL_ATTR_COLD void VmyCPU___024root__trace_full_sub_0(VmyCPU___024root* vlSelf, V
                                                                   | (0x1eU 
                                                                      & (vlSelf->myCPU__DOT__immGen_io_inst 
                                                                         >> 7U))))))))),45);
-    bufp->fullIData(oldp+140,((0xfffff000U & vlSelf->myCPU__DOT__immGen_io_inst)),32);
-    bufp->fullQData(oldp+141,((((QData)((IData)(((vlSelf->myCPU__DOT__immGen_io_inst 
+    bufp->fullIData(oldp+141,((0xfffff000U & vlSelf->myCPU__DOT__immGen_io_inst)),32);
+    bufp->fullQData(oldp+142,((((QData)((IData)(((vlSelf->myCPU__DOT__immGen_io_inst 
                                                   >> 0x1fU)
                                                   ? 0xffffffffU
                                                   : 0U))) 
                                 << 0x20U) | (QData)((IData)(
                                                             (0xfffff000U 
                                                              & vlSelf->myCPU__DOT__immGen_io_inst))))),64);
-    bufp->fullIData(oldp+143,(((0x100000U & (vlSelf->myCPU__DOT__immGen_io_inst 
+    bufp->fullIData(oldp+144,(((0x100000U & (vlSelf->myCPU__DOT__immGen_io_inst 
                                              >> 0xbU)) 
                                | ((0xff000U & vlSelf->myCPU__DOT__immGen_io_inst) 
                                   | ((0x800U & (vlSelf->myCPU__DOT__immGen_io_inst 
@@ -685,14 +699,14 @@ VL_ATTR_COLD void VmyCPU___024root__trace_full_sub_0(VmyCPU___024root* vlSelf, V
                                         | (0x1eU & 
                                            (vlSelf->myCPU__DOT__immGen_io_inst 
                                             >> 0x14U))))))),21);
-    bufp->fullQData(oldp+144,(vlSelf->myCPU__DOT__immGen__DOT__Jimm),53);
-    bufp->fullCData(oldp+146,((0x1fU & (vlSelf->myCPU__DOT__immGen_io_inst 
+    bufp->fullQData(oldp+145,(vlSelf->myCPU__DOT__immGen__DOT__Jimm),53);
+    bufp->fullCData(oldp+147,((0x1fU & (vlSelf->myCPU__DOT__immGen_io_inst 
                                         >> 0xfU))),6);
-    bufp->fullQData(oldp+147,((QData)((IData)((0x1fU 
+    bufp->fullQData(oldp+148,((QData)((IData)((0x1fU 
                                                & (vlSelf->myCPU__DOT__immGen_io_inst 
                                                   >> 0xfU))))),38);
-    bufp->fullBit(oldp+149,(vlSelf->clock));
-    bufp->fullBit(oldp+150,(vlSelf->reset));
-    bufp->fullQData(oldp+151,(vlSelf->io_pc_debug),64);
-    bufp->fullQData(oldp+153,(0ULL),64);
+    bufp->fullBit(oldp+150,(vlSelf->clock));
+    bufp->fullBit(oldp+151,(vlSelf->reset));
+    bufp->fullQData(oldp+152,(vlSelf->io_pc_debug),64);
+    bufp->fullQData(oldp+154,(0ULL),64);
 }

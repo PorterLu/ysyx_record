@@ -14,6 +14,10 @@ static int is_batch_mode = false;
 
 void init_regex();
 void init_wp_pool();
+void device_print();
+void dtrace_print();
+void print_etrace();
+void print_strace();
 
 /* We use the `readline' library to provide more flexibility to read from stdin. */
 static char* rl_gets() {
@@ -43,6 +47,26 @@ static int cmd_c(char *args) {
 static int cmd_q(char *args) {
    nemu_state.state = NEMU_QUIT;
   return -1;
+}
+
+static int cmd_dt(char *args){
+	dtrace_print();
+	return 0;
+}
+
+static int cmd_dp(char *args){
+	device_print();
+	return 0;
+}
+
+static int cmd_et(char *args){
+	print_etrace();
+	return 0;
+}
+
+static int cmd_st(char *args){
+	print_strace();
+	return 0;
 }
 
 static int cmd_ft(char *args)
@@ -175,7 +199,11 @@ static struct {
   { "d", "delete watchpoint", cmd_d},
   { "rb", "print contents of ringbuf", cmd_rb},
   { "mt", "trace memory request", cmd_mt},
-  { "ft", "trace function implementation", cmd_ft}
+  { "ft", "trace function implementation", cmd_ft},
+  {	"dt", "trace device access", cmd_dt},
+  { "dp", "print all device", cmd_dp},
+  { "et", "trace exception", cmd_et},
+  { "st", "strace system call", cmd_st}
 };
 
 #define NR_CMD ARRLEN(cmd_table)
@@ -211,6 +239,7 @@ void sdb_set_batch_mode() {
 }
 
 void sdb_mainloop() {
+	//sdb_set_batch_mode();
   if (is_batch_mode) {
     cmd_c(NULL);
     return;

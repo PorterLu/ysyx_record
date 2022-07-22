@@ -23,4 +23,6 @@ exec.o: /home/porterlu/ysyx-workbench/myCPU/csrc/exec.c \
  /home/porterlu/ysyx-workbench/myCPU/include/watchpoint.h \
  /home/porterlu/ysyx-workbench/myCPU/include/reg.h \
  /home/porterlu/ysyx-workbench/myCPU/include/elftl.h \
- /home/porterlu/ysyx-workbench/myCPU/include/difftest.h
+ /home/porterlu/ysyx-workbench/myCPU/include/difftest.h \
+ /home/porterlu/ysyx-workbench/myCPU/include/gpu.h \
+ /home/porterlu/ysyx-workbench/myCPU/include/timer.h

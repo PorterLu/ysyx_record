@@ -23,6 +23,10 @@
 #include <disasm.h>
 #include <elftl.h>
 #include <difftest.h>
+#include <serial.h>
+#include <timer.h>
+#include <gpu.h>
+#include <mmio.h>
 
 char* elf_file = NULL;
 
@@ -73,8 +77,11 @@ int main(int argc, char *argv[]){
 	contextp->commandArgs(argc, argv);
 	reset(10);
 	init_difftest(ref_so_file, img_size, 0);
-
-
+	init_map();
+	init_serial();
+	init_timer();
+	init_vga();
+		
 	sdbloop();
 	/*
 	while(!contextp->gotFinish())

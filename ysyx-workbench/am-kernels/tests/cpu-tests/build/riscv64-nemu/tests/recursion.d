@@ -1,6 +1,6 @@
-/home/porterlu/ysyx-workbench/am-kernels/tests/cpu-tests/build/riscv64-nemu/tests/recursion.o: \
- /home/porterlu/ysyx-workbench/am-kernels/tests/cpu-tests/tests/recursion.c \
- /home/porterlu/ysyx-workbench/am-kernels/tests/cpu-tests/include/trap.h \
+/home/porterlu/ysyx_record/ysyx-workbench/am-kernels/tests/cpu-tests/build/riscv64-nemu/tests/recursion.o: \
+ /home/porterlu/ysyx_record/ysyx-workbench/am-kernels/tests/cpu-tests/tests/recursion.c \
+ /home/porterlu/ysyx_record/ysyx-workbench/am-kernels/tests/cpu-tests/include/trap.h \
  /home/porterlu/ysyx-workbench/abstract-machine/am/include/am.h \
  /home/porterlu/ysyx-workbench/abstract-machine/am/include/arch/riscv64-nemu.h \
  /home/porterlu/ysyx-workbench/abstract-machine/am/include/amdev.h \
