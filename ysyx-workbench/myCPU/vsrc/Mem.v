@@ -11,20 +11,25 @@ module Mem(input clock,
 	output[63:0] rdata,
 	input enable,
 	input wen);
-	/* verilator lint_off LATCH */
-	always @(*) begin
-		if(enable && !clock) begin
+	
+	wire[63:0] tmp_data;
+	reg[63:0] delay;
+
+	always @(posedge clock) begin
+		if(enable && !reset) begin
 			if(wen) begin
 				pmem_write(addr, wdata, mask);
 			end
 			else begin
-				pmem_read(addr, rdata);
+				pmem_read(addr, tmp_data);
+				delay <= tmp_data;
 			end
 		end
 	end
-
-	always @(*)
-		if(!reset && !clock)
-			pc_read(pc_addr, pc_data);
+	assign rdata = delay;
+/*
+	always @(posedge clock)
+		if(!reset)
+			pc_read(pc_addr, pc_data);*/
 endmodule
 		

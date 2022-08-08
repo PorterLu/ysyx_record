@@ -51,7 +51,15 @@ static int cmd_q(char *args){
 }
 
 static int cmd_si(char *args){
-	exec(1);
+	char* arg = strtok(NULL, " ");
+	uint64_t n;
+
+	if(arg != NULL){
+		sscanf(arg, "%ld", &n);
+		exec(n);
+	}else{
+		exec(1);
+	}
 	return 0;
 }
 

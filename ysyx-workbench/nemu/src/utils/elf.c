@@ -87,33 +87,33 @@ void init_elf(const char* elf_file)
 	uint8_t buf_disk[4096];
 	uint64_t ramdisk_start = findSym("ramdisk_start");
 
-	//if(ramdisk_start != -1)
-	//{
-	memcpy(buf_disk, guest_to_host(ramdisk_start), 4096);
+	if(ramdisk_start != -1)
+	{
+		memcpy(buf_disk, guest_to_host(ramdisk_start), 4096);
 
-	Elf64_Ehdr *elf_ramdisk = (void*)buf_disk;
+		Elf64_Ehdr *elf_ramdisk = (void*)buf_disk;
 
-	uint64_t sh_ramdisk_size = elf_ramdisk->e_shentsize * elf_ramdisk->e_shnum;
+		uint64_t sh_ramdisk_size = elf_ramdisk->e_shentsize * elf_ramdisk->e_shnum;
 
-	Elf64_Shdr *sh_ramdisk = malloc(sh_ramdisk_size);
-	memcpy(sh_ramdisk, guest_to_host(ramdisk_start + elf_ramdisk->e_shoff), sh_ramdisk_size);
+		Elf64_Shdr *sh_ramdisk = malloc(sh_ramdisk_size);
+		memcpy(sh_ramdisk, guest_to_host(ramdisk_start + elf_ramdisk->e_shoff), sh_ramdisk_size);
 
-	char *shstrtab_program = malloc(sh[elf_ramdisk->e_shstrndx].sh_size);
-	memcpy(shstrtab_program, guest_to_host(ramdisk_start + sh_ramdisk[elf_ramdisk->e_shstrndx].sh_offset), sh_ramdisk[elf_ramdisk->e_shstrndx].sh_size);
+		char *shstrtab_program = malloc(sh[elf_ramdisk->e_shstrndx].sh_size);
+		memcpy(shstrtab_program, guest_to_host(ramdisk_start + sh_ramdisk[elf_ramdisk->e_shstrndx].sh_offset), sh_ramdisk[elf_ramdisk->e_shstrndx].sh_size);
 
-	for(int i = 0; i < elf_ramdisk->e_shnum; i++){
-		if(sh_ramdisk[i].sh_type == SHT_SYMTAB && (strcmp(shstrtab_program + sh_ramdisk[i].sh_name, ".symtab") == 0)){
-			symtab_program = malloc(sh_ramdisk[i].sh_size);
-			memcpy(symtab_program, guest_to_host(ramdisk_start + sh_ramdisk[i].sh_offset), sh_ramdisk[i].sh_size);
-			nr_symtab_entry_program = sh_ramdisk[i].sh_size/(sizeof(symtab_program[0]));
-		}else if(sh_ramdisk[i].sh_type == SHT_STRTAB && (strcmp(shstrtab_program + sh_ramdisk[i].sh_name, ".strtab") == 0)){
-			strtab_program = malloc(sh_ramdisk[i].sh_size);
-			memcpy(strtab_program, guest_to_host(ramdisk_start + sh_ramdisk[i].sh_offset), sh_ramdisk[i].sh_size);
-		
+		for(int i = 0; i < elf_ramdisk->e_shnum; i++){
+			if(sh_ramdisk[i].sh_type == SHT_SYMTAB && (strcmp(shstrtab_program + sh_ramdisk[i].sh_name, ".symtab") == 0)){
+				symtab_program = malloc(sh_ramdisk[i].sh_size);
+				memcpy(symtab_program, guest_to_host(ramdisk_start + sh_ramdisk[i].sh_offset), sh_ramdisk[i].sh_size);
+				nr_symtab_entry_program = sh_ramdisk[i].sh_size/(sizeof(symtab_program[0]));
+			}else if(sh_ramdisk[i].sh_type == SHT_STRTAB && (strcmp(shstrtab_program + sh_ramdisk[i].sh_name, ".strtab") == 0)){
+				strtab_program = malloc(sh_ramdisk[i].sh_size);
+				memcpy(strtab_program, guest_to_host(ramdisk_start + sh_ramdisk[i].sh_offset), sh_ramdisk[i].sh_size);
+			
+			}
 		}
+		free(sh_ramdisk);
 	}
-	free(sh_ramdisk);
-	//}
 
 
 	free(sh);
