@@ -45,8 +45,9 @@ static void exec_once()
 	printf("%s\n", log_buf);
 	//}
 
-	log_write("%s\n", log_buf);
-	// p is the ouput array, the next is the remaining length of the array, the third*/
+	log_write("%s\n", log_buf);*/
+
+	// p is the ouput array, the next is the remaining length of the array, the third
 	cpu.pc = top->io_pc_debug;
 
 	if(instr == 0x00100073)
@@ -54,7 +55,7 @@ static void exec_once()
 
 	//printf("\n\n\n\npc:%lx\n\n\n", cpu.pc);
 	/*
-	if(instr != 0x13)
+	if(instr != 0x13 && !(top->io_stall))
 	{
 		bool is_store = ((instr&0x7f) == 0x23);
 		is_store = false;
@@ -79,6 +80,7 @@ static void exec_once()
 
 	}*/
 	
+	
 	static uint64_t last = 0;
 	uint64_t now = get_time();
 	if ((now - last) < 1000000 / 60) {
@@ -87,7 +89,7 @@ static void exec_once()
 	last = now;
 	
   	vga_update_screen();
-
+	
 }
  
 void exec(uint64_t n)

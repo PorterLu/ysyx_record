@@ -7,21 +7,6 @@
 
 #include "VmyCPU___024root.h"
 
-void VmyCPU___024root___sequent__TOP__0(VmyCPU___024root* vlSelf);
-
-void VmyCPU___024root___eval(VmyCPU___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
-    VmyCPU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VmyCPU___024root___eval\n"); );
-    // Body
-    if (((IData)(vlSelf->clock) & (~ (IData)(vlSelf->__Vclklast__TOP__clock)))) {
-        VmyCPU___024root___sequent__TOP__0(vlSelf);
-        vlSelf->__Vm_traceActivity[1U] = 1U;
-    }
-    // Final
-    vlSelf->__Vclklast__TOP__clock = vlSelf->clock;
-}
-
 #ifdef VL_DEBUG
 void VmyCPU___024root___eval_debug_assertions(VmyCPU___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
@@ -32,5 +17,25 @@ void VmyCPU___024root___eval_debug_assertions(VmyCPU___024root* vlSelf) {
         Verilated::overWidthError("clock");}
     if (VL_UNLIKELY((vlSelf->reset & 0xfeU))) {
         Verilated::overWidthError("reset");}
+    if (VL_UNLIKELY((vlSelf->io_master_awready & 0xfeU))) {
+        Verilated::overWidthError("io_master_awready");}
+    if (VL_UNLIKELY((vlSelf->io_master_wready & 0xfeU))) {
+        Verilated::overWidthError("io_master_wready");}
+    if (VL_UNLIKELY((vlSelf->io_master_bvalid & 0xfeU))) {
+        Verilated::overWidthError("io_master_bvalid");}
+    if (VL_UNLIKELY((vlSelf->io_master_bresp & 0xfcU))) {
+        Verilated::overWidthError("io_master_bresp");}
+    if (VL_UNLIKELY((vlSelf->io_master_bid & 0xf0U))) {
+        Verilated::overWidthError("io_master_bid");}
+    if (VL_UNLIKELY((vlSelf->io_master_arready & 0xfeU))) {
+        Verilated::overWidthError("io_master_arready");}
+    if (VL_UNLIKELY((vlSelf->io_master_rvalid & 0xfeU))) {
+        Verilated::overWidthError("io_master_rvalid");}
+    if (VL_UNLIKELY((vlSelf->io_master_rresp & 0xfcU))) {
+        Verilated::overWidthError("io_master_rresp");}
+    if (VL_UNLIKELY((vlSelf->io_master_rlast & 0xfeU))) {
+        Verilated::overWidthError("io_master_rlast");}
+    if (VL_UNLIKELY((vlSelf->io_master_rid & 0xf0U))) {
+        Verilated::overWidthError("io_master_rid");}
 }
 #endif  // VL_DEBUG

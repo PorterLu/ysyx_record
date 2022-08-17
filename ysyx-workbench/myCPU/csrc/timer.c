@@ -17,11 +17,14 @@ uint64_t get_time(){
 
 
 static void rtc_io_handler(uint32_t offset, int len, bool is_write){
-	if(!is_write && offset == 4){
-		rtc_port_base[1] = get_time() >> 32;
-	}else if(!is_write){
-		rtc_port_base[0] = get_time();
-	}
+	//if(!is_write && offset == 4){
+	//	rtc_port_base[1] = get_time() >> 32;
+	//}else if(!is_write){
+	//	rtc_port_base[0] = get_time();
+	//}
+	rtc_port_base[0] = get_time();
+	rtc_port_base[1] = get_time() >> 32;
+	//printf("get_time :%lx\n", get_time());
 }
 
 

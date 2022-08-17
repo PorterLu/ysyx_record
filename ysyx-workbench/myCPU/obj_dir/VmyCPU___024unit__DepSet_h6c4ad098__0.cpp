@@ -8,44 +8,6 @@
 #include "VmyCPU__Syms.h"
 #include "VmyCPU___024unit.h"
 
-extern "C" void pmem_read(long long raddr, long long* rdata);
-
-VL_INLINE_OPT void VmyCPU___024unit____Vdpiimwrap_pmem_read_TOP____024unit(QData/*63:0*/ raddr, QData/*63:0*/ &rdata) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+        VmyCPU___024unit____Vdpiimwrap_pmem_read_TOP____024unit\n"); );
-    // Body
-    long long raddr__Vcvt;
-    for (size_t raddr__Vidx = 0; raddr__Vidx < 1; ++raddr__Vidx) raddr__Vcvt = raddr;
-    long long rdata__Vcvt;
-    pmem_read(raddr__Vcvt, &rdata__Vcvt);
-    rdata = rdata__Vcvt;
-}
-
-extern "C" void pmem_write(long long waddr, long long wdata, char mask);
-
-VL_INLINE_OPT void VmyCPU___024unit____Vdpiimwrap_pmem_write_TOP____024unit(QData/*63:0*/ waddr, QData/*63:0*/ wdata, CData/*7:0*/ mask) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+        VmyCPU___024unit____Vdpiimwrap_pmem_write_TOP____024unit\n"); );
-    // Body
-    long long waddr__Vcvt;
-    for (size_t waddr__Vidx = 0; waddr__Vidx < 1; ++waddr__Vidx) waddr__Vcvt = waddr;
-    long long wdata__Vcvt;
-    for (size_t wdata__Vidx = 0; wdata__Vidx < 1; ++wdata__Vidx) wdata__Vcvt = wdata;
-    char mask__Vcvt;
-    for (size_t mask__Vidx = 0; mask__Vidx < 1; ++mask__Vidx) mask__Vcvt = mask;
-    pmem_write(waddr__Vcvt, wdata__Vcvt, mask__Vcvt);
-}
-
-extern "C" void pc_read(long long raddr, long long* rdata);
-
-VL_INLINE_OPT void VmyCPU___024unit____Vdpiimwrap_pc_read_TOP____024unit(QData/*63:0*/ raddr, QData/*63:0*/ &rdata) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+        VmyCPU___024unit____Vdpiimwrap_pc_read_TOP____024unit\n"); );
-    // Body
-    long long raddr__Vcvt;
-    for (size_t raddr__Vidx = 0; raddr__Vidx < 1; ++raddr__Vidx) raddr__Vcvt = raddr;
-    long long rdata__Vcvt;
-    pc_read(raddr__Vcvt, &rdata__Vcvt);
-    rdata = rdata__Vcvt;
-}
-
 extern "C" void set_gpr_ptr(long long regfile_0, long long regfile_1, long long regfile_2, long long regfile_3, long long regfile_4, long long regfile_5, long long regfile_6, long long regfile_7, long long regfile_8, long long regfile_9, long long regfile_10, long long regfile_11, long long regfile_12, long long regfile_13, long long regfile_14, long long regfile_15, long long regfile_16, long long regfile_17, long long regfile_18, long long regfile_19, long long regfile_20, long long regfile_21, long long regfile_22, long long regfile_23, long long regfile_24, long long regfile_25, long long regfile_26, long long regfile_27, long long regfile_28, long long regfile_29, long long regfile_30, long long regfile_31);
 
 VL_INLINE_OPT void VmyCPU___024unit____Vdpiimwrap_set_gpr_ptr_TOP____024unit(QData/*63:0*/ regfile_0, QData/*63:0*/ regfile_1, QData/*63:0*/ regfile_2, QData/*63:0*/ regfile_3, QData/*63:0*/ regfile_4, QData/*63:0*/ regfile_5, QData/*63:0*/ regfile_6, QData/*63:0*/ regfile_7, QData/*63:0*/ regfile_8, QData/*63:0*/ regfile_9, QData/*63:0*/ regfile_10, QData/*63:0*/ regfile_11, QData/*63:0*/ regfile_12, QData/*63:0*/ regfile_13, QData/*63:0*/ regfile_14, QData/*63:0*/ regfile_15, QData/*63:0*/ regfile_16, QData/*63:0*/ regfile_17, QData/*63:0*/ regfile_18, QData/*63:0*/ regfile_19, QData/*63:0*/ regfile_20, QData/*63:0*/ regfile_21, QData/*63:0*/ regfile_22, QData/*63:0*/ regfile_23, QData/*63:0*/ regfile_24, QData/*63:0*/ regfile_25, QData/*63:0*/ regfile_26, QData/*63:0*/ regfile_27, QData/*63:0*/ regfile_28, QData/*63:0*/ regfile_29, QData/*63:0*/ regfile_30, QData/*63:0*/ regfile_31) {

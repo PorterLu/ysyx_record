@@ -13,4 +13,5 @@ sim.o: /home/porterlu/ysyx-workbench/myCPU/csrc/sim.c \
  /usr/local/share/verilator/include/verilated_trace.h \
  /usr/local/share/verilator/include/verilated_trace_defs.h \
  /home/porterlu/ysyx-workbench/myCPU/include/reg.h \
- /home/porterlu/ysyx-workbench/myCPU/include/common.h
+ /home/porterlu/ysyx-workbench/myCPU/include/common.h \
+ /home/porterlu/ysyx-workbench/myCPU/include/pmem.h

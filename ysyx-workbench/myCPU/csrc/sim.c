@@ -1,6 +1,7 @@
 #include <sim.h>
 #include <stdlib.h>
 #include <reg.h>
+#include <pmem.h>
 
 //extern uint64_t cpu_gpr[32];
 VmyCPU *top;
@@ -33,7 +34,10 @@ void step_and_dump_wave()			//模型利用输入计算输出，同时记录时�
 	//printf("%ld\n",top->rootp->myCPU__DOT__regFile__DOT__reg_24);
     tfp->dump(contextp->time());
 	*/
+
+	mem_step();  //top->eval();//mem_sync();
 	top->clock = 0; top->eval(); //contextp->timeInc(1); tfp->dump(contextp->time());
+	//mem_step();
 	top->clock = 1; top->eval(); //contextp->timeInc(1); tfp->dump(contextp->time());
 }
 

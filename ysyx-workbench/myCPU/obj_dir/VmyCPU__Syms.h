@@ -15,6 +15,7 @@
 
 // INCLUDE MODULE CLASSES
 #include "VmyCPU___024root.h"
+#include "VmyCPU_Cache.h"
 #include "VmyCPU___024unit.h"
 
 // DPI TYPES for DPI Export callbacks (Internal use)
@@ -31,6 +32,8 @@ class VmyCPU__Syms final : public VerilatedSyms {
     // MODULE INSTANCE STATE
     VmyCPU___024root               TOP;
     VmyCPU___024unit               TOP____024unit;
+    VmyCPU_Cache                   TOP__myCPU__DOT__dcache;
+    VmyCPU_Cache                   TOP__myCPU__DOT__icache;
 
     // CONSTRUCTORS
     VmyCPU__Syms(VerilatedContext* contextp, const char* namep, VmyCPU* modelp);

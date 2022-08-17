@@ -7,24 +7,26 @@
 
 #include "VmyCPU___024root.h"
 
+VL_ATTR_COLD void VmyCPU___024root___initial__TOP__0(VmyCPU___024root* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    VmyCPU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VmyCPU___024root___initial__TOP__0\n"); );
+    // Body
+    vlSelf->io_master_awid = 0U;
+    vlSelf->io_master_awsize = 6U;
+    vlSelf->io_master_awburst = 1U;
+    vlSelf->io_master_arid = 0U;
+    vlSelf->io_master_arsize = 6U;
+    vlSelf->io_master_arburst = 1U;
+}
+
 VL_ATTR_COLD void VmyCPU___024root___eval_initial(VmyCPU___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VmyCPU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VmyCPU___024root___eval_initial\n"); );
     // Body
+    VmyCPU___024root___initial__TOP__0(vlSelf);
     vlSelf->__Vclklast__TOP__clock = vlSelf->clock;
-}
-
-VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf);
-
-VL_ATTR_COLD void VmyCPU___024root___eval_settle(VmyCPU___024root* vlSelf) {
-    if (false && vlSelf) {}  // Prevent unused
-    VmyCPU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    VmyCPU___024root___eval_settle\n"); );
-    // Body
-    VmyCPU___024root___settle__TOP__0(vlSelf);
-    vlSelf->__Vm_traceActivity[1U] = 1U;
-    vlSelf->__Vm_traceActivity[0U] = 1U;
 }
 
 VL_ATTR_COLD void VmyCPU___024root___final(VmyCPU___024root* vlSelf) {
@@ -43,8 +45,49 @@ VL_ATTR_COLD void VmyCPU___024root___ctor_var_reset(VmyCPU___024root* vlSelf) {
     vlSelf->io_pc_debug = VL_RAND_RESET_Q(64);
     vlSelf->io_inst = VL_RAND_RESET_I(32);
     vlSelf->io_start = VL_RAND_RESET_I(1);
+    vlSelf->io_stall = VL_RAND_RESET_I(1);
+    vlSelf->io_master_awready = VL_RAND_RESET_I(1);
+    vlSelf->io_master_awvalid = VL_RAND_RESET_I(1);
+    vlSelf->io_master_awaddr = VL_RAND_RESET_I(32);
+    vlSelf->io_master_awid = VL_RAND_RESET_I(4);
+    vlSelf->io_master_awlen = VL_RAND_RESET_I(8);
+    vlSelf->io_master_awsize = VL_RAND_RESET_I(3);
+    vlSelf->io_master_awburst = VL_RAND_RESET_I(2);
+    vlSelf->io_master_wready = VL_RAND_RESET_I(1);
+    vlSelf->io_master_wvalid = VL_RAND_RESET_I(1);
+    vlSelf->io_master_wdata = VL_RAND_RESET_Q(64);
+    vlSelf->io_master_wstrb = VL_RAND_RESET_I(8);
+    vlSelf->io_master_wlast = VL_RAND_RESET_I(1);
+    vlSelf->io_master_bready = VL_RAND_RESET_I(1);
+    vlSelf->io_master_bvalid = VL_RAND_RESET_I(1);
+    vlSelf->io_master_bresp = VL_RAND_RESET_I(2);
+    vlSelf->io_master_bid = VL_RAND_RESET_I(4);
+    vlSelf->io_master_arready = VL_RAND_RESET_I(1);
+    vlSelf->io_master_arvalid = VL_RAND_RESET_I(1);
+    vlSelf->io_master_araddr = VL_RAND_RESET_I(32);
+    vlSelf->io_master_arid = VL_RAND_RESET_I(4);
+    vlSelf->io_master_arlen = VL_RAND_RESET_I(8);
+    vlSelf->io_master_arsize = VL_RAND_RESET_I(3);
+    vlSelf->io_master_arburst = VL_RAND_RESET_I(2);
+    vlSelf->io_master_rready = VL_RAND_RESET_I(1);
+    vlSelf->io_master_rvalid = VL_RAND_RESET_I(1);
+    vlSelf->io_master_rresp = VL_RAND_RESET_I(2);
+    vlSelf->io_master_rdata = VL_RAND_RESET_Q(64);
+    vlSelf->io_master_rlast = VL_RAND_RESET_I(1);
+    vlSelf->io_master_rid = VL_RAND_RESET_I(4);
+    vlSelf->myCPU__DOT__datapath_io_dcache_cpu_request_rw = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__datapath_io_dcache_cpu_request_valid = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__control_io_imm_sel = VL_RAND_RESET_I(3);
     vlSelf->myCPU__DOT__control_io_csr_cmd = VL_RAND_RESET_I(3);
+    vlSelf->myCPU__DOT__arb_io_icache_ar_ready = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__arb_io_icache_r_valid = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__arb_io_dcache_aw_ready = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__arb_io_dcache_w_ready = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__arb_io_dcache_b_valid = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__arb_io_dcache_ar_ready = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__arb_io_dcache_r_valid = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__arb_io_axi_out_b_ready = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__arb_io_axi_out_r_ready = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT__alu_io_A = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__alu_io_B = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__alu_io_out = VL_RAND_RESET_Q(64);
@@ -54,8 +97,6 @@ VL_ATTR_COLD void VmyCPU___024root___ctor_var_reset(VmyCPU___024root* vlSelf) {
     vlSelf->myCPU__DOT__datapath__DOT__regFile_io_wen = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT__regFile_io_wdata = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__regFile_io_rdata_1 = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT__datapath__DOT__imem_pc_data = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT__datapath__DOT__dmem_pc_data = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__csr_io_flush_mask = VL_RAND_RESET_I(4);
     vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op = VL_RAND_RESET_I(3);
     vlSelf->myCPU__DOT__datapath__DOT__csr_io_illegal_inst = VL_RAND_RESET_I(32);
@@ -95,6 +136,10 @@ VL_ATTR_COLD void VmyCPU___024root___ctor_var_reset(VmyCPU___024root* vlSelf) {
     vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_csr_write_op = VL_RAND_RESET_I(3);
     vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_csr_write_addr = VL_RAND_RESET_I(12);
     vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_csr_write_data = VL_RAND_RESET_Q(64);
+    vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_jump_addr = VL_RAND_RESET_Q(64);
+    vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_jump_taken = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_st_data = VL_RAND_RESET_Q(64);
+    vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_st_type = VL_RAND_RESET_I(3);
     vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type = VL_RAND_RESET_I(3);
     vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_sel = VL_RAND_RESET_I(2);
     vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_en = VL_RAND_RESET_I(1);
@@ -109,11 +154,16 @@ VL_ATTR_COLD void VmyCPU___024root___ctor_var_reset(VmyCPU___024root* vlSelf) {
     vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_op = VL_RAND_RESET_I(3);
     vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_addr = VL_RAND_RESET_I(12);
     vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_data = VL_RAND_RESET_Q(64);
+    vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_jump_addr = VL_RAND_RESET_Q(64);
+    vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_jump_taken = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel = VL_RAND_RESET_I(2);
     vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_en = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_pc = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst = VL_RAND_RESET_I(32);
     vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_enable = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__datapath__DOT__started = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__datapath__DOT__dcache_stall = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__datapath__DOT__stall = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT__csr_atomic_flush = VL_RAND_RESET_I(4);
     vlSelf->myCPU__DOT__datapath__DOT__brCond_taken = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT__jmp_occur = VL_RAND_RESET_I(1);
@@ -121,30 +171,31 @@ VL_ATTR_COLD void VmyCPU___024root___ctor_var_reset(VmyCPU___024root* vlSelf) {
     vlSelf->myCPU__DOT__datapath__DOT__flush_de = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT__flush_em = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT__flush_mw = VL_RAND_RESET_I(1);
-    vlSelf->myCPU__DOT__datapath__DOT__started = VL_RAND_RESET_I(1);
     VL_RAND_RESET_W(65, vlSelf->myCPU__DOT__datapath__DOT__pc);
-    VL_RAND_RESET_W(65, vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_1);
-    vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_4 = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_5 = VL_RAND_RESET_I(1);
+    VL_RAND_RESET_W(65, vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_11);
     vlSelf->myCPU__DOT__datapath__DOT__is_kill_inst = VL_RAND_RESET_I(1);
+    vlSelf->myCPU__DOT__datapath__DOT___inst_T_7 = VL_RAND_RESET_I(32);
+    VL_RAND_RESET_W(65, vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2);
+    vlSelf->myCPU__DOT__datapath__DOT___GEN_2 = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT___csr_op_T_2 = VL_RAND_RESET_I(1);
-    vlSelf->myCPU__DOT__datapath__DOT___csr_op_T_15 = VL_RAND_RESET_I(3);
+    vlSelf->myCPU__DOT__datapath__DOT___csr_op_T_16 = VL_RAND_RESET_I(3);
     vlSelf->myCPU__DOT__datapath__DOT___de_pipe_reg_rs1_T_11 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT___de_pipe_reg_rs1_T_12 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_5 = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_33 = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT__datapath__DOT___T_2 = VL_RAND_RESET_I(1);
-    vlSelf->myCPU__DOT__datapath__DOT___src1_data_T_7 = VL_RAND_RESET_Q(64);
+    vlSelf->myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_34 = VL_RAND_RESET_Q(64);
+    vlSelf->myCPU__DOT__datapath__DOT___T_6 = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT___GEN_54 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT___GEN_56 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT___GEN_58 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT___GEN_60 = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT__datapath__DOT__src2_data = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__A_data = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__B_data = VL_RAND_RESET_Q(64);
+    vlSelf->myCPU__DOT__datapath__DOT___io_dcache_cpu_request_addr_T = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__st_mask = VL_RAND_RESET_I(8);
+    VL_RAND_RESET_W(65, vlSelf->myCPU__DOT__datapath__DOT___GEN_136);
     vlSelf->myCPU__DOT__datapath__DOT__alu__DOT__shamt = VL_RAND_RESET_I(6);
-    VL_RAND_RESET_W(128, vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80);
     VL_RAND_RESET_W(128, vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_88);
     vlSelf->myCPU__DOT__datapath__DOT__alu__DOT__sum = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__immGen__DOT__Iimm = VL_RAND_RESET_Q(44);
@@ -190,10 +241,6 @@ VL_ATTR_COLD void VmyCPU___024root___ctor_var_reset(VmyCPU___024root* vlSelf) {
     vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT___GEN_90 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT___GEN_110 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT___GEN_123 = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT__datapath__DOT__imem__DOT__tmp_data = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT__datapath__DOT__imem__DOT__delay = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT__datapath__DOT__dmem__DOT__tmp_data = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT__datapath__DOT__dmem__DOT__delay = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mode = VL_RAND_RESET_I(2);
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_sum = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_mpp = VL_RAND_RESET_I(2);
@@ -256,7 +303,6 @@ VL_ATTR_COLD void VmyCPU___024root___ctor_var_reset(VmyCPU___024root* vlSelf) {
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause = VL_RAND_RESET_Q(63);
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__handExcS = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__cause = VL_RAND_RESET_Q(64);
-    vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___mcycle_data_T_1 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_2 = VL_RAND_RESET_Q(64);
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___T_167 = VL_RAND_RESET_Q(64);
@@ -317,7 +363,12 @@ VL_ATTR_COLD void VmyCPU___024root___ctor_var_reset(VmyCPU___024root* vlSelf) {
     vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_1109 = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_1126 = VL_RAND_RESET_I(1);
     vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_1143 = VL_RAND_RESET_I(1);
-    for (int __Vi0=0; __Vi0<2; ++__Vi0) {
+    vlSelf->myCPU__DOT__arb__DOT__state = VL_RAND_RESET_I(3);
+    vlSelf->myCPU__DOT__arb__DOT___GEN_0 = VL_RAND_RESET_I(3);
+    vlSelf->myCPU__DOT__arb__DOT___GEN_4 = VL_RAND_RESET_I(3);
+    vlSelf->myCPU__DOT__arb__DOT___GEN_6 = VL_RAND_RESET_I(3);
+    vlSelf->myCPU__DOT__arb__DOT___GEN_14 = VL_RAND_RESET_I(3);
+    for (int __Vi0=0; __Vi0<3; ++__Vi0) {
         vlSelf->__Vm_traceActivity[__Vi0] = VL_RAND_RESET_I(1);
     }
 }

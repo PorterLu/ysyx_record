@@ -14,36 +14,144 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VmyCPU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VmyCPU___024root___settle__TOP__0\n"); );
-    // Init
-    VlWide<3>/*95:0*/ __Vtemp_h9dc1a9be__0;
-    VlWide<3>/*95:0*/ __Vtemp_h5e66f7d5__0;
-    VlWide<3>/*95:0*/ __Vtemp_hd1bbea4b__0;
-    VlWide<3>/*95:0*/ __Vtemp_h3da41009__0;
-    VlWide<3>/*95:0*/ __Vtemp_hf0b58f7d__0;
-    VlWide<3>/*95:0*/ __Vtemp_h2eeaba80__0;
-    VlWide<3>/*95:0*/ __Vtemp_hbde7148f__0;
-    VlWide<3>/*95:0*/ __Vtemp_hf0f9f0c3__0;
-    VlWide<3>/*95:0*/ __Vtemp_hb3a50930__0;
-    VlWide<3>/*95:0*/ __Vtemp_h33f76f69__0;
-    VlWide<4>/*127:0*/ __Vtemp_h0d44f1b8__0;
-    VlWide<4>/*127:0*/ __Vtemp_hf037b5c0__0;
-    VlWide<4>/*127:0*/ __Vtemp_hbdee2cf2__0;
-    VlWide<4>/*127:0*/ __Vtemp_h6d63f16d__0;
-    VlWide<4>/*127:0*/ __Vtemp_h51384543__0;
-    VlWide<4>/*127:0*/ __Vtemp_h5162a830__0;
-    VlWide<4>/*127:0*/ __Vtemp_h514c3f2e__0;
-    VlWide<4>/*127:0*/ __Vtemp_h375ca612__0;
-    VlWide<4>/*127:0*/ __Vtemp_h3763b123__0;
-    VlWide<4>/*127:0*/ __Vtemp_hf037b5c0__1;
-    VlWide<4>/*127:0*/ __Vtemp_h212409a7__0;
-    VlWide<4>/*127:0*/ __Vtemp_h1f641964__0;
-    VlWide<4>/*127:0*/ __Vtemp_h0ce33da7__0;
-    VlWide<4>/*127:0*/ __Vtemp_h48201fc5__0;
-    VlWide<4>/*127:0*/ __Vtemp_hf037b5c0__2;
-    VlWide<4>/*127:0*/ __Vtemp_h7bdfc44d__0;
-    VlWide<4>/*127:0*/ __Vtemp_h2bda0aa4__0;
     // Body
     vlSelf->io_pc_debug = vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_pc;
+    if ((0U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))) {
+        vlSelf->io_master_awlen = 0xfU;
+        vlSelf->io_master_wstrb = 0xffU;
+        vlSelf->io_master_awaddr = vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg;
+    } else if ((1U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))) {
+        vlSelf->io_master_awlen = 0xfU;
+        vlSelf->io_master_wstrb = 0xffU;
+        vlSelf->io_master_awaddr = vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg;
+    } else if ((2U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))) {
+        vlSelf->io_master_awlen = 0U;
+        vlSelf->io_master_wstrb = 0xffU;
+        vlSelf->io_master_awaddr = vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg;
+    } else {
+        vlSelf->io_master_awlen = 0xfU;
+        if ((3U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))) {
+            vlSelf->io_master_wstrb = 0xffU;
+            vlSelf->io_master_awaddr = vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg;
+        } else if ((4U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))) {
+            vlSelf->io_master_wstrb = vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_mask;
+            vlSelf->io_master_awaddr = vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg;
+        } else {
+            vlSelf->io_master_wstrb = 0xffU;
+            vlSelf->io_master_awaddr = ((5U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                         ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg
+                                         : ((7U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                             ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg
+                                             : ((0xaU 
+                                                 == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                 ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg
+                                                 : 
+                                                ((9U 
+                                                  == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                  ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg
+                                                  : 
+                                                 ((0xbU 
+                                                   == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                   ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__writeback_addr
+                                                   : vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg)))));
+        }
+    }
+    if ((5U == (IData)(vlSelf->myCPU__DOT__arb__DOT__state))) {
+        if ((0U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))) {
+            vlSelf->io_master_arlen = 0xfU;
+            vlSelf->io_master_araddr = vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg;
+        } else if ((1U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))) {
+            vlSelf->io_master_arlen = 0U;
+            vlSelf->io_master_araddr = vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg;
+        } else {
+            vlSelf->io_master_arlen = 0xfU;
+            vlSelf->io_master_araddr = ((2U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                         ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg
+                                         : ((3U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                             ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg
+                                             : ((4U 
+                                                 == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                 ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg
+                                                 : 
+                                                ((5U 
+                                                  == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                  ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg
+                                                  : 
+                                                 ((7U 
+                                                   == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                   ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg
+                                                   : 
+                                                  ((0xaU 
+                                                    == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                    ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__refill_addr
+                                                    : vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_addr_reg))))));
+        }
+    } else if ((0U == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))) {
+        vlSelf->io_master_arlen = 0xfU;
+        vlSelf->io_master_araddr = vlSymsp->TOP__myCPU__DOT__icache.__PVT__cpu_request_addr_reg;
+    } else if ((1U == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))) {
+        vlSelf->io_master_arlen = 0U;
+        vlSelf->io_master_araddr = vlSymsp->TOP__myCPU__DOT__icache.__PVT__cpu_request_addr_reg;
+    } else {
+        vlSelf->io_master_arlen = 0xfU;
+        vlSelf->io_master_araddr = ((2U == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                     ? vlSymsp->TOP__myCPU__DOT__icache.__PVT__cpu_request_addr_reg
+                                     : ((3U == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                         ? vlSymsp->TOP__myCPU__DOT__icache.__PVT__cpu_request_addr_reg
+                                         : ((4U == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                             ? vlSymsp->TOP__myCPU__DOT__icache.__PVT__cpu_request_addr_reg
+                                             : ((5U 
+                                                 == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                 ? vlSymsp->TOP__myCPU__DOT__icache.__PVT__cpu_request_addr_reg
+                                                 : 
+                                                ((7U 
+                                                  == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                  ? vlSymsp->TOP__myCPU__DOT__icache.__PVT__cpu_request_addr_reg
+                                                  : 
+                                                 ((0xaU 
+                                                   == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                   ? vlSymsp->TOP__myCPU__DOT__icache.__PVT__refill_addr
+                                                   : vlSymsp->TOP__myCPU__DOT__icache.__PVT__cpu_request_addr_reg))))));
+    }
+    vlSelf->myCPU__DOT__arb_io_axi_out_b_ready = ((
+                                                   (0U 
+                                                    != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                                   & ((1U 
+                                                       != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                                      & ((2U 
+                                                          != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                                         & ((3U 
+                                                             != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                                            & ((4U 
+                                                                != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                                               & ((5U 
+                                                                   == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                                                  | ((7U 
+                                                                      != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                                                     & ((0xaU 
+                                                                         != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                                                        & ((9U 
+                                                                            != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                                                           & ((0xbU 
+                                                                               != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                                                              & ((8U 
+                                                                                != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                                                                & (0xcU 
+                                                                                == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))))))))))))) 
+                                                  & (7U 
+                                                     == (IData)(vlSelf->myCPU__DOT__arb__DOT__state)));
+    vlSelf->myCPU__DOT__arb_io_icache_ar_ready = ((IData)(vlSelf->io_master_arready) 
+                                                  & (4U 
+                                                     == (IData)(vlSelf->myCPU__DOT__arb__DOT__state)));
+    vlSelf->myCPU__DOT__arb_io_dcache_ar_ready = ((IData)(vlSelf->io_master_arready) 
+                                                  & (5U 
+                                                     == (IData)(vlSelf->myCPU__DOT__arb__DOT__state)));
+    vlSelf->myCPU__DOT__arb_io_dcache_aw_ready = ((IData)(vlSelf->io_master_awready) 
+                                                  & (6U 
+                                                     == (IData)(vlSelf->myCPU__DOT__arb__DOT__state)));
+    vlSelf->myCPU__DOT__arb_io_dcache_w_ready = ((IData)(vlSelf->io_master_wready) 
+                                                 & (3U 
+                                                    == (IData)(vlSelf->myCPU__DOT__arb__DOT__state)));
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___sip_T 
         = (((QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mip_meip)) 
             << 0xbU) | (QData)((IData)((((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mip_seip) 
@@ -54,6 +162,15 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                        << 3U) 
                                                       | ((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mip_ssip) 
                                                          << 1U)))))));
+    vlSelf->myCPU__DOT__arb_io_dcache_b_valid = ((IData)(vlSelf->io_master_bvalid) 
+                                                 & (7U 
+                                                    == (IData)(vlSelf->myCPU__DOT__arb__DOT__state)));
+    vlSelf->myCPU__DOT__arb_io_icache_r_valid = ((IData)(vlSelf->io_master_rvalid) 
+                                                 & (1U 
+                                                    == (IData)(vlSelf->myCPU__DOT__arb__DOT__state)));
+    vlSelf->myCPU__DOT__arb_io_dcache_r_valid = ((IData)(vlSelf->io_master_rvalid) 
+                                                 & (2U 
+                                                    == (IData)(vlSelf->myCPU__DOT__arb__DOT__state)));
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___T_4 
         = (((QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mip_seip)) 
             << 9U) | (QData)((IData)((((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mip_stip) 
@@ -71,25 +188,13 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                           << 3U) 
                                                          | ((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mie_ssie) 
                                                             << 1U))))))));
-    vlSelf->myCPU__DOT__datapath__DOT__st_mask = ((1U 
-                                                   == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_st_type))
-                                                   ? 0xfU
-                                                   : 
-                                                  ((2U 
-                                                    == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_st_type))
-                                                    ? 3U
-                                                    : 
-                                                   ((3U 
-                                                     == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_st_type))
-                                                     ? 1U
-                                                     : 0xffU)));
-    VmyCPU___024unit____Vdpiimwrap_set_gpr_ptr_TOP____024unit(0ULL, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_1, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_2, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_3, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_4, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_5, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_6, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_7, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_8, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_9, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_10, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_11, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_12, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_13, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_14, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_15, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_16, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_17, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_18, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_19, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_20, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_21, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_22, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_23, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_24, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_25, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_26, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_27, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_28, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_29, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_30, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_31);
     vlSelf->myCPU__DOT__datapath__DOT___de_pipe_reg_rs1_T_11 
         = ((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel))
             ? (4ULL + vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_pc)
             : ((3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel))
                 ? vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_read_data
                 : vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_load_data));
+    VmyCPU___024unit____Vdpiimwrap_set_gpr_ptr_TOP____024unit(0ULL, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_1, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_2, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_3, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_4, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_5, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_6, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_7, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_8, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_9, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_10, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_11, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_12, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_13, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_14, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_15, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_16, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_17, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_18, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_19, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_20, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_21, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_22, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_23, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_24, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_25, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_26, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_27, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_28, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_29, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_30, vlSelf->myCPU__DOT__datapath__DOT__regFile__DOT__reg_31);
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___sstatus_T 
         = (((QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_sum)) 
             << 0x12U) | (QData)((IData)((((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_mpp) 
@@ -105,33 +210,13 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                      | ((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_sie) 
                                                         << 1U)))))))));
     vlSelf->io_inst = vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst;
-    vlSelf->myCPU__DOT__datapath__DOT__regFile_io_wen 
-        = ((((((0U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel)) 
-               | (2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel))) 
-              | (1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel))) 
-             | (3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel))) 
-            & (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_en)) 
-           & (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_enable));
-    __Vtemp_h9dc1a9be__0[0U] = ((IData)((7ULL & vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out)) 
-                                << 3U);
-    __Vtemp_h9dc1a9be__0[1U] = (((IData)((7ULL & vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out)) 
-                                 >> 0x1dU) | ((IData)(
-                                                      ((7ULL 
-                                                        & vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out) 
-                                                       >> 0x20U)) 
-                                              << 3U));
-    __Vtemp_h9dc1a9be__0[2U] = ((IData)(((7ULL & vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out) 
-                                         >> 0x20U)) 
-                                >> 0x1dU);
-    vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard 
-        = VL_SHIFTR_QQW(64,64,67, vlSelf->myCPU__DOT__datapath__DOT__dmem__DOT__delay, __Vtemp_h9dc1a9be__0);
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___mcycle_data_T_1 
         = (1ULL + vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mcycle_data);
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_2 
         = ((0x13U != vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst)
             ? (1ULL + vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__minstret_data)
             : vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__minstret_data);
-    vlSelf->myCPU__DOT__datapath__DOT___T_2 = ((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_enable) 
+    vlSelf->myCPU__DOT__datapath__DOT___T_6 = ((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_enable) 
                                                & (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_en));
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__writeEn 
         = (((((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_op)) 
@@ -139,9 +224,6 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
              | (5U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_op))) 
             | (4U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_op))) 
            & (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_enable));
-    vlSelf->myCPU__DOT__datapath__DOT__jmp_occur = 
-        ((IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_enable) 
-         & (1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_pc_sel)));
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___writeData_T_8 
         = ((4U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_op))
             ? vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_data
@@ -150,6 +232,9 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                 : ((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_op))
                     ? vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_data
                     : 0ULL)));
+    vlSelf->myCPU__DOT__datapath__DOT__jmp_occur = 
+        ((IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_enable) 
+         & (1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_pc_sel)));
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__readable 
         = ((0xc00U == (vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_inst 
                        >> 0x14U)) | ((0xc02U == (vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_inst 
@@ -1088,16 +1173,7 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                              ? 5U
                                                              : 0U)))))))))))))));
     vlSelf->io_start = vlSelf->myCPU__DOT__datapath__DOT__started;
-    __Vtemp_h5e66f7d5__0[0U] = 4U;
-    __Vtemp_h5e66f7d5__0[1U] = 0U;
-    __Vtemp_h5e66f7d5__0[2U] = 0U;
-    VL_ADD_W(3, __Vtemp_hd1bbea4b__0, __Vtemp_h5e66f7d5__0, vlSelf->myCPU__DOT__datapath__DOT__pc);
-    vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_1[0U] 
-        = __Vtemp_hd1bbea4b__0[0U];
-    vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_1[1U] 
-        = __Vtemp_hd1bbea4b__0[1U];
-    vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_1[2U] 
-        = (1U & __Vtemp_hd1bbea4b__0[2U]);
+    vlSelf->io_master_bready = vlSelf->myCPU__DOT__arb_io_axi_out_b_ready;
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__flagIntM 
         = (vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___sip_T 
            & vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___sie_T);
@@ -1185,29 +1261,6 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
         vlSelf->myCPU__DOT__datapath__DOT___de_pipe_reg_rs1_T_12 
             = vlSelf->myCPU__DOT__datapath__DOT___de_pipe_reg_rs1_T_11;
     }
-    vlSelf->myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_5 
-        = (((QData)((IData)(((1U & (IData)((vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard 
-                                            >> 0x1fU)))
-                              ? 0xffffffffU : 0U))) 
-            << 0x20U) | (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard)));
-    vlSelf->myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_33 
-        = ((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
-            ? ((((1U & (IData)((vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard 
-                                >> 0xfU))) ? 0xffffffffffffULL
-                  : 0ULL) << 0x10U) | (QData)((IData)(
-                                                      (0xffffU 
-                                                       & (IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard)))))
-            : ((4U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
-                ? (QData)((IData)((0xffffU & (IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard))))
-                : ((3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
-                    ? ((((1U & (IData)((vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard 
-                                        >> 7U))) ? 0xffffffffffffffULL
-                          : 0ULL) << 8U) | (QData)((IData)(
-                                                           (0xffU 
-                                                            & (IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard)))))
-                    : ((5U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
-                        ? (QData)((IData)((0xffU & (IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard))))
-                        : vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard))));
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__writeData 
         = ((5U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_op))
             ? 0ULL : vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___writeData_T_8);
@@ -2043,18 +2096,6 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                     ? vlSelf->myCPU__DOT__datapath__DOT___de_pipe_reg_rs1_T_12
                                                     : 0ULL)
                                                    : vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_rs2);
-    vlSelf->myCPU__DOT__datapath__DOT___src1_data_T_7 
-        = ((0U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_sel))
-            ? vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out
-            : ((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_sel))
-                ? (4ULL + vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_pc)
-                : ((3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_sel))
-                    ? vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_csr_read_data
-                    : ((1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
-                        ? vlSelf->myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_5
-                        : ((6U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
-                            ? (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard))
-                            : vlSelf->myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_33)))));
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___T_167 
         = (((QData)((IData)((1U & (IData)((vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__writeData 
                                            >> 0x12U))))) 
@@ -2515,14 +2556,6 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__flagIntS 
         = (vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___T_4 
            & vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___T_1);
-    vlSelf->myCPU__DOT__datapath__DOT___GEN_54 = ((vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src1_addr 
-                                                   == (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_dest)))
-                                                   ? vlSelf->myCPU__DOT__datapath__DOT___src1_data_T_7
-                                                   : 0ULL);
-    vlSelf->myCPU__DOT__datapath__DOT___GEN_58 = ((vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src2_addr 
-                                                   == (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_dest)))
-                                                   ? vlSelf->myCPU__DOT__datapath__DOT___src1_data_T_7
-                                                   : 0ULL);
     if ((0x5063U == (0x707fU & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))) {
         vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_199 = 0U;
         vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_947 = 0U;
@@ -2794,39 +2827,6 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
             | (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_mie)) 
            & (0U != (vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__flagIntS 
                      & (~ vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mideleg_data))));
-    vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs1 
-        = (((((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_enable) 
-              & (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_en)) 
-             & (vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src1_addr 
-                == (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_dest)))) 
-            & (0ULL != vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src1_addr))
-            ? vlSelf->myCPU__DOT__datapath__DOT___GEN_54
-            : vlSelf->myCPU__DOT__datapath__DOT___GEN_56);
-    vlSelf->myCPU__DOT__datapath__DOT__A_data = ((IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_A_sel)
-                                                  ? 
-                                                 (((((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_enable) 
-                                                     & (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_en)) 
-                                                    & (vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src1_addr 
-                                                       == (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_dest)))) 
-                                                   & (0ULL 
-                                                      != vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src1_addr))
-                                                   ? vlSelf->myCPU__DOT__datapath__DOT___GEN_54
-                                                   : vlSelf->myCPU__DOT__datapath__DOT___GEN_56)
-                                                  : vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_pc);
-    if ((((IData)(vlSelf->myCPU__DOT__datapath__DOT___T_2) 
-          & (vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src2_addr 
-             == (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_dest)))) 
-         & (0ULL != vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src2_addr))) {
-        vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs2 
-            = vlSelf->myCPU__DOT__datapath__DOT___GEN_58;
-        vlSelf->myCPU__DOT__datapath__DOT__src2_data 
-            = vlSelf->myCPU__DOT__datapath__DOT___GEN_58;
-    } else {
-        vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs2 
-            = vlSelf->myCPU__DOT__datapath__DOT___GEN_60;
-        vlSelf->myCPU__DOT__datapath__DOT__src2_data 
-            = vlSelf->myCPU__DOT__datapath__DOT___GEN_60;
-    }
     if ((0x37U == (0x7fU & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))) {
         vlSelf->myCPU__DOT__control_io_imm_sel = 3U;
         vlSelf->myCPU__DOT__control_io_csr_cmd = 0U;
@@ -2901,17 +2901,6 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                   & (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_sie))) 
               & (0U != (vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__flagIntS 
                         & vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mideleg_data))));
-    vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__eq 
-        = (vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs1 
-           == vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs2);
-    vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__lt 
-        = VL_LTS_IQQ(64, vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs1, vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs2);
-    vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__ltu 
-        = (vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs1 
-           < vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs2);
-    vlSelf->myCPU__DOT__datapath__DOT__B_data = ((IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_B_sel)
-                                                  ? vlSelf->myCPU__DOT__datapath__DOT__src2_data
-                                                  : vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_imm);
     vlSelf->myCPU__DOT__datapath__DOT__immGen__DOT___io_out_T_5 
         = ((2U == (IData)(vlSelf->myCPU__DOT__control_io_imm_sel))
             ? (((QData)((IData)(((vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst 
@@ -2936,32 +2925,24 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
     vlSelf->myCPU__DOT__datapath__DOT___csr_op_T_2 
         = (IData)(((1U == (IData)(vlSelf->myCPU__DOT__control_io_csr_cmd)) 
                    & (0U == (0xf80U & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))));
-    vlSelf->myCPU__DOT__datapath__DOT___csr_op_T_15 
-        = ((IData)(((3U == (IData)(vlSelf->myCPU__DOT__control_io_csr_cmd)) 
-                    & (0U == (0xf80U & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))))
-            ? 1U : ((3U == (IData)(vlSelf->myCPU__DOT__control_io_csr_cmd))
-                     ? 5U : ((IData)(((2U == (IData)(vlSelf->myCPU__DOT__control_io_csr_cmd)) 
-                                      & (0U == (0xf80U 
-                                                & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))))
-                              ? 1U : ((2U == (IData)(vlSelf->myCPU__DOT__control_io_csr_cmd))
-                                       ? 4U : 0U))));
+    vlSelf->myCPU__DOT__datapath__DOT___csr_op_T_16 
+        = ((1U == (IData)(vlSelf->myCPU__DOT__control_io_csr_cmd))
+            ? 3U : ((IData)(((3U == (IData)(vlSelf->myCPU__DOT__control_io_csr_cmd)) 
+                             & (0U == (0xf80U & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))))
+                     ? 1U : ((3U == (IData)(vlSelf->myCPU__DOT__control_io_csr_cmd))
+                              ? 5U : ((IData)(((2U 
+                                                == (IData)(vlSelf->myCPU__DOT__control_io_csr_cmd)) 
+                                               & (0U 
+                                                  == 
+                                                  (0xf80U 
+                                                   & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))))
+                                       ? 1U : ((2U 
+                                                == (IData)(vlSelf->myCPU__DOT__control_io_csr_cmd))
+                                                ? 4U
+                                                : 0U)))));
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__handIntS 
         = ((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__hasInt) 
            & (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__hasIntM)));
-    vlSelf->myCPU__DOT__datapath__DOT__brCond_taken 
-        = ((((((((3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
-                 & (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__eq)) 
-                | ((6U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
-                   & (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__eq)))) 
-               | ((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
-                  & (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__lt))) 
-              | ((5U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
-                 & (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__lt)))) 
-             | ((1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
-                & (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__ltu))) 
-            | ((4U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
-               & (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__ltu)))) 
-           & (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_enable));
     vlSelf->myCPU__DOT__datapath__DOT__immGen__DOT___io_out_T_7 
         = ((5U == (IData)(vlSelf->myCPU__DOT__control_io_imm_sel))
             ? (((QData)((IData)(((vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst 
@@ -2981,12 +2962,437 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                 << 0x2cU) | vlSelf->myCPU__DOT__datapath__DOT__immGen__DOT___io_out_T_5));
     vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op 
         = ((IData)(vlSelf->myCPU__DOT__datapath__DOT___csr_op_T_2)
-            ? 2U : ((1U == (IData)(vlSelf->myCPU__DOT__control_io_csr_cmd))
-                     ? 3U : (IData)(vlSelf->myCPU__DOT__datapath__DOT___csr_op_T_15)));
-    vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_4 
-        = (((1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_pc_sel)) 
-            & (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_enable)) 
-           | (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond_taken));
+            ? 2U : (IData)(vlSelf->myCPU__DOT__datapath__DOT___csr_op_T_16));
+    vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__valid 
+        = (1U & ((((5U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op))
+                    ? (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___instValid_T)
+                    : ((4U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op))
+                        ? (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___instValid_T)
+                        : ((3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op))
+                            ? (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___instValid_T)
+                            : ((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op))
+                                ? (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__writable)
+                                : ((1U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op)) 
+                                   | (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__readable)))))) 
+                  | (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_enable))) 
+                 & (((((3U & (vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_inst 
+                              >> 0x1cU)) <= (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mode)) 
+                      | (0U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op))) 
+                     & (((0x37U == (0x7fU & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
+                          ? 0U : ((0x17U == (0x7fU 
+                                             & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
+                                   ? 0U : ((0x6fU == 
+                                            (0x7fU 
+                                             & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
+                                            ? 0U : 
+                                           ((0x67U 
+                                             == (0x707fU 
+                                                 & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
+                                             ? 0U : 
+                                            ((0x63U 
+                                              == (0x707fU 
+                                                  & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
+                                              ? 0U : 
+                                             ((0x1063U 
+                                               == (0x707fU 
+                                                   & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
+                                               ? 0U
+                                               : ((0x4063U 
+                                                   == 
+                                                   (0x707fU 
+                                                    & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
+                                                   ? 0U
+                                                   : 
+                                                  (1U 
+                                                   & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_947))))))))) 
+                        <= (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mode))) 
+                    | (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_enable)))));
+}
+
+VL_ATTR_COLD void VmyCPU___024root___settle__TOP__1(VmyCPU___024root* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    VmyCPU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VmyCPU___024root___settle__TOP__1\n"); );
+    // Init
+    QData/*63:0*/ myCPU__DOT__datapath__DOT___src1_data_T_7;
+    VlWide<4>/*127:0*/ myCPU__DOT__datapath__DOT__alu__DOT___out_T_80;
+    CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T;
+    VlWide<3>/*95:0*/ __Vtemp_h9dc1a9be__0;
+    VlWide<3>/*95:0*/ __Vtemp_h3da41009__0;
+    VlWide<3>/*95:0*/ __Vtemp_hf0b58f7d__0;
+    VlWide<3>/*95:0*/ __Vtemp_h664db615__0;
+    VlWide<3>/*95:0*/ __Vtemp_hbde7148f__0;
+    VlWide<3>/*95:0*/ __Vtemp_hc8b425cc__0;
+    VlWide<3>/*95:0*/ __Vtemp_h9f0c567e__0;
+    VlWide<3>/*95:0*/ __Vtemp_h4f1fa24b__0;
+    VlWide<4>/*127:0*/ __Vtemp_hef9128c0__0;
+    VlWide<4>/*127:0*/ __Vtemp_hf037b5c0__0;
+    VlWide<4>/*127:0*/ __Vtemp_hbdee2cf2__0;
+    VlWide<4>/*127:0*/ __Vtemp_h6d63f16d__0;
+    VlWide<4>/*127:0*/ __Vtemp_h51384543__0;
+    VlWide<4>/*127:0*/ __Vtemp_h5162a830__0;
+    VlWide<4>/*127:0*/ __Vtemp_h514c3f2e__0;
+    VlWide<4>/*127:0*/ __Vtemp_h375ca612__0;
+    VlWide<4>/*127:0*/ __Vtemp_h3763b123__0;
+    VlWide<4>/*127:0*/ __Vtemp_hf037b5c0__1;
+    VlWide<4>/*127:0*/ __Vtemp_h212409a7__0;
+    VlWide<4>/*127:0*/ __Vtemp_h1f641964__0;
+    VlWide<4>/*127:0*/ __Vtemp_h0ce33da7__0;
+    VlWide<4>/*127:0*/ __Vtemp_h48201fc5__0;
+    VlWide<4>/*127:0*/ __Vtemp_hf037b5c0__2;
+    VlWide<4>/*127:0*/ __Vtemp_h7bdfc44d__0;
+    VlWide<4>/*127:0*/ __Vtemp_h2bda0aa4__0;
+    VlWide<3>/*95:0*/ __Vtemp_h5e66f7d5__0;
+    VlWide<3>/*95:0*/ __Vtemp_hd1bbea4b__0;
+    VlWide<3>/*95:0*/ __Vtemp_h7d52d80c__0;
+    VlWide<3>/*95:0*/ __Vtemp_hf0c0d54e__0;
+    VlWide<3>/*95:0*/ __Vtemp_hfbd62a2a__0;
+    // Body
+    vlSelf->myCPU__DOT__arb__DOT___GEN_0 = ((IData)(vlSymsp->TOP__myCPU__DOT__icache.io_mem_io_ar_valid)
+                                             ? 4U : (IData)(vlSelf->myCPU__DOT__arb__DOT__state));
+    vlSelf->myCPU__DOT__datapath__DOT___inst_T_7 = 
+        ((4U & vlSelf->myCPU__DOT__datapath__DOT__pc[0U])
+          ? (IData)((((0U == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                       ? 0ULL : ((1U == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                  ? 0ULL : ((2U == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                             ? 0ULL
+                                             : ((3U 
+                                                 == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                 ? vlSelf->io_master_rdata
+                                                 : 
+                                                ((4U 
+                                                  == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                  ? 0ULL
+                                                  : 
+                                                 ((5U 
+                                                   == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((7U 
+                                                    == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                    ? 
+                                                   (((((IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__is_match_0) 
+                                                       | (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__is_match_1)) 
+                                                      | (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__is_match_2)) 
+                                                     | (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__is_match_3))
+                                                     ? vlSymsp->TOP__myCPU__DOT__icache.__PVT___io_cpu_response_data_T_70
+                                                     : 0ULL)
+                                                    : 0ULL))))))) 
+                     >> 0x20U)) : (IData)(((0U == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                            ? 0ULL : 
+                                           ((1U == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                             ? 0ULL
+                                             : ((2U 
+                                                 == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                 ? 0ULL
+                                                 : 
+                                                ((3U 
+                                                  == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                  ? vlSelf->io_master_rdata
+                                                  : 
+                                                 ((4U 
+                                                   == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((5U 
+                                                    == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                    ? 0ULL
+                                                    : 
+                                                   ((7U 
+                                                     == (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__cache_state))
+                                                     ? 
+                                                    (((((IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__is_match_0) 
+                                                        | (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__is_match_1)) 
+                                                       | (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__is_match_2)) 
+                                                      | (IData)(vlSymsp->TOP__myCPU__DOT__icache.__PVT__is_match_3))
+                                                      ? vlSymsp->TOP__myCPU__DOT__icache.__PVT___io_cpu_response_data_T_70
+                                                      : 0ULL)
+                                                     : 0ULL)))))))));
+    vlSelf->io_master_arvalid = (((IData)(vlSymsp->TOP__myCPU__DOT__icache.io_mem_io_ar_valid) 
+                                  | (IData)(vlSymsp->TOP__myCPU__DOT__dcache.io_mem_io_ar_valid)) 
+                                 & ((4U == (IData)(vlSelf->myCPU__DOT__arb__DOT__state)) 
+                                    | (5U == (IData)(vlSelf->myCPU__DOT__arb__DOT__state))));
+    vlSelf->myCPU__DOT__arb__DOT___GEN_4 = (((IData)(vlSelf->myCPU__DOT__arb_io_dcache_ar_ready) 
+                                             & (IData)(vlSymsp->TOP__myCPU__DOT__dcache.io_mem_io_ar_valid))
+                                             ? 2U : (IData)(vlSelf->myCPU__DOT__arb__DOT__state));
+    vlSelf->io_master_awvalid = ((IData)(vlSymsp->TOP__myCPU__DOT__dcache.io_mem_io_aw_valid) 
+                                 & (6U == (IData)(vlSelf->myCPU__DOT__arb__DOT__state)));
+    vlSelf->io_master_wvalid = ((IData)(vlSymsp->TOP__myCPU__DOT__dcache.io_mem_io_w_valid) 
+                                & (3U == (IData)(vlSelf->myCPU__DOT__arb__DOT__state)));
+    vlSelf->myCPU__DOT__arb_io_axi_out_r_ready = (((IData)(vlSymsp->TOP__myCPU__DOT__icache.io_mem_io_r_ready) 
+                                                   & (1U 
+                                                      == (IData)(vlSelf->myCPU__DOT__arb__DOT__state))) 
+                                                  | ((IData)(vlSymsp->TOP__myCPU__DOT__dcache.io_mem_io_r_ready) 
+                                                     & (2U 
+                                                        == (IData)(vlSelf->myCPU__DOT__arb__DOT__state))));
+    vlSelf->myCPU__DOT__datapath__DOT__dcache_stall 
+        = ((((0U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type)) 
+             | (0U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_st_type))) 
+            & (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_enable)) 
+           & (~ ((0U != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                 & ((1U != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                    & ((2U != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                       & ((3U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                           ? (IData)(vlSelf->myCPU__DOT__arb_io_dcache_r_valid)
+                           : ((4U != (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                              & ((5U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                  ? (IData)(vlSelf->myCPU__DOT__arb_io_dcache_b_valid)
+                                  : ((7U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state)) 
+                                     & ((((IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__is_match_0) 
+                                          | (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__is_match_1)) 
+                                         | (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__is_match_2)) 
+                                        | (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__is_match_3)))))))))));
+    vlSelf->io_master_wlast = vlSymsp->TOP__myCPU__DOT__dcache.io_mem_io_w_bits_last;
+    __Vtemp_h9dc1a9be__0[0U] = ((IData)((7ULL & vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out)) 
+                                << 3U);
+    __Vtemp_h9dc1a9be__0[1U] = (((IData)((7ULL & vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out)) 
+                                 >> 0x1dU) | ((IData)(
+                                                      ((7ULL 
+                                                        & vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out) 
+                                                       >> 0x20U)) 
+                                              << 3U));
+    __Vtemp_h9dc1a9be__0[2U] = ((IData)(((7ULL & vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out) 
+                                         >> 0x20U)) 
+                                >> 0x1dU);
+    vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard 
+        = VL_SHIFTR_QQW(64,64,67, ((0U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                    ? 0ULL : ((1U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                               ? 0ULL
+                                               : ((2U 
+                                                   == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((3U 
+                                                    == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                    ? vlSelf->io_master_rdata
+                                                    : 
+                                                   ((4U 
+                                                     == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                     ? 0ULL
+                                                     : 
+                                                    ((5U 
+                                                      == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                      ? 0ULL
+                                                      : 
+                                                     ((7U 
+                                                       == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                       ? 
+                                                      (((((IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__is_match_0) 
+                                                          | (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__is_match_1)) 
+                                                         | (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__is_match_2)) 
+                                                        | (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__is_match_3))
+                                                        ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT___io_cpu_response_data_T_70
+                                                        : 0ULL)
+                                                       : 0ULL))))))), __Vtemp_h9dc1a9be__0);
+    vlSelf->io_master_wdata = ((0U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                ? 0ULL : ((1U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                           ? 0ULL : 
+                                          ((2U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                            ? 0ULL : 
+                                           ((3U == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                             ? 0ULL
+                                             : ((4U 
+                                                 == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                 ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cpu_request_data
+                                                 : 
+                                                ((5U 
+                                                  == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                  ? 0ULL
+                                                  : 
+                                                 ((7U 
+                                                   == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                   ? 0ULL
+                                                   : 
+                                                  ((0xaU 
+                                                    == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                    ? 0ULL
+                                                    : 
+                                                   ((9U 
+                                                     == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                     ? 0ULL
+                                                     : 
+                                                    ((0xbU 
+                                                      == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                      ? 0ULL
+                                                      : 
+                                                     ((8U 
+                                                       == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__cache_state))
+                                                       ? 
+                                                      ((3U 
+                                                        == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__replace))
+                                                        ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT___GEN_1143
+                                                        : 
+                                                       ((2U 
+                                                         == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__replace))
+                                                         ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT___GEN_1143
+                                                         : 
+                                                        ((1U 
+                                                          == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__replace))
+                                                          ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT___GEN_1143
+                                                          : 
+                                                         ((0U 
+                                                           == (IData)(vlSymsp->TOP__myCPU__DOT__dcache.__PVT__replace))
+                                                           ? vlSymsp->TOP__myCPU__DOT__dcache.__PVT___GEN_1143
+                                                           : 0ULL))))
+                                                       : 0ULL)))))))))));
+    vlSelf->io_master_rready = vlSelf->myCPU__DOT__arb_io_axi_out_r_ready;
+    vlSelf->myCPU__DOT__arb__DOT___GEN_6 = ((((IData)(vlSelf->myCPU__DOT__arb_io_axi_out_r_ready) 
+                                              & (IData)(vlSelf->io_master_rvalid)) 
+                                             & (IData)(vlSelf->io_master_rlast))
+                                             ? 0U : (IData)(vlSelf->myCPU__DOT__arb__DOT__state));
+    vlSelf->io_stall = (1U & ((~ (IData)(vlSymsp->TOP__myCPU__DOT__icache.io_cpu_response_ready)) 
+                              | (IData)(vlSelf->myCPU__DOT__datapath__DOT__dcache_stall)));
+    vlSelf->myCPU__DOT__datapath__DOT__stall = (1U 
+                                                & ((~ (IData)(vlSymsp->TOP__myCPU__DOT__icache.io_cpu_response_ready)) 
+                                                   | (IData)(vlSelf->myCPU__DOT__datapath__DOT__dcache_stall)));
+    vlSelf->myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_5 
+        = (((QData)((IData)(((1U & (IData)((vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard 
+                                            >> 0x1fU)))
+                              ? 0xffffffffU : 0U))) 
+            << 0x20U) | (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard)));
+    vlSelf->myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_34 
+        = ((6U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
+            ? (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard))
+            : ((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
+                ? ((((1U & (IData)((vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard 
+                                    >> 0xfU))) ? 0xffffffffffffULL
+                      : 0ULL) << 0x10U) | (QData)((IData)(
+                                                          (0xffffU 
+                                                           & (IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard)))))
+                : ((4U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
+                    ? (QData)((IData)((0xffffU & (IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard))))
+                    : ((3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
+                        ? ((((1U & (IData)((vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard 
+                                            >> 7U)))
+                              ? 0xffffffffffffffULL
+                              : 0ULL) << 8U) | (QData)((IData)(
+                                                               (0xffU 
+                                                                & (IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard)))))
+                        : ((5U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
+                            ? (QData)((IData)((0xffU 
+                                               & (IData)(vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard))))
+                            : vlSelf->myCPU__DOT__datapath__DOT__load_data_hazard)))));
+    vlSelf->myCPU__DOT__arb__DOT___GEN_14 = ((6U == (IData)(vlSelf->myCPU__DOT__arb__DOT__state))
+                                              ? (((IData)(vlSelf->myCPU__DOT__arb_io_dcache_aw_ready) 
+                                                  & (IData)(vlSymsp->TOP__myCPU__DOT__dcache.io_mem_io_aw_valid))
+                                                  ? 3U
+                                                  : (IData)(vlSelf->myCPU__DOT__arb__DOT__state))
+                                              : ((1U 
+                                                  == (IData)(vlSelf->myCPU__DOT__arb__DOT__state))
+                                                  ? (IData)(vlSelf->myCPU__DOT__arb__DOT___GEN_6)
+                                                  : 
+                                                 ((2U 
+                                                   == (IData)(vlSelf->myCPU__DOT__arb__DOT__state))
+                                                   ? (IData)(vlSelf->myCPU__DOT__arb__DOT___GEN_6)
+                                                   : 
+                                                  ((3U 
+                                                    == (IData)(vlSelf->myCPU__DOT__arb__DOT__state))
+                                                    ? 
+                                                   ((((IData)(vlSelf->myCPU__DOT__arb_io_dcache_w_ready) 
+                                                      & (IData)(vlSymsp->TOP__myCPU__DOT__dcache.io_mem_io_w_valid)) 
+                                                     & (IData)(vlSymsp->TOP__myCPU__DOT__dcache.io_mem_io_w_bits_last))
+                                                     ? 7U
+                                                     : (IData)(vlSelf->myCPU__DOT__arb__DOT__state))
+                                                    : 
+                                                   ((7U 
+                                                     == (IData)(vlSelf->myCPU__DOT__arb__DOT__state))
+                                                     ? 
+                                                    (((IData)(vlSelf->myCPU__DOT__arb_io_axi_out_b_ready) 
+                                                      & (IData)(vlSelf->io_master_bvalid))
+                                                      ? 0U
+                                                      : (IData)(vlSelf->myCPU__DOT__arb__DOT__state))
+                                                     : (IData)(vlSelf->myCPU__DOT__arb__DOT__state))))));
+    vlSelf->myCPU__DOT__datapath__DOT___GEN_2 = (1U 
+                                                 & ((~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__stall)) 
+                                                    | (IData)(vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_enable)));
+    vlSelf->myCPU__DOT__datapath__DOT__regFile_io_wen 
+        = (((((((0U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel)) 
+                | (2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel))) 
+               | (1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel))) 
+              | (3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel))) 
+             & (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_en)) 
+            & (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_enable)) 
+           & (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__stall)));
+    vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_5 
+        = ((~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__started)) 
+           & (IData)(vlSelf->myCPU__DOT__datapath__DOT__stall));
+    myCPU__DOT__datapath__DOT___src1_data_T_7 = ((0U 
+                                                  == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_sel))
+                                                  ? vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out
+                                                  : 
+                                                 ((2U 
+                                                   == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_sel))
+                                                   ? 
+                                                  (4ULL 
+                                                   + vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_pc)
+                                                   : 
+                                                  ((3U 
+                                                    == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_sel))
+                                                    ? vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_csr_read_data
+                                                    : 
+                                                   ((1U 
+                                                     == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type))
+                                                     ? vlSelf->myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_5
+                                                     : vlSelf->myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_34))));
+    vlSelf->myCPU__DOT__datapath__DOT___GEN_54 = ((vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src1_addr 
+                                                   == (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_dest)))
+                                                   ? myCPU__DOT__datapath__DOT___src1_data_T_7
+                                                   : 0ULL);
+    vlSelf->myCPU__DOT__datapath__DOT___GEN_58 = ((vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src2_addr 
+                                                   == (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_dest)))
+                                                   ? myCPU__DOT__datapath__DOT___src1_data_T_7
+                                                   : 0ULL);
+    vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs1 
+        = (((((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_enable) 
+              & (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_en)) 
+             & (vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src1_addr 
+                == (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_dest)))) 
+            & (0ULL != vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src1_addr))
+            ? vlSelf->myCPU__DOT__datapath__DOT___GEN_54
+            : vlSelf->myCPU__DOT__datapath__DOT___GEN_56);
+    vlSelf->myCPU__DOT__datapath__DOT__A_data = ((IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_A_sel)
+                                                  ? 
+                                                 (((((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_enable) 
+                                                     & (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_wb_en)) 
+                                                    & (vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src1_addr 
+                                                       == (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_dest)))) 
+                                                   & (0ULL 
+                                                      != vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src1_addr))
+                                                   ? vlSelf->myCPU__DOT__datapath__DOT___GEN_54
+                                                   : vlSelf->myCPU__DOT__datapath__DOT___GEN_56)
+                                                  : vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_pc);
+    vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs2 
+        = ((((IData)(vlSelf->myCPU__DOT__datapath__DOT___T_6) 
+             & (vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src2_addr 
+                == (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_dest)))) 
+            & (0ULL != vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_src2_addr))
+            ? vlSelf->myCPU__DOT__datapath__DOT___GEN_58
+            : vlSelf->myCPU__DOT__datapath__DOT___GEN_60);
+    vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__eq 
+        = (vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs1 
+           == vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs2);
+    vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__lt 
+        = VL_LTS_IQQ(64, vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs1, vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs2);
+    vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__ltu 
+        = (vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs1 
+           < vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs2);
+    vlSelf->myCPU__DOT__datapath__DOT__B_data = ((IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_B_sel)
+                                                  ? vlSelf->myCPU__DOT__datapath__DOT__brCond_io_rs2
+                                                  : vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_imm);
+    vlSelf->myCPU__DOT__datapath__DOT__brCond_taken 
+        = ((((((((3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
+                 & (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__eq)) 
+                | ((6U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
+                   & (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__eq)))) 
+               | ((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
+                  & (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__lt))) 
+              | ((5U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
+                 & (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__lt)))) 
+             | ((1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
+                & (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__ltu))) 
+            | ((4U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_br_type)) 
+               & (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond__DOT__ltu)))) 
+           & (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_enable));
     if ((1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_wd_type))) {
         vlSelf->myCPU__DOT__datapath__DOT__alu_io_A 
             = (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__A_data));
@@ -3003,52 +3409,6 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
            + ((1U & (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_alu_op))
                ? (- vlSelf->myCPU__DOT__datapath__DOT__alu_io_B)
                : vlSelf->myCPU__DOT__datapath__DOT__alu_io_B));
-    vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__valid 
-        = (1U & ((((5U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op))
-                    ? (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___instValid_T)
-                    : ((4U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op))
-                        ? (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___instValid_T)
-                        : ((3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op))
-                            ? (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___instValid_T)
-                            : ((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op))
-                                ? (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__writable)
-                                : ((1U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op)) 
-                                   | (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__readable)))))) 
-                  | (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_enable))) 
-                 & (((((3U & (vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_inst 
-                              >> 0x1cU)) <= (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mode)) 
-                      & (((0x37U == (0x7fU & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
-                           ? 0U : ((0x17U == (0x7fU 
-                                              & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
-                                    ? 0U : ((0x6fU 
-                                             == (0x7fU 
-                                                 & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
-                                             ? 0U : 
-                                            ((0x67U 
-                                              == (0x707fU 
-                                                  & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
-                                              ? 0U : 
-                                             ((0x63U 
-                                               == (0x707fU 
-                                                   & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
-                                               ? 0U
-                                               : ((0x1063U 
-                                                   == 
-                                                   (0x707fU 
-                                                    & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
-                                                   ? 0U
-                                                   : 
-                                                  ((0x4063U 
-                                                    == 
-                                                    (0x707fU 
-                                                     & vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_inst))
-                                                    ? 0U
-                                                    : 
-                                                   (1U 
-                                                    & (IData)(vlSelf->myCPU__DOT__control__DOT___ctrlSignals_T_947))))))))) 
-                         <= (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mode))) 
-                     | (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_enable))) 
-                    | (0U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_r_op)))));
     VL_EXTEND_WQ(65,33, __Vtemp_h3da41009__0, (0x1ffffffffULL 
                                                & VL_DIVS_QQQ(33, 
                                                              (0x1ffffffffULL 
@@ -3056,14 +3416,14 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                              (0x1ffffffffULL 
                                                               & VL_EXTENDS_QI(33,32, (IData)(vlSelf->myCPU__DOT__datapath__DOT__alu_io_B))))));
     VL_EXTENDS_WQ(65,64, __Vtemp_hf0b58f7d__0, vlSelf->myCPU__DOT__datapath__DOT__alu_io_A);
-    __Vtemp_h2eeaba80__0[0U] = __Vtemp_hf0b58f7d__0[0U];
-    __Vtemp_h2eeaba80__0[1U] = __Vtemp_hf0b58f7d__0[1U];
-    __Vtemp_h2eeaba80__0[2U] = (1U & __Vtemp_hf0b58f7d__0[2U]);
+    __Vtemp_h664db615__0[0U] = __Vtemp_hf0b58f7d__0[0U];
+    __Vtemp_h664db615__0[1U] = __Vtemp_hf0b58f7d__0[1U];
+    __Vtemp_h664db615__0[2U] = (1U & __Vtemp_hf0b58f7d__0[2U]);
     VL_EXTENDS_WQ(65,64, __Vtemp_hbde7148f__0, vlSelf->myCPU__DOT__datapath__DOT__alu_io_B);
-    __Vtemp_hf0f9f0c3__0[0U] = __Vtemp_hbde7148f__0[0U];
-    __Vtemp_hf0f9f0c3__0[1U] = __Vtemp_hbde7148f__0[1U];
-    __Vtemp_hf0f9f0c3__0[2U] = (1U & __Vtemp_hbde7148f__0[2U]);
-    VL_DIVS_WWW(65, __Vtemp_hb3a50930__0, __Vtemp_h2eeaba80__0, __Vtemp_hf0f9f0c3__0);
+    __Vtemp_hc8b425cc__0[0U] = __Vtemp_hbde7148f__0[0U];
+    __Vtemp_hc8b425cc__0[1U] = __Vtemp_hbde7148f__0[1U];
+    __Vtemp_hc8b425cc__0[2U] = (1U & __Vtemp_hbde7148f__0[2U]);
+    VL_DIVS_WWW(65, __Vtemp_h9f0c567e__0, __Vtemp_h664db615__0, __Vtemp_hc8b425cc__0);
     if ((1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_wd_type))) {
         vlSelf->myCPU__DOT__datapath__DOT__alu__DOT__shamt 
             = (0x3fU & (0x1fU & (IData)(vlSelf->myCPU__DOT__datapath__DOT__alu_io_B)));
@@ -3072,19 +3432,19 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                 >> 0x1fU)))
                                   ? 0xffffffffU : 0U))) 
                 << 0x20U) | (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__alu__DOT__sum)));
-        __Vtemp_h33f76f69__0[0U] = __Vtemp_h3da41009__0[0U];
-        __Vtemp_h33f76f69__0[1U] = __Vtemp_h3da41009__0[1U];
-        __Vtemp_h33f76f69__0[2U] = (1U & __Vtemp_h3da41009__0[2U]);
+        __Vtemp_h4f1fa24b__0[0U] = __Vtemp_h3da41009__0[0U];
+        __Vtemp_h4f1fa24b__0[1U] = __Vtemp_h3da41009__0[1U];
+        __Vtemp_h4f1fa24b__0[2U] = (1U & __Vtemp_h3da41009__0[2U]);
     } else {
         vlSelf->myCPU__DOT__datapath__DOT__alu__DOT__shamt 
             = (0x3fU & (IData)(vlSelf->myCPU__DOT__datapath__DOT__alu_io_B));
         vlSelf->myCPU__DOT__datapath__DOT__alu_io_sum 
             = vlSelf->myCPU__DOT__datapath__DOT__alu__DOT__sum;
-        __Vtemp_h33f76f69__0[0U] = __Vtemp_hb3a50930__0[0U];
-        __Vtemp_h33f76f69__0[1U] = __Vtemp_hb3a50930__0[1U];
-        __Vtemp_h33f76f69__0[2U] = (1U & __Vtemp_hb3a50930__0[2U]);
+        __Vtemp_h4f1fa24b__0[0U] = __Vtemp_h9f0c567e__0[0U];
+        __Vtemp_h4f1fa24b__0[1U] = __Vtemp_h9f0c567e__0[1U];
+        __Vtemp_h4f1fa24b__0[2U] = (1U & __Vtemp_h9f0c567e__0[2U]);
     }
-    VL_EXTEND_WW(128,65, __Vtemp_h0d44f1b8__0, __Vtemp_h33f76f69__0);
+    VL_EXTEND_WW(128,65, __Vtemp_hef9128c0__0, __Vtemp_h4f1fa24b__0);
     VL_EXTEND_WQ(128,64, __Vtemp_hf037b5c0__0, vlSelf->myCPU__DOT__datapath__DOT__alu_io_A);
     VL_EXTEND_WQ(128,64, __Vtemp_hbdee2cf2__0, vlSelf->myCPU__DOT__datapath__DOT__alu_io_B);
     VL_MUL_W(4, __Vtemp_h6d63f16d__0, __Vtemp_hf037b5c0__0, __Vtemp_hbdee2cf2__0);
@@ -3172,31 +3532,31 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
     }
     VL_EXTEND_WW(128,127, __Vtemp_h48201fc5__0, __Vtemp_h0ce33da7__0);
     if ((0xdU == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_alu_op))) {
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[0U] 
-            = __Vtemp_h0d44f1b8__0[0U];
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[1U] 
-            = __Vtemp_h0d44f1b8__0[1U];
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[2U] 
-            = __Vtemp_h0d44f1b8__0[2U];
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[3U] 
-            = __Vtemp_h0d44f1b8__0[3U];
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[0U] 
+            = __Vtemp_hef9128c0__0[0U];
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[1U] 
+            = __Vtemp_hef9128c0__0[1U];
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[2U] 
+            = __Vtemp_hef9128c0__0[2U];
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[3U] 
+            = __Vtemp_hef9128c0__0[3U];
     } else if ((0xcU == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_alu_op))) {
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[0U] 
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[0U] 
             = __Vtemp_h6d63f16d__0[0U];
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[1U] 
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[1U] 
             = __Vtemp_h6d63f16d__0[1U];
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[2U] 
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[2U] 
             = __Vtemp_h6d63f16d__0[2U];
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[3U] 
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[3U] 
             = __Vtemp_h6d63f16d__0[3U];
     } else {
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[0U] 
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[0U] 
             = __Vtemp_h48201fc5__0[0U];
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[1U] 
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[1U] 
             = __Vtemp_h48201fc5__0[1U];
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[2U] 
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[2U] 
             = __Vtemp_h48201fc5__0[2U];
-        vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[3U] 
+        myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[3U] 
             = __Vtemp_h48201fc5__0[3U];
     }
     VL_EXTEND_WQ(128,64, __Vtemp_hf037b5c0__2, vlSelf->myCPU__DOT__datapath__DOT__alu_io_A);
@@ -3241,13 +3601,13 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
             = __Vtemp_h2bda0aa4__0[3U];
     } else {
         vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_88[0U] 
-            = vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[0U];
+            = myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[0U];
         vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_88[1U] 
-            = vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[1U];
+            = myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[1U];
         vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_88[2U] 
-            = vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[2U];
+            = myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[2U];
         vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_88[3U] 
-            = vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[3U];
+            = myCPU__DOT__datapath__DOT__alu__DOT___out_T_80[3U];
     }
     vlSelf->myCPU__DOT__datapath__DOT__alu_io_out = 
         ((1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_wd_type))
@@ -3257,6 +3617,65 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                                     vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_88[0U])))
           : (((QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_88[1U])) 
               << 0x20U) | (QData)((IData)(vlSelf->myCPU__DOT__datapath__DOT__alu__DOT___out_T_88[0U]))));
+    if (vlSelf->myCPU__DOT__datapath__DOT__stall) {
+        vlSelf->myCPU__DOT__datapath__DOT__st_mask 
+            = ((1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_st_type))
+                ? 0xfU : ((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_st_type))
+                           ? 3U : ((3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_st_type))
+                                    ? 1U : 0xffU)));
+        vlSelf->myCPU__DOT__datapath_io_dcache_cpu_request_rw 
+            = ((0U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_st_type)) 
+               & (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_enable));
+        vlSelf->myCPU__DOT__datapath_io_dcache_cpu_request_valid 
+            = (((0U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type)) 
+                | (0U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_st_type))) 
+               & (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_enable));
+        vlSelf->myCPU__DOT__datapath__DOT___io_dcache_cpu_request_addr_T 
+            = vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out;
+    } else {
+        vlSelf->myCPU__DOT__datapath__DOT__st_mask 
+            = ((1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_st_type))
+                ? 0xfU : ((2U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_st_type))
+                           ? 3U : ((3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_st_type))
+                                    ? 1U : 0xffU)));
+        vlSelf->myCPU__DOT__datapath_io_dcache_cpu_request_rw 
+            = ((0U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_st_type)) 
+               & (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_enable));
+        vlSelf->myCPU__DOT__datapath_io_dcache_cpu_request_valid 
+            = (((0U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_ld_type)) 
+                | (0U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_st_type))) 
+               & (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_enable));
+        vlSelf->myCPU__DOT__datapath__DOT___io_dcache_cpu_request_addr_T 
+            = vlSelf->myCPU__DOT__datapath__DOT__alu_io_out;
+    }
+    __Vtemp_h5e66f7d5__0[0U] = 4U;
+    __Vtemp_h5e66f7d5__0[1U] = 0U;
+    __Vtemp_h5e66f7d5__0[2U] = 0U;
+    VL_ADD_W(3, __Vtemp_hd1bbea4b__0, __Vtemp_h5e66f7d5__0, vlSelf->myCPU__DOT__datapath__DOT__pc);
+    if ((((1U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_pc_sel)) 
+          & (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_enable)) 
+         | (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond_taken))) {
+        vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_11[0U] 
+            = ((IData)((vlSelf->myCPU__DOT__datapath__DOT__alu_io_out 
+                        >> 1U)) << 1U);
+        vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_11[1U] 
+            = (((IData)((vlSelf->myCPU__DOT__datapath__DOT__alu_io_out 
+                         >> 1U)) >> 0x1fU) | ((IData)(
+                                                      ((vlSelf->myCPU__DOT__datapath__DOT__alu_io_out 
+                                                        >> 1U) 
+                                                       >> 0x20U)) 
+                                              << 1U));
+        vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_11[2U] 
+            = (1U & ((IData)(((vlSelf->myCPU__DOT__datapath__DOT__alu_io_out 
+                               >> 1U) >> 0x20U)) >> 0x1fU));
+    } else {
+        vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_11[0U] 
+            = __Vtemp_hd1bbea4b__0[0U];
+        vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_11[1U] 
+            = __Vtemp_hd1bbea4b__0[1U];
+        vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_11[2U] 
+            = (1U & __Vtemp_hd1bbea4b__0[2U]);
+    }
     vlSelf->myCPU__DOT__datapath__DOT__csr_io_load_misalign 
         = ((0U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_ld_type)) 
            & ((~ ((3U == (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_ld_type)) 
@@ -3289,7 +3708,7 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                         & (IData)(vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_enable))) 
                     | (((0x73U == vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst) 
                         | (0x100073U == vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst)) 
-                       & (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_enable)))));
+                       & (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_enable)))));
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause 
         = ((0x73U == vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst)
             ? 8ULL : ((0x100073U == vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst)
@@ -3328,20 +3747,18 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
         = (((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__hasInt) 
             | (((0x30200073U == vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst) 
                 | (0x10200073U == vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst)) 
-               & (IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_enable)))
-            ? 0xfU : ((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__hasExc)
-                       ? (((8ULL == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause) 
-                           | (3ULL == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause))
-                           ? 0xfU : (((4ULL == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause) 
-                                      | (6ULL == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause))
-                                      ? 7U : ((2ULL 
-                                               == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause)
-                                               ? 3U
-                                               : ((0ULL 
-                                                   == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause)
-                                                   ? 3U
-                                                   : 0U))))
-                       : 0U));
+               & (IData)(vlSelf->myCPU__DOT__datapath__DOT__em_pipe_reg_enable)))
+            ? 7U : ((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__hasExc)
+                     ? (((8ULL == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause) 
+                         | (3ULL == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause))
+                         ? 0xfU : (((4ULL == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause) 
+                                    | (6ULL == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause))
+                                    ? 7U : ((2ULL == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause)
+                                             ? 3U : 
+                                            ((0ULL 
+                                              == vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__excCause)
+                                              ? 3U : 0U))))
+                     : 0U));
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__cause 
         = ((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__hasInt)
             ? (0x8000000000000000ULL | ((1U & (IData)(
@@ -3379,18 +3796,19 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                                    & (((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_flush_mask) 
                                                        | (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_atomic_flush)) 
                                                       >> 3U));
-    vlSelf->myCPU__DOT__datapath__DOT__flush_fd = (1U 
-                                                   & ((((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_flush_mask) 
-                                                        | (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond_taken)) 
-                                                       | (IData)(vlSelf->myCPU__DOT__datapath__DOT__jmp_occur)) 
-                                                      | (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_atomic_flush)));
     vlSelf->myCPU__DOT__datapath__DOT__flush_de = (1U 
-                                                   & (((((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_flush_mask) 
-                                                         >> 1U) 
-                                                        | (IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond_taken)) 
-                                                       | (IData)(vlSelf->myCPU__DOT__datapath__DOT__jmp_occur)) 
+                                                   & ((((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_flush_mask) 
+                                                        >> 1U) 
+                                                       | (((IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond_taken) 
+                                                           | (IData)(vlSelf->myCPU__DOT__datapath__DOT__jmp_occur)) 
+                                                          & (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__stall)))) 
                                                       | ((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_atomic_flush) 
                                                          >> 1U)));
+    vlSelf->myCPU__DOT__datapath__DOT__flush_fd = (1U 
+                                                   & (((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_io_flush_mask) 
+                                                       | ((IData)(vlSelf->myCPU__DOT__datapath__DOT__brCond_taken) 
+                                                          | (IData)(vlSelf->myCPU__DOT__datapath__DOT__jmp_occur))) 
+                                                      | (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_atomic_flush)));
     if (((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__handIntS) 
          | (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__handExcS))) {
         vlSelf->myCPU__DOT__datapath__DOT__csr_io_trapVec 
@@ -3401,7 +3819,7 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                        & (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__cause)))))
                  : vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__stvec_base) 
                << 2U);
-        vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T = 1U;
+        myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T = 1U;
     } else {
         vlSelf->myCPU__DOT__datapath__DOT__csr_io_trapVec 
             = ((((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mtvec_mode) 
@@ -3411,7 +3829,72 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                                        & (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__cause)))))
                  : vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mtvec_base) 
                << 2U);
-        vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T = 0U;
+        myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T = 0U;
+    }
+    VL_EXTEND_WQ(65,64, __Vtemp_h7d52d80c__0, vlSelf->myCPU__DOT__datapath__DOT__fd_pipe_reg_pc);
+    if (vlSelf->reset) {
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[0U] = 0x80000000U;
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[1U] = 0U;
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[2U] = 0U;
+    } else if (((IData)(vlSelf->myCPU__DOT__datapath__DOT__flush_fd) 
+                & (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__stall)))) {
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[0U] = 0x80000000U;
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[1U] = 0U;
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[2U] = 0U;
+    } else if (vlSelf->myCPU__DOT__datapath__DOT__stall) {
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[0U] 
+            = __Vtemp_h7d52d80c__0[0U];
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[1U] 
+            = __Vtemp_h7d52d80c__0[1U];
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[2U] 
+            = __Vtemp_h7d52d80c__0[2U];
+    } else {
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[0U] 
+            = vlSelf->myCPU__DOT__datapath__DOT__pc[0U];
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[1U] 
+            = vlSelf->myCPU__DOT__datapath__DOT__pc[1U];
+        vlSelf->myCPU__DOT__datapath__DOT___GEN_136[2U] 
+            = vlSelf->myCPU__DOT__datapath__DOT__pc[2U];
+    }
+    VL_EXTEND_WQ(65,64, __Vtemp_hf0c0d54e__0, vlSelf->myCPU__DOT__datapath__DOT__csr_io_trapVec);
+    VL_EXTEND_WQ(65,64, __Vtemp_hfbd62a2a__0, (4ULL 
+                                               + vlSelf->myCPU__DOT__datapath__DOT__de_pipe_reg_pc));
+    if (((IData)(vlSelf->myCPU__DOT__datapath__DOT__stall) 
+         & (~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__started)))) {
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[0U] 
+            = vlSelf->myCPU__DOT__datapath__DOT__pc[0U];
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[1U] 
+            = vlSelf->myCPU__DOT__datapath__DOT__pc[1U];
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[2U] 
+            = vlSelf->myCPU__DOT__datapath__DOT__pc[2U];
+    } else if (vlSelf->myCPU__DOT__datapath__DOT__csr_io_trap) {
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[0U] 
+            = __Vtemp_hf0c0d54e__0[0U];
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[1U] 
+            = __Vtemp_hf0c0d54e__0[1U];
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[2U] 
+            = __Vtemp_hf0c0d54e__0[2U];
+    } else if ((0U != (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr_atomic_flush))) {
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[0U] 
+            = __Vtemp_hfbd62a2a__0[0U];
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[1U] 
+            = __Vtemp_hfbd62a2a__0[1U];
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[2U] 
+            = __Vtemp_hfbd62a2a__0[2U];
+    } else if (vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_5) {
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[0U] 
+            = vlSelf->myCPU__DOT__datapath__DOT__pc[0U];
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[1U] 
+            = vlSelf->myCPU__DOT__datapath__DOT__pc[1U];
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[2U] 
+            = vlSelf->myCPU__DOT__datapath__DOT__pc[2U];
+    } else {
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[0U] 
+            = vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_11[0U];
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[1U] 
+            = vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_11[1U];
+        vlSelf->myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2[2U] 
+            = vlSelf->myCPU__DOT__datapath__DOT___next_pc_T_11[2U];
     }
     if ((0x30200073U == vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst)) {
         vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_74 
@@ -3419,8 +3902,6 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
         vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_66 
             = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_mpie;
         vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_68 = 0U;
-        vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_69 
-            = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__sepc_data;
         vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_70 
             = (1U & (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__scause_int));
         vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_71 
@@ -3437,17 +3918,17 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
             = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mcause_code;
         vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_79 
             = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mtval_data;
+        vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_69 
+            = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__sepc_data;
     } else {
         vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_74 
-            = ((~ (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T)) 
+            = ((~ (IData)(myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T)) 
                & (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_sie));
-        if (vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T) {
+        if (myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T) {
             vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_66 
                 = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_mie;
             vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_68 
                 = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_mpp;
-            vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_69 
-                = (0xfffffffffffffffcULL & vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_pc);
             vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_70 
                 = (1U & (IData)((vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__cause 
                                  >> 0x3fU)));
@@ -3465,12 +3946,15 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                 = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mcause_code;
             vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_79 
                 = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mtval_data;
+            vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_69 
+                = (0xfffffffffffffffcULL & ((IData)(vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_jump_taken)
+                                             ? vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_jump_addr
+                                             : (4ULL 
+                                                + vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_pc)));
         } else {
             vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_66 = 0U;
             vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_68 
                 = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mode;
-            vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_69 
-                = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__sepc_data;
             vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_70 
                 = (1U & (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__scause_int));
             vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_71 
@@ -3488,18 +3972,41 @@ VL_ATTR_COLD void VmyCPU___024root___settle__TOP__0(VmyCPU___024root* vlSelf) {
                 = (QData)((IData)((0xfU & (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__cause))));
             vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_79 
                 = vlSelf->myCPU__DOT__datapath__DOT__csr_io_excValue;
+            vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_69 
+                = vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__sepc_data;
         }
     }
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_67 
         = ((0x30200073U == vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst) 
-           | ((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T)
+           | ((IData)(myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T)
                ? (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_mpie)
                : (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_mie)));
     vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___GEN_81 
         = ((0x10200073U == vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst) 
            | ((0x30200073U == vlSelf->myCPU__DOT__datapath__DOT__mw_pipe_reg_inst)
                ? (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_spie)
-               : ((IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T)
+               : ((IData)(myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T)
                    ? (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_sie)
                    : (IData)(vlSelf->myCPU__DOT__datapath__DOT__csr__DOT__mstatus_spie))));
+}
+
+VL_ATTR_COLD void VmyCPU_Cache___settle__TOP__myCPU__DOT__icache__0(VmyCPU_Cache* vlSelf);
+VL_ATTR_COLD void VmyCPU_Cache___settle__TOP__myCPU__DOT__dcache__0(VmyCPU_Cache* vlSelf);
+void VmyCPU_Cache___combo__TOP__myCPU__DOT__dcache__1(VmyCPU_Cache* vlSelf);
+void VmyCPU_Cache___combo__TOP__myCPU__DOT__icache__2(VmyCPU_Cache* vlSelf);
+
+VL_ATTR_COLD void VmyCPU___024root___eval_settle(VmyCPU___024root* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    VmyCPU__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    VmyCPU___024root___eval_settle\n"); );
+    // Body
+    VmyCPU___024root___settle__TOP__0(vlSelf);
+    vlSelf->__Vm_traceActivity[2U] = 1U;
+    vlSelf->__Vm_traceActivity[1U] = 1U;
+    vlSelf->__Vm_traceActivity[0U] = 1U;
+    VmyCPU_Cache___settle__TOP__myCPU__DOT__icache__0((&vlSymsp->TOP__myCPU__DOT__icache));
+    VmyCPU_Cache___settle__TOP__myCPU__DOT__dcache__0((&vlSymsp->TOP__myCPU__DOT__dcache));
+    VmyCPU___024root___settle__TOP__1(vlSelf);
+    VmyCPU_Cache___combo__TOP__myCPU__DOT__dcache__1((&vlSymsp->TOP__myCPU__DOT__dcache));
+    VmyCPU_Cache___combo__TOP__myCPU__DOT__icache__2((&vlSymsp->TOP__myCPU__DOT__icache));
 }

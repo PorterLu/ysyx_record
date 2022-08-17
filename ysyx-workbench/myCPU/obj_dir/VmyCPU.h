@@ -15,6 +15,7 @@ class VmyCPU__Syms;
 class VmyCPU___024root;
 class VerilatedVcdC;
 class VmyCPU___024unit;
+class VmyCPU_Cache;
 
 
 // This class is the main interface to the Verilated model
@@ -31,13 +32,45 @@ class VmyCPU VL_NOT_FINAL {
     VL_IN8(&clock,0,0);
     VL_IN8(&reset,0,0);
     VL_OUT8(&io_start,0,0);
+    VL_OUT8(&io_stall,0,0);
+    VL_IN8(&io_master_awready,0,0);
+    VL_OUT8(&io_master_awvalid,0,0);
+    VL_OUT8(&io_master_awid,3,0);
+    VL_OUT8(&io_master_awlen,7,0);
+    VL_OUT8(&io_master_awsize,2,0);
+    VL_OUT8(&io_master_awburst,1,0);
+    VL_IN8(&io_master_wready,0,0);
+    VL_OUT8(&io_master_wvalid,0,0);
+    VL_OUT8(&io_master_wstrb,7,0);
+    VL_OUT8(&io_master_wlast,0,0);
+    VL_OUT8(&io_master_bready,0,0);
+    VL_IN8(&io_master_bvalid,0,0);
+    VL_IN8(&io_master_bresp,1,0);
+    VL_IN8(&io_master_bid,3,0);
+    VL_IN8(&io_master_arready,0,0);
+    VL_OUT8(&io_master_arvalid,0,0);
+    VL_OUT8(&io_master_arid,3,0);
+    VL_OUT8(&io_master_arlen,7,0);
+    VL_OUT8(&io_master_arsize,2,0);
+    VL_OUT8(&io_master_arburst,1,0);
+    VL_OUT8(&io_master_rready,0,0);
+    VL_IN8(&io_master_rvalid,0,0);
+    VL_IN8(&io_master_rresp,1,0);
+    VL_IN8(&io_master_rlast,0,0);
+    VL_IN8(&io_master_rid,3,0);
     VL_OUT(&io_inst,31,0);
+    VL_OUT(&io_master_awaddr,31,0);
+    VL_OUT(&io_master_araddr,31,0);
     VL_OUT64(&io_pc_debug,63,0);
+    VL_OUT64(&io_master_wdata,63,0);
+    VL_IN64(&io_master_rdata,63,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.
     // Otherwise the application code can consider these internals.
     VmyCPU___024unit* const __PVT____024unit;
+    VmyCPU_Cache* const __PVT__myCPU__DOT__icache;
+    VmyCPU_Cache* const __PVT__myCPU__DOT__dcache;
 
     // Root instance pointer to allow access to model internals,
     // including inlined /* verilator public_flat_* */ items.

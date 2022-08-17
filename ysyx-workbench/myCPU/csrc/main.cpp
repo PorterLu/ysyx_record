@@ -76,18 +76,23 @@ int main(int argc, char *argv[]){
 	sim_init();
 	contextp->commandArgs(argc, argv);
 	reset(10);
-	single_cycle();
-	single_cycle();
-	single_cycle();
-	single_cycle();
-	single_cycle();
-	init_difftest(ref_so_file, img_size, 0);
 	init_map();
 
 	//single_cycle();
 	init_serial();
 	init_timer();
 	init_vga();
+
+	for(int i = 0; i < 26; i++)
+		step_and_dump_wave();
+//	single_cycle();
+//	single_cycle();
+//	single_cycle();
+//	single_cycle();
+//	single_cycle();
+//	single_cycle();
+
+	//init_difftest(ref_so_file, img_size, 0);
 		
 	sdbloop();
 	/*

@@ -373,3 +373,130 @@ INFO: Unsupported notification method: $/setTrace
 2022.08.03 10:10:29 WARN  Build server is not auto-connectable.
 2022.08.03 10:10:30 INFO  skipping build import with status 'Requested'
 2022.08.03 14:21:13 INFO  shutting down Metals
+2022.08.08 23:15:37 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.08 23:15:38 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.08 23:15:38 INFO  Started: Metals version 0.11.7 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.08 23:15:38 INFO  time: initialize in 0.88s
+2022.08.08 23:15:39 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.08 23:15:39 WARN  Build server is not auto-connectable.
+2022.08.08 23:15:39 INFO  skipping build import with status 'Requested'
+2022.08.08 23:48:04 INFO  shutting down Metals
+2022.08.09 08:45:39 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.09 08:45:40 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.09 08:45:40 INFO  Started: Metals version 0.11.7 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.09 08:45:42 INFO  time: initialize in 2.19s
+2022.08.09 08:45:42 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.09 08:45:42 WARN  Build server is not auto-connectable.
+2022.08.09 08:45:44 INFO  skipping build import with status 'Requested'
+2022.08.09 23:46:50 INFO  shutting down Metals
+2022.08.10 08:27:16 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.10 08:27:17 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.10 08:27:17 INFO  Started: Metals version 0.11.7 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.10 08:27:17 INFO  time: initialize in 0.85s
+2022.08.10 08:27:18 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.10 08:27:18 WARN  Build server is not auto-connectable.
+2022.08.10 08:27:18 INFO  skipping build import with status 'Requested'
+Aug 10, 2022 9:13:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.08.10 21:14:09 INFO  shutting down Metals
+2022.08.11 09:46:13 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.11 09:46:14 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.11 09:46:14 INFO  Started: Metals version 0.11.8 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.11 09:46:18 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.11 09:46:18 INFO  time: initialize in 4.71s
+2022.08.11 09:46:19 WARN  Build server is not auto-connectable.
+2022.08.11 09:46:19 INFO  skipping build import with status 'Requested'
+2022.08.11 13:51:49 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.11 13:51:51 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.11 13:51:51 INFO  Started: Metals version 0.11.8 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.11 13:51:57 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.11 13:51:58 INFO  time: initialize in 7.07s
+2022.08.11 13:51:59 WARN  Build server is not auto-connectable.
+2022.08.11 13:51:59 INFO  skipping build import with status 'Requested'
+2022.08.11 23:50:33 INFO  shutting down Metals
+2022.08.12 13:48:21 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.12 13:48:22 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.12 13:48:22 INFO  Started: Metals version 0.11.8 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.12 13:48:23 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.12 13:48:24 INFO  time: initialize in 2.1s
+2022.08.12 13:48:25 WARN  Build server is not auto-connectable.
+2022.08.12 13:48:25 INFO  skipping build import with status 'Requested'
+2022.08.12 23:52:47 INFO  shutting down Metals
+2022.08.13 08:04:15 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.13 08:04:16 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.13 08:04:16 INFO  Started: Metals version 0.11.8 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.13 08:04:17 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.13 08:04:18 INFO  time: initialize in 1.94s
+2022.08.13 08:04:18 WARN  Build server is not auto-connectable.
+2022.08.13 08:04:18 INFO  skipping build import with status 'Requested'
+2022.08.13 10:37:32 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.13 10:37:33 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.13 10:37:33 INFO  Started: Metals version 0.11.8 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.13 10:37:39 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.13 10:37:40 INFO  time: initialize in 6.71s
+2022.08.13 10:37:40 WARN  Build server is not auto-connectable.
+2022.08.13 10:37:41 INFO  skipping build import with status 'Requested'
+2022.08.13 23:31:12 INFO  shutting down Metals
+2022.08.14 07:53:06 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.14 07:53:06 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.14 07:53:06 INFO  Started: Metals version 0.11.8 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.14 07:53:08 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.14 07:53:08 INFO  time: initialize in 1.88s
+2022.08.14 07:53:08 WARN  Build server is not auto-connectable.
+2022.08.14 07:53:09 INFO  skipping build import with status 'Requested'
+2022.08.14 23:57:27 INFO  shutting down Metals
+2022.08.15 07:54:56 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.15 07:54:56 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.15 07:54:56 INFO  Started: Metals version 0.11.8 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.15 07:54:58 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.15 07:54:58 INFO  time: initialize in 1.78s
+2022.08.15 07:54:59 WARN  Build server is not auto-connectable.
+2022.08.15 07:54:58 INFO  skipping build import with status 'Requested'
+Aug 15, 2022 8:57:41 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.08.15 17:42:09 INFO  shutting down Metals
+2022.08.15 17:42:18 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.15 17:42:19 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.15 17:42:19 INFO  Started: Metals version 0.11.8 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.15 17:42:20 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.15 17:42:21 INFO  time: initialize in 2.05s
+2022.08.15 17:42:21 WARN  Build server is not auto-connectable.
+2022.08.15 17:42:21 INFO  skipping build import with status 'Requested'
+2022.08.15 23:59:37 INFO  shutting down Metals
+2022.08.16 19:32:31 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.16 19:32:32 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.16 19:32:32 INFO  Started: Metals version 0.11.8 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.16 19:32:33 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.16 19:32:33 INFO  time: initialize in 1.69s
+2022.08.16 19:32:34 WARN  Build server is not auto-connectable.
+2022.08.16 19:32:33 INFO  skipping build import with status 'Requested'
+Aug 16, 2022 10:23:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Aug 16, 2022 10:24:33 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Aug 16, 2022 10:27:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Aug 16, 2022 10:27:05 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Aug 16, 2022 10:27:05 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Aug 16, 2022 10:27:06 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Aug 16, 2022 10:27:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2022.08.17 00:32:48 INFO  shutting down Metals
+2022.08.17 07:47:45 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.17 07:47:45 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.17 07:47:45 INFO  Started: Metals version 0.11.8 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.17 07:47:46 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.17 07:47:47 INFO  time: initialize in 1.72s
+2022.08.17 07:47:47 WARN  Build server is not auto-connectable.
+2022.08.17 07:47:47 INFO  skipping build import with status 'Requested'
+2022.08.17 15:03:59 INFO  shutting down Metals
+2022.08.17 16:14:51 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/porterlu/ysyx-workbench/myCPU/.metals/lsp.trace.json or /home/porterlu/.cache/metals/lsp.trace.json
+2022.08.17 16:14:52 INFO  logging to file /home/porterlu/ysyx-workbench/myCPU/.metals/metals.log
+2022.08.17 16:14:52 INFO  Started: Metals version 0.11.8 in workspace '/home/porterlu/ysyx-workbench/myCPU' for client Visual Studio Code 1.68.0.
+2022.08.17 16:14:53 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.
+2022.08.17 16:14:54 INFO  time: initialize in 1.96s
+2022.08.17 16:14:54 WARN  Build server is not auto-connectable.
+2022.08.17 16:14:54 INFO  skipping build import with status 'Requested'

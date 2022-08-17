@@ -17,4 +17,7 @@ pmem.o: /home/porterlu/ysyx-workbench/myCPU/csrc/pmem.c \
  /usr/local/share/verilator/include/verilated.h VmyCPU.h VmyCPU__Dpi.h \
  /usr/local/share/verilator/include/verilated_vcd_c.h \
  /usr/local/share/verilator/include/verilated_trace.h \
- /usr/local/share/verilator/include/verilated_trace_defs.h
+ /usr/local/share/verilator/include/verilated_trace_defs.h \
+ /home/porterlu/ysyx-workbench/myCPU/csrc/src/axi4_mem.hpp \
+ /home/porterlu/ysyx-workbench/myCPU/csrc/src/axi4_slave.hpp \
+ /home/porterlu/ysyx-workbench/myCPU/csrc/src/axi4.hpp

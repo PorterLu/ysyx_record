@@ -6,6 +6,7 @@ static uint8_t *serial_base = NULL;
 
 void serial_io_handler(uint32_t offset, int len, bool is_write){
 	//assert(len == 1);
+	//printf("offset:%d %c\n",offset, serial_base[0]);
 	switch(offset){
 		case 0:
 			if(is_write) putc(serial_base[0], stderr);

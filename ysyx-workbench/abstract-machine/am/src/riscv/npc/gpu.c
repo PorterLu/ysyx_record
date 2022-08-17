@@ -13,6 +13,11 @@ void __am_gpu_init() {
   uint32_t size = *(volatile uint32_t*) (VGACTL_ADDR);
   w = size >> 16;
   h = size & 0xffff;
+  //printf("%d %d\n",w, h);
+  //printf("%d %d\n",w, h);
+  //printf("%d %d\n",w, h);
+  //printf("%d %d\n",w, h);
+  //printf("%d %d\n",w, h);
 
 }
  
@@ -44,6 +49,7 @@ void __am_gpu_fbdraw(AM_GPU_FBDRAW_T *ctl) {
 	dest += (w * 4);
 	src += (width*4);
   }
+  //printf("draw\n");
 
   if (ctl->sync) {
     *(volatile uint32_t*)(SYNC_ADDR) = 1;

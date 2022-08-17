@@ -9,11 +9,14 @@
 
 class VmyCPU__Syms;
 class VmyCPU___024unit;
+class VmyCPU_Cache;
 
 VL_MODULE(VmyCPU___024root) {
   public:
     // CELLS
     VmyCPU___024unit* __PVT____024unit;
+    VmyCPU_Cache* __PVT__myCPU__DOT__icache;
+    VmyCPU_Cache* __PVT__myCPU__DOT__dcache;
 
     // DESIGN SPECIFIC STATE
     // Anonymous structures to workaround compiler member-count bugs
@@ -21,8 +24,45 @@ VL_MODULE(VmyCPU___024root) {
         VL_IN8(clock,0,0);
         VL_IN8(reset,0,0);
         VL_OUT8(io_start,0,0);
+        VL_OUT8(io_stall,0,0);
+        VL_IN8(io_master_awready,0,0);
+        VL_OUT8(io_master_awvalid,0,0);
+        VL_OUT8(io_master_awid,3,0);
+        VL_OUT8(io_master_awlen,7,0);
+        VL_OUT8(io_master_awsize,2,0);
+        VL_OUT8(io_master_awburst,1,0);
+        VL_IN8(io_master_wready,0,0);
+        VL_OUT8(io_master_wvalid,0,0);
+        VL_OUT8(io_master_wstrb,7,0);
+        VL_OUT8(io_master_wlast,0,0);
+        VL_OUT8(io_master_bready,0,0);
+        VL_IN8(io_master_bvalid,0,0);
+        VL_IN8(io_master_bresp,1,0);
+        VL_IN8(io_master_bid,3,0);
+        VL_IN8(io_master_arready,0,0);
+        VL_OUT8(io_master_arvalid,0,0);
+        VL_OUT8(io_master_arid,3,0);
+        VL_OUT8(io_master_arlen,7,0);
+        VL_OUT8(io_master_arsize,2,0);
+        VL_OUT8(io_master_arburst,1,0);
+        VL_OUT8(io_master_rready,0,0);
+        VL_IN8(io_master_rvalid,0,0);
+        VL_IN8(io_master_rresp,1,0);
+        VL_IN8(io_master_rlast,0,0);
+        VL_IN8(io_master_rid,3,0);
+        CData/*0:0*/ myCPU__DOT__datapath_io_dcache_cpu_request_rw;
+        CData/*0:0*/ myCPU__DOT__datapath_io_dcache_cpu_request_valid;
         CData/*2:0*/ myCPU__DOT__control_io_imm_sel;
         CData/*2:0*/ myCPU__DOT__control_io_csr_cmd;
+        CData/*0:0*/ myCPU__DOT__arb_io_icache_ar_ready;
+        CData/*0:0*/ myCPU__DOT__arb_io_icache_r_valid;
+        CData/*0:0*/ myCPU__DOT__arb_io_dcache_aw_ready;
+        CData/*0:0*/ myCPU__DOT__arb_io_dcache_w_ready;
+        CData/*0:0*/ myCPU__DOT__arb_io_dcache_b_valid;
+        CData/*0:0*/ myCPU__DOT__arb_io_dcache_ar_ready;
+        CData/*0:0*/ myCPU__DOT__arb_io_dcache_r_valid;
+        CData/*0:0*/ myCPU__DOT__arb_io_axi_out_b_ready;
+        CData/*0:0*/ myCPU__DOT__arb_io_axi_out_r_ready;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__regFile_io_wen;
         CData/*3:0*/ myCPU__DOT__datapath__DOT__csr_io_flush_mask;
         CData/*2:0*/ myCPU__DOT__datapath__DOT__csr_io_r_op;
@@ -44,6 +84,10 @@ VL_MODULE(VmyCPU___024root) {
         CData/*0:0*/ myCPU__DOT__datapath__DOT__de_pipe_reg_wb_en;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__de_pipe_reg_enable;
         CData/*2:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_csr_write_op;
+        CData/*0:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_jump_taken;
+    };
+    struct {
+        CData/*2:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_st_type;
         CData/*2:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_ld_type;
         CData/*1:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_wb_sel;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_wb_en;
@@ -51,9 +95,13 @@ VL_MODULE(VmyCPU___024root) {
         CData/*0:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_enable;
         CData/*4:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_dest;
         CData/*2:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_op;
+        CData/*0:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_jump_taken;
         CData/*1:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_sel;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_wb_en;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_enable;
+        CData/*0:0*/ myCPU__DOT__datapath__DOT__started;
+        CData/*0:0*/ myCPU__DOT__datapath__DOT__dcache_stall;
+        CData/*0:0*/ myCPU__DOT__datapath__DOT__stall;
         CData/*3:0*/ myCPU__DOT__datapath__DOT__csr_atomic_flush;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__brCond_taken;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__jmp_occur;
@@ -61,12 +109,12 @@ VL_MODULE(VmyCPU___024root) {
         CData/*0:0*/ myCPU__DOT__datapath__DOT__flush_de;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__flush_em;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__flush_mw;
-        CData/*0:0*/ myCPU__DOT__datapath__DOT__started;
-        CData/*0:0*/ myCPU__DOT__datapath__DOT___next_pc_T_4;
+        CData/*0:0*/ myCPU__DOT__datapath__DOT___next_pc_T_5;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__is_kill_inst;
+        CData/*0:0*/ myCPU__DOT__datapath__DOT___GEN_2;
         CData/*0:0*/ myCPU__DOT__datapath__DOT___csr_op_T_2;
-        CData/*2:0*/ myCPU__DOT__datapath__DOT___csr_op_T_15;
-        CData/*0:0*/ myCPU__DOT__datapath__DOT___T_2;
+        CData/*2:0*/ myCPU__DOT__datapath__DOT___csr_op_T_16;
+        CData/*0:0*/ myCPU__DOT__datapath__DOT___T_6;
         CData/*7:0*/ myCPU__DOT__datapath__DOT__st_mask;
         CData/*5:0*/ myCPU__DOT__datapath__DOT__alu__DOT__shamt;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__brCond__DOT__eq;
@@ -82,8 +130,6 @@ VL_MODULE(VmyCPU___024root) {
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__mstatus_sie;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__mie_meie;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__mie_seie;
-    };
-    struct {
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__mie_mtie;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__mie_stie;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__mie_msie;
@@ -105,10 +151,11 @@ VL_MODULE(VmyCPU___024root) {
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__writeEn;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__hasIntM;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__hasInt;
+    };
+    struct {
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__handIntS;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__hasExc;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT__handExcS;
-        CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT___trapVec_T;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT___GEN_66;
         CData/*0:0*/ myCPU__DOT__datapath__DOT__csr__DOT___GEN_67;
         CData/*1:0*/ myCPU__DOT__datapath__DOT__csr__DOT___GEN_68;
@@ -148,8 +195,6 @@ VL_MODULE(VmyCPU___024root) {
         CData/*1:0*/ myCPU__DOT__control__DOT___ctrlSignals_T_902;
         CData/*1:0*/ myCPU__DOT__control__DOT___ctrlSignals_T_917;
         CData/*1:0*/ myCPU__DOT__control__DOT___ctrlSignals_T_932;
-    };
-    struct {
         CData/*1:0*/ myCPU__DOT__control__DOT___ctrlSignals_T_947;
         CData/*2:0*/ myCPU__DOT__control__DOT___ctrlSignals_T_972;
         CData/*2:0*/ myCPU__DOT__control__DOT___ctrlSignals_T_987;
@@ -161,21 +206,34 @@ VL_MODULE(VmyCPU___024root) {
         CData/*0:0*/ myCPU__DOT__control__DOT___ctrlSignals_T_1109;
         CData/*0:0*/ myCPU__DOT__control__DOT___ctrlSignals_T_1126;
         CData/*0:0*/ myCPU__DOT__control__DOT___ctrlSignals_T_1143;
+        CData/*2:0*/ myCPU__DOT__arb__DOT__state;
+        CData/*2:0*/ myCPU__DOT__arb__DOT___GEN_0;
+        CData/*2:0*/ myCPU__DOT__arb__DOT___GEN_4;
+        CData/*2:0*/ myCPU__DOT__arb__DOT___GEN_6;
+        CData/*2:0*/ myCPU__DOT__arb__DOT___GEN_14;
         CData/*0:0*/ __Vclklast__TOP__clock;
         SData/*11:0*/ myCPU__DOT__datapath__DOT__de_pipe_reg_csr_write_addr;
         SData/*11:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_csr_write_addr;
         SData/*11:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_addr;
         VL_OUT(io_inst,31,0);
+        VL_OUT(io_master_awaddr,31,0);
+    };
+    struct {
+        VL_OUT(io_master_araddr,31,0);
         IData/*31:0*/ myCPU__DOT__datapath__DOT__csr_io_illegal_inst;
         IData/*31:0*/ myCPU__DOT__datapath__DOT__fd_pipe_reg_inst;
         IData/*31:0*/ myCPU__DOT__datapath__DOT__de_pipe_reg_inst;
         IData/*31:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_inst;
         IData/*31:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_inst;
         VlWide<3>/*64:0*/ myCPU__DOT__datapath__DOT__pc;
-        VlWide<3>/*64:0*/ myCPU__DOT__datapath__DOT___next_pc_T_1;
-        VlWide<4>/*127:0*/ myCPU__DOT__datapath__DOT__alu__DOT___out_T_80;
+        VlWide<3>/*64:0*/ myCPU__DOT__datapath__DOT___next_pc_T_11;
+        IData/*31:0*/ myCPU__DOT__datapath__DOT___inst_T_7;
+        VlWide<3>/*64:0*/ myCPU__DOT__datapath__DOT___io_icache_cpu_request_addr_T_2;
+        VlWide<3>/*64:0*/ myCPU__DOT__datapath__DOT___GEN_136;
         VlWide<4>/*127:0*/ myCPU__DOT__datapath__DOT__alu__DOT___out_T_88;
         VL_OUT64(io_pc_debug,63,0);
+        VL_OUT64(io_master_wdata,63,0);
+        VL_IN64(io_master_rdata,63,0);
         QData/*63:0*/ myCPU__DOT__datapath__DOT__alu_io_A;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__alu_io_B;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__alu_io_out;
@@ -184,8 +242,6 @@ VL_MODULE(VmyCPU___024root) {
         QData/*63:0*/ myCPU__DOT__datapath__DOT__brCond_io_rs2;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__regFile_io_wdata;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__regFile_io_rdata_1;
-        QData/*63:0*/ myCPU__DOT__datapath__DOT__imem_pc_data;
-        QData/*63:0*/ myCPU__DOT__datapath__DOT__dmem_pc_data;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr_io_excValue;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr_io_trapVec;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__fd_pipe_reg_pc;
@@ -200,33 +256,35 @@ VL_MODULE(VmyCPU___024root) {
         QData/*63:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_alu_out;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_csr_read_data;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_csr_write_data;
+        QData/*63:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_jump_addr;
+        QData/*63:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_st_data;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__em_pipe_reg_pc;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_load_data;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_alu_out;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_read_data;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_csr_write_data;
+        QData/*63:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_jump_addr;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__mw_pipe_reg_pc;
         QData/*63:0*/ myCPU__DOT__datapath__DOT___de_pipe_reg_rs1_T_11;
         QData/*63:0*/ myCPU__DOT__datapath__DOT___de_pipe_reg_rs1_T_12;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__load_data_hazard;
         QData/*63:0*/ myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_5;
-        QData/*63:0*/ myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_33;
-        QData/*63:0*/ myCPU__DOT__datapath__DOT___src1_data_T_7;
+        QData/*63:0*/ myCPU__DOT__datapath__DOT___load_data_ext_hazard_T_34;
         QData/*63:0*/ myCPU__DOT__datapath__DOT___GEN_54;
         QData/*63:0*/ myCPU__DOT__datapath__DOT___GEN_56;
-    };
-    struct {
         QData/*63:0*/ myCPU__DOT__datapath__DOT___GEN_58;
         QData/*63:0*/ myCPU__DOT__datapath__DOT___GEN_60;
-        QData/*63:0*/ myCPU__DOT__datapath__DOT__src2_data;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__A_data;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__B_data;
+        QData/*63:0*/ myCPU__DOT__datapath__DOT___io_dcache_cpu_request_addr_T;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__alu__DOT__sum;
         QData/*43:0*/ myCPU__DOT__datapath__DOT__immGen__DOT__Iimm;
         QData/*52:0*/ myCPU__DOT__datapath__DOT__immGen__DOT__Jimm;
         QData/*43:0*/ myCPU__DOT__datapath__DOT__immGen__DOT___io_out_T_5;
         QData/*44:0*/ myCPU__DOT__datapath__DOT__immGen__DOT___io_out_T_7;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__regFile__DOT__reg_0;
+    };
+    struct {
         QData/*63:0*/ myCPU__DOT__datapath__DOT__regFile__DOT__reg_1;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__regFile__DOT__reg_2;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__regFile__DOT__reg_3;
@@ -262,10 +320,6 @@ VL_MODULE(VmyCPU___024root) {
         QData/*63:0*/ myCPU__DOT__datapath__DOT__regFile__DOT___GEN_90;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__regFile__DOT___GEN_110;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__regFile__DOT___GEN_123;
-        QData/*63:0*/ myCPU__DOT__datapath__DOT__imem__DOT__tmp_data;
-        QData/*63:0*/ myCPU__DOT__datapath__DOT__imem__DOT__delay;
-        QData/*63:0*/ myCPU__DOT__datapath__DOT__dmem__DOT__tmp_data;
-        QData/*63:0*/ myCPU__DOT__datapath__DOT__dmem__DOT__delay;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT__medeleg_data;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT__mideleg_data;
         QData/*61:0*/ myCPU__DOT__datapath__DOT__csr__DOT__mtvec_base;
@@ -280,8 +334,6 @@ VL_MODULE(VmyCPU___024root) {
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT___sip_T;
         QData/*61:0*/ myCPU__DOT__datapath__DOT__csr__DOT__stvec_base;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT__sscratch_data;
-    };
-    struct {
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT__sepc_data;
         QData/*62:0*/ myCPU__DOT__datapath__DOT__csr__DOT__scause_code;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT__stval_data;
@@ -297,6 +349,8 @@ VL_MODULE(VmyCPU___024root) {
         QData/*62:0*/ myCPU__DOT__datapath__DOT__csr__DOT__excCause;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT__cause;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT___mcycle_data_T_1;
+    };
+    struct {
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT___GEN_2;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT___T_167;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT___T_169;
@@ -306,7 +360,7 @@ VL_MODULE(VmyCPU___024root) {
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT___GEN_76;
         QData/*62:0*/ myCPU__DOT__datapath__DOT__csr__DOT___GEN_78;
         QData/*63:0*/ myCPU__DOT__datapath__DOT__csr__DOT___GEN_79;
-        VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
+        VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;
     };
 
     // INTERNAL VARIABLES

@@ -10,7 +10,7 @@ VM_C11 = 1
 # Coverage output mode?  0/1 (from --coverage)
 VM_COVERAGE = 0
 # Parallel builds?  0/1 (from --output-split)
-VM_PARALLEL_BUILDS = 0
+VM_PARALLEL_BUILDS = 1
 # Threaded output mode?  0/1/N threads (from --threads)
 VM_THREADS = 0
 # Tracing output mode?  0/1 (from --trace/--trace-fst)
@@ -30,13 +30,22 @@ VM_CLASSES_FAST += \
 	VmyCPU \
 	VmyCPU___024root__DepSet_hb84afa59__0 \
 	VmyCPU___024root__DepSet_h7377be0a__0 \
+	VmyCPU_Cache__DepSet_hc7e3df7d__0 \
+	VmyCPU_Cache__DepSet_h4767171f__0 \
+	VmyCPU_Cache__DepSet_h4767171f__1 \
+	VmyCPU_Cache__DepSet_h4767171f__2 \
 	VmyCPU___024unit__DepSet_h6c4ad098__0 \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
+	VmyCPU__ConstPool_0 \
 	VmyCPU___024root__Slow \
 	VmyCPU___024root__DepSet_hb84afa59__0__Slow \
 	VmyCPU___024root__DepSet_h7377be0a__0__Slow \
+	VmyCPU_Cache__Slow \
+	VmyCPU_Cache__DepSet_hc7e3df7d__0__Slow \
+	VmyCPU_Cache__DepSet_h4767171f__0__Slow \
+	VmyCPU_Cache__DepSet_h4767171f__1__Slow \
 	VmyCPU___024unit__Slow \
 	VmyCPU___024unit__DepSet_hbf77d4cb__0__Slow \
 

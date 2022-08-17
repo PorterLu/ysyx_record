@@ -73,7 +73,10 @@ void init_map(){
 word_t map_read(paddr_t addr, int len, IOMap *map){
 	paddr_t offset = addr - map->low;
 	invoke_callback(map->callback, offset, len, false);
+	//printf("map 1\n");
 	word_t ret = host_read((uint8_t*)(map->space) + offset, len);
+	//printf("offset:%d", offset);
+	//printf("map 2\n");
 	return ret;
 }
 
